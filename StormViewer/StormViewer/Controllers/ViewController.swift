@@ -15,11 +15,7 @@ class ViewController: UITableViewController {
     // MARK: Properties
     
     var pictures = [String]()
-    
-    // MARK: IB Outlets
-    
-    @IBOutlet weak var imageView: UIImageView!
-    
+        
     // MARK: View Life Cycle
     
     override func viewDidLoad() {
@@ -53,12 +49,16 @@ extension ViewController {
         return pictures.count
     }
     
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150.0
+    }
+ 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) {
-            cell.imageView?.image = UIImage(contentsOfFile: pictures[indexPath.row])
-            return cell
-        }
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell", for: indexPath) as! ImageCell
+        cell.cellImageView?.image = UIImage(named: pictures[indexPath.row])
+        cell.titleLabel.text = "Picture \(indexPath.row)"
+        cell.descriptionLabel.text = pictures[indexPath.row]
+        return cell
     }
     
 }
