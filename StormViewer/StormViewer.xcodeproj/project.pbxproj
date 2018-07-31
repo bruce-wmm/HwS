@@ -23,6 +23,7 @@
 		11E6802B21110F8A00F06DE9 /* nssl0091.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11E6802121110F8A00F06DE9 /* nssl0091.jpg */; };
 		11E6802C21110F8A00F06DE9 /* nssl0049.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11E6802221110F8A00F06DE9 /* nssl0049.jpg */; };
 		11E6802E2111142200F06DE9 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6802D2111142200F06DE9 /* ImageCell.swift */; };
+		11E6803021111B4500F06DE9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E6802F21111B4500F06DE9 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		11E6802121110F8A00F06DE9 /* nssl0091.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0091.jpg; sourceTree = "<group>"; };
 		11E6802221110F8A00F06DE9 /* nssl0049.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0049.jpg; sourceTree = "<group>"; };
 		11E6802D2111142200F06DE9 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		11E6802F21111B4500F06DE9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				11E680042110D73E00F06DE9 /* ViewController.swift */,
+				11E6802F21111B4500F06DE9 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				11E680052110D73E00F06DE9 /* ViewController.swift in Sources */,
 				11E680032110D73E00F06DE9 /* AppDelegate.swift in Sources */,
 				11E6802E2111142200F06DE9 /* ImageCell.swift in Sources */,
+				11E6803021111B4500F06DE9 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
