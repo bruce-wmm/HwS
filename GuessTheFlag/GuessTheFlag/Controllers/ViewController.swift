@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     // MARK: Properties
     
     var countries = [String]()
+    var buttons = [UIButton]()
     
     var countryString: String?
     
@@ -25,8 +26,11 @@ class ViewController: UIViewController {
     // MARK: IB Outlets
     
     @IBOutlet weak var topButton: UIButton!
+    @IBOutlet weak var topStatusLabel: UILabel!
     @IBOutlet weak var middleButton: UIButton!
+    @IBOutlet weak var middleStatusLabel: UILabel!
     @IBOutlet weak var bottomButton: UIButton!
+    @IBOutlet weak var bottomStatusLabel: UILabel!
     
     @IBOutlet weak var questionLabel: UILabel!
     
@@ -42,6 +46,12 @@ class ViewController: UIViewController {
         countries = ["estonia", "france", "germany", "ireland", "italy", "monaco",
                      "nigeria", "poland", "russia", "spain", "uk", "us"]
         questionLabel.text! = askQuestion()
+        
+        buttons = [topButton, middleButton, bottomButton]
+        for button in buttons {
+            button.layer.borderWidth = 1
+            button.layer.borderColor = UIColor.lightGray.cgColor
+        }
     }
     
     private func askQuestion() -> String {
@@ -78,24 +88,27 @@ class ViewController: UIViewController {
     // MARK: IB Actions
     
     @IBAction func buttonTapped(_ sender: UIButton) {
-        var testString = ""
         switch sender {
             case topButton:
-                testString = self.topCountry!
+                if countryString == self.topCountry! {
+                    topStatusLabel.text = "✓"
+                } else {
+                    topStatusLabel.text = "✗"
+                }
             case middleButton:
-                testString = self.middleCountry!
+                if countryString == self.middleCountry! {
+                    middleStatusLabel.text = "✓"
+                } else {
+                    middleStatusLabel.text = "✗"
+                }
             case bottomButton:
-                testString = self.bottomCountry!
+                if countryString == self.bottomCountry! {
+                    bottomStatusLabel.text = "✓"
+                } else {
+                    bottomStatusLabel.text = "✗"
+                }
             default:
                 break
-        }
-        
-        if let countryString = countryString {
-            if countryString == testString {
-                questionLabel.text = "CORRECT"
-            } else {
-                questionLabel.text = "TRY AGAIN"
-            }
         }
     }
     
