@@ -18,10 +18,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="2jL-Qc-43z">
-                                <rect key="frame" x="87.5" y="133.5" width="200" height="400"/>
+                                <rect key="frame" x="87.5" y="108.5" width="200" height="450"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfX-oQ-wvl">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fa-hh-AVe">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                                        <rect key="frame" x="0.0" y="50" width="200" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="KHz-OS-zyB"/>
                                             <constraint firstAttribute="width" constant="200" id="rJK-Tz-7Sz"/>
@@ -32,7 +38,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uVE-hn-Kd8">
-                                        <rect key="frame" x="0.0" y="150" width="200" height="100"/>
+                                        <rect key="frame" x="0.0" y="200" width="200" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="CGj-P4-WUG"/>
                                             <constraint firstAttribute="width" constant="200" id="eAb-hr-68e"/>
@@ -43,7 +49,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtc-PF-0O3">
-                                        <rect key="frame" x="0.0" y="300" width="200" height="100"/>
+                                        <rect key="frame" x="0.0" y="350" width="200" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="ZtC-XQ-Rtp"/>
                                             <constraint firstAttribute="height" constant="100" id="ibD-t8-1Hi"/>
@@ -67,6 +73,7 @@
                     <connections>
                         <outlet property="bottomButton" destination="gtc-PF-0O3" id="rWt-pj-36D"/>
                         <outlet property="middleButton" destination="uVE-hn-Kd8" id="0jD-VM-Avd"/>
+                        <outlet property="questionLabel" destination="yfX-oQ-wvl" id="Xzc-LB-yRK"/>
                         <outlet property="topButton" destination="9fa-hh-AVe" id="oyp-bD-BqI"/>
                     </connections>
                 </viewController>
