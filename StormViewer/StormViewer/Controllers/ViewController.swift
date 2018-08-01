@@ -18,7 +18,7 @@ class ViewController: UITableViewController {
         
     // MARK: View Life Cycle
     
-    override func viewDidLoad() {
+    override func viewDidLoad() {        
         super.viewDidLoad()
 
         let fileManager = FileManager.default
@@ -30,9 +30,6 @@ class ViewController: UITableViewController {
                 pictures.append(item)
             }
         }
-        
-        print(pictures)
-        
     }
     
 }

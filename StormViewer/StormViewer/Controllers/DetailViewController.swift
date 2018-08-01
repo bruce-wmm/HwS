@@ -12,11 +12,18 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    // MARK: Properties
+    
     var selectedImage: String?
+    
+    // MARK: IB Outlets
     
     @IBOutlet weak var detailImageView: UIImageView!
     
+    // MARK: View Life Cycle
+    
     override func viewDidLoad() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
         super.viewDidLoad()
         
         guard let selectedImage = selectedImage else { return }
@@ -35,6 +42,14 @@ class DetailViewController: UIViewController {
     
     override var prefersHomeIndicatorAutoHidden: Bool {
         return navigationController?.hidesBarsOnTap ?? false
+    }
+    
+    // MARK: Helper Methods
+    
+    @objc func shareTapped(){
+        let activityVC = UIActivityViewController(activityItems: [detailImageView.image!], applicationActivities: [])
+        activityVC.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(activityVC, animated: true)
     }
     
 }
