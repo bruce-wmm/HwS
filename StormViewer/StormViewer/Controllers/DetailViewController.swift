@@ -32,4 +32,9 @@ class DetailViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationController?.hidesBarsOnTap = false
     }
+    
+    override var prefersHomeIndicatorAutoHidden: Bool {
+        return navigationController?.hidesBarsOnTap ?? false
+    }
+    
 }

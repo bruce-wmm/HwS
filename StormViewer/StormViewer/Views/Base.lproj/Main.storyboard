@@ -89,17 +89,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LWS-gO-NVS">
-                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="D8H-8C-Ig4"/>
-                                    <constraint firstAttribute="height" constant="250" id="I3M-Xw-Ul9"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LWS-gO-NVS" firstAttribute="centerX" secondItem="maO-Tp-iC2" secondAttribute="centerX" id="E2z-9x-YEU"/>
-                            <constraint firstItem="LWS-gO-NVS" firstAttribute="centerY" secondItem="maO-Tp-iC2" secondAttribute="centerY" id="vqA-5h-DCx"/>
+                            <constraint firstItem="uJz-Iq-1HU" firstAttribute="trailing" secondItem="LWS-gO-NVS" secondAttribute="trailing" id="0cN-kq-elt"/>
+                            <constraint firstItem="LWS-gO-NVS" firstAttribute="top" secondItem="uJz-Iq-1HU" secondAttribute="top" id="Wg0-Y8-ZmI"/>
+                            <constraint firstItem="LWS-gO-NVS" firstAttribute="leading" secondItem="uJz-Iq-1HU" secondAttribute="leading" id="jB6-Yy-DIp"/>
+                            <constraint firstItem="LWS-gO-NVS" firstAttribute="bottom" secondItem="uJz-Iq-1HU" secondAttribute="bottom" id="s4l-oU-1jQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uJz-Iq-1HU"/>
                     </view>
