@@ -23,11 +23,12 @@ class DetailViewController: UIViewController {
     // MARK: View Life Cycle
     
     override func viewDidLoad() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
         super.viewDidLoad()
         
         guard let selectedImage = selectedImage else { return }
         detailImageView.image = UIImage(named: selectedImage)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
     }
     
     override func viewWillAppear(_ animated: Bool) {
