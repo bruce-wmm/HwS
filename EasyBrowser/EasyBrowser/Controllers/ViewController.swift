@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     var webView: WKWebView!
     var progressView: UIProgressView!
     
+    var websites = ["apple.com", "hackingwithswift.com"]
+    
     // MARK: View Life Cycle
     
     override func loadView() {
@@ -29,7 +31,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: "https://www.apple.com")!
+        let url = URL(string: websites[0])!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
         
@@ -53,8 +55,9 @@ class ViewController: UIViewController {
     
     @objc func openTapped() {
         let alert = UIAlertController(title: "Open page...", message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "apple.com", style: .default, handler: openPage))
-        alert.addAction(UIAlertAction(title: "hackingwithswift.com", style: .default, handler: openPage))
+        for website in websites {
+            alert.addAction(UIAlertAction(title: website, style: .default, handler: openPage))
+        }
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         alert.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
         present(alert, animated: true)
@@ -81,6 +84,21 @@ extension ViewController: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         title = webView.title
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        let url = navigationAction.request.url
+        
+        if let host = url?.host {
+            for website in websites {
+                if host.contains(website) {
+                    decisionHandler(.allow)
+                    return
+                }
+            }
+        }
+        
+        decisionHandler(.cancel)
     }
     
 }
