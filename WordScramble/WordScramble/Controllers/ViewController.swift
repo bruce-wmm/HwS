@@ -61,10 +61,33 @@ class ViewController: UITableViewController {
     func submit(answer: String) {
         
         let lowercasedAnswer = answer.lowercased()
+        let errorTitle: String
+        let errorMessage: String
+        var alert = UIAlertController()
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
         
-        guard checkPossible(word: lowercasedAnswer),
-              checkOriginal(word: lowercasedAnswer),
-              checkReal(word: lowercasedAnswer) else { return }
+        guard checkPossible(word: lowercasedAnswer) else {
+            errorTitle = "Word not recognized"
+            errorMessage = "You can't just make them up, you know!"
+            alert = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
+            present(alert, animated: true)
+            return
+        }
+        guard checkOriginal(word: lowercasedAnswer) else {
+            errorTitle = "Word used already"
+            errorMessage = "Be more original!"
+            alert = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
+            present(alert, animated: true)
+            return
+        }
+        
+        guard checkReal(word: lowercasedAnswer) else {
+            errorTitle = "Word not possible"
+            errorMessage = "You can't spell that word from '\(title!.lowercased())'!"
+            alert = UIAlertController(title: errorTitle, message: errorMessage, preferredStyle: .alert)
+            present(alert, animated: true)
+            return
+        }
         
         usedWords.insert(answer, at: 0)
         tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
