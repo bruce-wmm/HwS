@@ -12,6 +12,8 @@
 		11EF951021146562005B7094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EF950E21146562005B7094 /* Main.storyboard */; };
 		11EF951221146563005B7094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11EF951121146563005B7094 /* Assets.xcassets */; };
 		11EF951521146563005B7094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EF951321146563005B7094 /* LaunchScreen.storyboard */; };
+		11EF95222115491C005B7094 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EF95212115491C005B7094 /* SwiftyJSON.swift */; };
+		11EF95242115EE4B005B7094 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EF95232115EE4B005B7094 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		11EF951121146563005B7094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11EF951421146563005B7094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11EF951621146563005B7094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11EF95212115491C005B7094 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		11EF95232115EE4B005B7094 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				11EF950C21146562005B7094 /* ViewController.swift */,
+				11EF95232115EE4B005B7094 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -91,6 +96,7 @@
 		11EF951F2114BA20005B7094 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				11EF95212115491C005B7094 /* SwiftyJSON.swift */,
 				11EF951621146563005B7094 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -175,8 +181,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11EF95222115491C005B7094 /* SwiftyJSON.swift in Sources */,
 				11EF950D21146562005B7094 /* ViewController.swift in Sources */,
 				11EF950B21146562005B7094 /* AppDelegate.swift in Sources */,
+				11EF95242115EE4B005B7094 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
