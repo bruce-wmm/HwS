@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--White House Petitions-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WHPetitions" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,7 +61,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Lww-B7-SoE"/>
+                    <navigationItem key="navigationItem" title="White House Petitions" largeTitleDisplayMode="always" id="Lww-B7-SoE"/>
                     <connections>
                         <outlet property="tableView" destination="z7D-G3-Ioy" id="ah0-r2-l1N"/>
                     </connections>
@@ -70,11 +70,11 @@
             </objects>
             <point key="canvasLocation" x="1775" y="-564"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="wr4-cv-L00">
             <objects>
                 <navigationController storyboardIdentifier="NavController" automaticallyAdjustsScrollViewInsets="NO" id="7pw-a4-ahz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Xed-kh-dRY"/>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="Xed-kh-dRY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dt0-uF-JFM">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

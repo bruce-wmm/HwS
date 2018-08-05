@@ -25,7 +25,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        getPetitionsFor(url: "https://api.whitehouse.gov/v1/petitions.json?limit=100")
+        if navigationController?.tabBarItem.tag == 0 {
+            getPetitionsFor(url: "https://api.whitehouse.gov/v1/petitions.json?limit=100")
+        } else {
+            getPetitionsFor(url: "https://api.whitehouse.gov/v1/petitions.json?signatureCountFloor=10000&limit=100")
+        }
     }
     
     // MARK: Helper Methods
@@ -36,9 +40,12 @@ class ViewController: UIViewController {
                 let json = JSON(parseJSON: data)
                 if json["metadata"]["responseInfo"]["status"].intValue == 200 {
                     parse(json: json)
+                    return
                 }
             }
         }
+        
+        showError()
     }
     
     func parse(json: JSON) {
@@ -51,6 +58,14 @@ class ViewController: UIViewController {
         }
         
         tableView.reloadData()
+    }
+    
+    func showError() {
+        let alert = UIAlertController(title: "Loading error",
+                                      message: "There was a problem loading the feed. Please check your connection and try again.",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 }
 
