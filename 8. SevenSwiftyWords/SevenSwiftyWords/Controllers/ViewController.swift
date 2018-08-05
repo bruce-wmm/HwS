@@ -8,13 +8,32 @@
 
 import UIKit
 
+// MARK: ViewController: UIViewController
+
 class ViewController: UIViewController {
 
+    // MARK: IB Outlets
+    
+    @IBOutlet weak var cluesLabel: UILabel!
+    @IBOutlet weak var answersLabel: UILabel!
+    @IBOutlet weak var currentAnswer: UITextField!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    // MARK: View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
-
+    // MARK: IB Actions
+    
+    @IBAction func submitTapped(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func clearTapped(_ sender: UIButton) {
+        
+    }
 }
 
