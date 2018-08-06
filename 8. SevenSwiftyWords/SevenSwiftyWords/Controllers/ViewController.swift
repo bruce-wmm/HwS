@@ -18,7 +18,11 @@ class ViewController: UIViewController {
     var letterButtons = [UIButton]()
     var activatedButtons = [UIButton]()
     var solutions = [String]()
-    var score = 0
+    var score = 0 {
+        didSet {
+            scoreLabel.text = "Score: \(score)"
+        }
+    }
     var level = 1
     
     // MARK: IB Outlets
@@ -45,7 +49,9 @@ class ViewController: UIViewController {
     // MARK: Helper Methods
     
     @objc func letterTapped(button: UIButton) {
-        
+        currentAnswer.text = currentAnswer.text! + button.titleLabel!.text!
+        activatedButtons.append(button)
+        button.isHidden = true
     }
     
     func loadLevel() {
@@ -80,15 +86,43 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    func levelUp(action: UIAlertAction) {
+        level += 1
+        solutions.removeAll(keepingCapacity: true)
+        loadLevel()
+        for button in letterButtons {
+            button.isHidden = false
+        }
+    }
 
     // MARK: IB Actions
     
     @IBAction func submitTapped(_ sender: UIButton) {
-        
+        if let solutionPosition = solutions.index(of: currentAnswer.text!) {
+            activatedButtons.removeAll()
+            var splitAnswers = answersLabel.text!.components(separatedBy: "\n")
+            splitAnswers[solutionPosition] = currentAnswer.text!
+            answersLabel.text = splitAnswers.joined(separator: "\n")
+            currentAnswer.text = ""
+            score += 1
+            if score % 7 == 0 {
+                let alert = UIAlertController(title: "Well done!",
+                                           message: "Are you ready for the next level?",
+                                           preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Let's go!",
+                                           style: .default, handler: levelUp))
+                present(alert, animated: true)
+            }
+        }
     }
     
     @IBAction func clearTapped(_ sender: UIButton) {
-        
+        currentAnswer.text = ""
+        for button in activatedButtons {
+            button.isHidden = false
+        }
+        activatedButtons.removeAll()
     }
 }
 
