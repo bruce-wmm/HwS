@@ -25,29 +25,31 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if navigationController?.tabBarItem.tag == 0 {
-            getPetitionsFor(url: "https://api.whitehouse.gov/v1/petitions.json?limit=100")
-        } else {
-            getPetitionsFor(url: "https://api.whitehouse.gov/v1/petitions.json?signatureCountFloor=10000&limit=100")
-        }
+        performSelector(inBackground: #selector(fetchJSON), with: nil)
     }
     
     // MARK: Helper Methods
     
-    func getPetitionsFor(url: String) {
+    @objc func fetchJSON() {
         
-        DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
-            if let url = URL(string: url) {
-                if let data = try? String(contentsOf: url) {
-                    let json = JSON(parseJSON: data)
-                    if json["metadata"]["responseInfo"]["status"].intValue == 200 {
-                        self.parse(json: json)
-                        return
-                    }
+        let urlString: String
+        
+        if navigationController?.tabBarItem.tag == 0 {
+            urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
+        } else {
+            urlString = "https://api.whitehouse.gov/v1/petitions.json?signatureCountFloor=10000&limit=100"
+        }
+        
+        if let url = URL(string: urlString) {
+            if let data = try? String(contentsOf: url) {
+                let json = JSON(parseJSON: data)
+                if json["metadata"]["responseInfo"]["status"].intValue == 200 {
+                    self.parse(json: json)
+                    return
                 }
             }
         }
-        showError()
+        performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
     }
     
     func parse(json: JSON) {
@@ -59,10 +61,10 @@ class ViewController: UIViewController {
             petitions.append(obj)
         }
         
-        tableView.reloadData()
+        tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil, waitUntilDone: false)
     }
     
-    func showError() {
+    @objc func showError() {
         let alert = UIAlertController(title: "Loading error",
                                       message: "There was a problem loading the feed. Please check your connection and try again.",
                                       preferredStyle: .alert)
