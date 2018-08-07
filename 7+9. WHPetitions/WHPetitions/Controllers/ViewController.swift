@@ -35,16 +35,18 @@ class ViewController: UIViewController {
     // MARK: Helper Methods
     
     func getPetitionsFor(url: String) {
-        if let url = URL(string: url) {
-            if let data = try? String(contentsOf: url) {
-                let json = JSON(parseJSON: data)
-                if json["metadata"]["responseInfo"]["status"].intValue == 200 {
-                    parse(json: json)
-                    return
+        
+        DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
+            if let url = URL(string: url) {
+                if let data = try? String(contentsOf: url) {
+                    let json = JSON(parseJSON: data)
+                    if json["metadata"]["responseInfo"]["status"].intValue == 200 {
+                        self.parse(json: json)
+                        return
+                    }
                 }
             }
         }
-        
         showError()
     }
     
