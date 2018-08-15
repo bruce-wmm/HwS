@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11E8F23B2120708C00C22573 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E8F23A2120708C00C22573 /* PersonCell.swift */; };
+		11E8F23D2124DAFD00C22573 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E8F23C2124DAFD00C22573 /* Person.swift */; };
 		11EF957D211B6AC8005B7094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EF957C211B6AC8005B7094 /* AppDelegate.swift */; };
 		11EF957F211B6AC8005B7094 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EF957E211B6AC8005B7094 /* ViewController.swift */; };
 		11EF9582211B6AC8005B7094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EF9580211B6AC8005B7094 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		11E8F23A2120708C00C22573 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		11E8F23C2124DAFD00C22573 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		11EF9579211B6AC8005B7094 /* NamesToFaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NamesToFaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11EF957C211B6AC8005B7094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11EF957E211B6AC8005B7094 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				11E8F23A2120708C00C22573 /* PersonCell.swift */,
+				11E8F23C2124DAFD00C22573 /* Person.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				11E8F23B2120708C00C22573 /* PersonCell.swift in Sources */,
 				11EF957F211B6AC8005B7094 /* ViewController.swift in Sources */,
+				11E8F23D2124DAFD00C22573 /* Person.swift in Sources */,
 				11EF957D211B6AC8005B7094 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
