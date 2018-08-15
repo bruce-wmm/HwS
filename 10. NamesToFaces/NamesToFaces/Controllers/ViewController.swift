@@ -44,6 +44,17 @@ class ViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let person = people[indexPath.item]
+        
+        let alert = UIAlertController(title: "Rename person", message: nil, preferredStyle: .alert)
+        alert.addTextField()
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        alert.addAction(UIAlertAction(title: "OK", style: .default) { [unowned self, alert] _ in
+            let newName = alert.textFields![0]
+            person.name = newName.text!
+            self.collectionView?.reloadData()
+        })
+        present(alert, animated: true)
     }
     
     // MARK: UICollectionView Data Source Methods
