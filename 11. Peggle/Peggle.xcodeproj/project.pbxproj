@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110A4027212B7311000338EB /* FireParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 110A4026212B7311000338EB /* FireParticles.sks */; };
 		11E8F24B2124EFCA00C22573 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E8F24A2124EFCA00C22573 /* AppDelegate.swift */; };
 		11E8F24D2124EFCA00C22573 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 11E8F24C2124EFCA00C22573 /* GameScene.sks */; };
 		11E8F2512124EFCA00C22573 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E8F2502124EFCA00C22573 /* GameScene.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110A4026212B7311000338EB /* FireParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireParticles.sks; sourceTree = "<group>"; };
 		11E8F2472124EFCA00C22573 /* Peggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11E8F24A2124EFCA00C22573 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11E8F24C2124EFCA00C22573 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		11E8F2622124EFE500C22573 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				110A4026212B7311000338EB /* FireParticles.sks */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			files = (
 				11E8F2562124EFCA00C22573 /* Main.storyboard in Resources */,
 				11E8F24D2124EFCA00C22573 /* GameScene.sks in Resources */,
+				110A4027212B7311000338EB /* FireParticles.sks in Resources */,
 				11E8F2582124EFCB00C22573 /* Assets.xcassets in Resources */,
 				11E8F25B2124EFCB00C22573 /* LaunchScreen.storyboard in Resources */,
 			);
