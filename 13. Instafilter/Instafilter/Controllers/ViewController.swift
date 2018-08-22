@@ -30,5 +30,9 @@ class ViewController: UIViewController {
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         
     }
+    
+    @IBAction func intensityChanged(_ sender: UISlider) {
+        
+    }
 }
 
