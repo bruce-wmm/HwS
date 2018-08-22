@@ -23,6 +23,10 @@ class ViewController: UICollectionViewController {
 
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addNewPerson))
         
+        let defaults = UserDefaults.standard
+        if let savedPeople = defaults.object(forKey: "people") as? Data {
+            people = NSKeyedUnarchiver.unarchiveObject(with: savedPeople) as! [Person]
+        }
     }
 
     // MARK: Helper Methods
@@ -40,6 +44,12 @@ class ViewController: UICollectionViewController {
         return documentsDirectory
     }
     
+    func save() {
+        let savedData = NSKeyedArchiver.archivedData(withRootObject: people)
+        let defaults = UserDefaults.standard
+        defaults.set(savedData, forKey: "people")
+    }
+    
     // MARK: UICollectionView Delegate Methods
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -53,6 +63,7 @@ class ViewController: UICollectionViewController {
             let newName = alert.textFields![0]
             person.name = newName.text!
             self.collectionView?.reloadData()
+            self.save()
         })
         present(alert, animated: true)
     }
@@ -100,6 +111,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         collectionView?.reloadData()
         
         dismiss(animated: true)
+        self.save()
     }
     
 }
