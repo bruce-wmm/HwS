@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreImage
 
 // MARK: ViewController: UIViewController
 
@@ -15,6 +16,8 @@ class ViewController: UIViewController {
     // MARK: Properties
     
     var currentImage: UIImage!
+    var context: CIContext!
+    var currentFilter: CIFilter!
     
     // MARK: IB Outlets
     
@@ -29,6 +32,8 @@ class ViewController: UIViewController {
         title = "Instafilter"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(importPicture))
         
+        context = CIContext()
+        currentFilter = CIFilter(name: "CISepiaTone")
     }
     
     // MARK: Helper Methods
@@ -38,6 +43,14 @@ class ViewController: UIViewController {
         picker.allowsEditing = true
         picker.delegate = self
         present(picker, animated: true)
+    }
+    
+    func applyProcessing() {
+        currentFilter.setValue(slider.value, forKey: kCIInputIntensityKey)
+        if let cgimg = context.createCGImage(currentFilter.outputImage!, from: currentFilter.outputImage!.extent) {
+            let processedImage = UIImage(cgImage: cgimg)
+            imageView.image = processedImage
+        }
     }
 
     // MARK: IB Actions
@@ -51,7 +64,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func intensityChanged(_ sender: UISlider) {
-        
+        applyProcessing()
     }
 }
 
@@ -61,6 +74,11 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
         dismiss(animated: true, completion: nil)
         currentImage = image
+        
+        let beginImage = CIImage(image: currentImage)
+        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        
+        applyProcessing()
     }
 }
 
