@@ -46,17 +46,55 @@ class ViewController: UIViewController {
     }
     
     func applyProcessing() {
-        currentFilter.setValue(slider.value, forKey: kCIInputIntensityKey)
+        let inputKeys = currentFilter.inputKeys
+        if inputKeys.contains(kCIInputIntensityKey) {
+            currentFilter.setValue(slider.value, forKey: kCIInputIntensityKey)
+        }
+        if inputKeys.contains(kCIInputRadiusKey) {
+            currentFilter.setValue(slider.value * 200, forKey: kCIInputRadiusKey)
+        }
+        if inputKeys.contains(kCIInputScaleKey) {
+            currentFilter.setValue(slider.value * 10, forKey: kCIInputScaleKey)
+        }
+        if inputKeys.contains(kCIInputCenterKey) {
+            currentFilter.setValue(CIVector(x: currentImage.size.width / 2, y: currentImage.size.height / 2), forKey: kCIInputCenterKey)
+        }
         if let cgimg = context.createCGImage(currentFilter.outputImage!, from: currentFilter.outputImage!.extent) {
             let processedImage = UIImage(cgImage: cgimg)
-            imageView.image = processedImage
+            self.imageView.image = processedImage
         }
+        
+    }
+    
+    func setFilter(action: UIAlertAction) {
+        guard currentImage != nil else { return }
+        currentFilter = CIFilter(name: action.title!)
+        let beginImage = CIImage(image: currentImage)
+        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        applyProcessing()
     }
 
     // MARK: IB Actions
     
     @IBAction func changeFilterButtonPressed(_ sender: UIButton) {
-    
+        let alert = UIAlertController(title: "Choose filter", message:
+            nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "CIBumpDistortion",
+                                   style: .default, handler: setFilter))
+        alert.addAction(UIAlertAction(title: "CIGaussianBlur",
+                                   style: .default, handler: setFilter))
+        alert.addAction(UIAlertAction(title: "CIPixellate",
+                                   style: .default, handler: setFilter))
+        alert.addAction(UIAlertAction(title: "CISepiaTone",
+                                   style: .default, handler: setFilter))
+        alert.addAction(UIAlertAction(title: "CITwirlDistortion",
+                                   style: .default, handler: setFilter))
+        alert.addAction(UIAlertAction(title: "CIUnsharpMask",
+                                   style: .default, handler: setFilter))
+        alert.addAction(UIAlertAction(title: "CIVignette",
+                                   style: .default, handler: setFilter))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(alert, animated: true)
     }
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
