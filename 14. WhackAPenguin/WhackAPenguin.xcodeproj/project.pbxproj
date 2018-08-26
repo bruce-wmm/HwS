@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1107035B213335AE00D4EE8E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1107035A213335AE00D4EE8E /* Helper.swift */; };
+		1107035D2133392200D4EE8E /* WhackSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1107035C2133392200D4EE8E /* WhackSlot.swift */; };
 		11D2C2682130D2FE00817E50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D2C2672130D2FE00817E50 /* AppDelegate.swift */; };
 		11D2C26A2130D2FE00817E50 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 11D2C2692130D2FE00817E50 /* GameScene.sks */; };
 		11D2C26E2130D2FE00817E50 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D2C26D2130D2FE00817E50 /* GameScene.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		1107035A213335AE00D4EE8E /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		1107035C2133392200D4EE8E /* WhackSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhackSlot.swift; sourceTree = "<group>"; };
 		11D2C2642130D2FE00817E50 /* WhackAPenguin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhackAPenguin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11D2C2672130D2FE00817E50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11D2C2692130D2FE00817E50 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				11D2C26D2130D2FE00817E50 /* GameScene.swift */,
+				1107035C2133392200D4EE8E /* WhackSlot.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11D2C26E2130D2FE00817E50 /* GameScene.swift in Sources */,
+				1107035D2133392200D4EE8E /* WhackSlot.swift in Sources */,
 				11D2C2702130D2FE00817E50 /* GameViewController.swift in Sources */,
 				11D2C2682130D2FE00817E50 /* AppDelegate.swift in Sources */,
 				1107035B213335AE00D4EE8E /* Helper.swift in Sources */,
