@@ -27,13 +27,26 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         imageView = UIImageView(image: UIImage(named: "penguin"))
-        imageView.center = CGPoint(x: 512, y: 384)
+        imageView.frame.size = CGSize(width: 150, height: 150)
+        imageView.center = CGPoint(x: 512, y: view.frame.height / 2)
+        imageView.contentMode = .scaleAspectFit
         view.addSubview(imageView)
     }
     
     // MARK: IB Actions
     
     @IBAction func tapped(_ sender: UIButton) {
+        tap.isHidden = true
+        UIView.animate(withDuration: 1, delay: 0, options: [], animations: { [unowned self] in
+            switch self.currentAnimation {
+                case 0:
+                    break
+                default:
+                    break
+            }
+        }) { [unowned self] (finished: Bool) in
+            self.tap.isHidden = false
+        }
         currentAnimation += 1
         if currentAnimation > 7 {
             currentAnimation = 0
