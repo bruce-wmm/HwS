@@ -12,7 +12,10 @@ class ViewController: UIViewController {
     
     // MARK: Properties
     
-    var countries = [Country]()
+    var countries = [Country(name: "United States of America",
+                             capital: "Washington, D.C.",
+                             population: 380000000,
+                             currency: "Dollar")]
     
     // MARK: IB Outlets
     
@@ -22,15 +25,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let USA = Country(name: "United States of America",
-                          capital: "Washington, D.C.",
-                          population: 380000000,
-                          currency: "Dollar")
-        
-        countries.append(USA)
     }
 
 }
+
+// MARK: 
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -44,7 +43,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CountryCell") as! CountryCell
+        cell.countryImageView.image = UIImage(named: "united-states-of-america")
+        cell.countryTitle.text = countries[indexPath.row].name
+        cell.countrySubtitle.text = countries[indexPath.row].capital
+        
+        return cell
     }
-    
 }
