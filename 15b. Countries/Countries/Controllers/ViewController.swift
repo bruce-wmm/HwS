@@ -9,14 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     // MARK: Properties
     
     var countries = [Country]()
     
+    // MARK: IB Outlets
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let USA = Country(name: "United States of America",
+                          capital: "Washington, D.C.",
+                          population: 380000000,
+                          currency: "Dollar")
         
+        countries.append(USA)
     }
 
 }
@@ -24,7 +35,8 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as! DetailViewController
+        present(detailVC, animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

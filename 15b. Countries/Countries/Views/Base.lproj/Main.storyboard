@@ -31,7 +31,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oaZ-QZ-vvX">
                                                     <rect key="frame" x="8" y="8" width="359" height="63.5"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kwo-CP-LDT">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="united-states-of-america" translatesAutoresizingMaskIntoConstraints="NO" id="Kwo-CP-LDT">
                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="63.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="60" id="HeO-C2-HEV"/>
@@ -40,15 +40,15 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Sza-M1-QTA">
                                                             <rect key="frame" x="70" y="0.0" width="289" height="63.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COUNTRY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3d-d5-sP1">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="United States of America" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3d-d5-sP1">
                                                                     <rect key="frame" x="0.0" y="0.0" width="289" height="32"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="16"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSM-XY-8Xw">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Washington, D.C." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSM-XY-8Xw">
                                                                     <rect key="frame" x="0.0" y="32" width="289" height="31.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -87,10 +87,47 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="hEP-vC-LLu"/>
+                    <connections>
+                        <outlet property="tableView" destination="31U-dg-YYA" id="TXW-6a-js1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1228" y="140"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="xyT-QA-KBh">
+            <objects>
+                <viewController id="zOz-jB-ATA" customClass="DetailViewController" customModule="Countries" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CFh-ff-lrk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vp6-gi-9e6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vp6-gi-9e6" firstAttribute="top" secondItem="J1u-23-lA5" secondAttribute="top" id="Fcu-Pt-6AE"/>
+                            <constraint firstItem="J1u-23-lA5" firstAttribute="trailing" secondItem="Vp6-gi-9e6" secondAttribute="trailing" id="jZU-04-rwP"/>
+                            <constraint firstItem="J1u-23-lA5" firstAttribute="bottom" secondItem="Vp6-gi-9e6" secondAttribute="bottom" id="otp-w7-wwM"/>
+                            <constraint firstItem="Vp6-gi-9e6" firstAttribute="leading" secondItem="J1u-23-lA5" secondAttribute="leading" id="sMM-Ja-GNA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="J1u-23-lA5"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Vp6-gi-9e6" id="Ksr-yp-vej"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ojb-kz-LLB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2022" y="140"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="aT4-MG-095">
@@ -111,4 +148,7 @@
             <point key="canvasLocation" x="428" y="139.880059970015"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="united-states-of-america" width="512" height="512"/>
+    </resources>
 </document>

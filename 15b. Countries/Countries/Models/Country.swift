@@ -8,11 +8,11 @@
 
 import Foundation
 
-class Country {
+struct Country {
     
-    var name: String?
-    var capital: String?
-    var population: Int?
-    var currency: String?
+    var name: String
+    var capital: String
+    var population: Int
+    var currency: String
     
 }
