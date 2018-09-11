@@ -43,7 +43,27 @@ class ActionViewController: UIViewController {
                 }
             }
         }
+        
+        // Handle Keyboard
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard),
+                                       name: UIWindow.keyboardWillHideNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard),
+                                       name: UIWindow.keyboardWillChangeFrameNotification, object: nil)
 
+    }
+    
+    @objc func adjustForKeyboard(notification: Notification) {
+        let userInfo = notification.userInfo!
+        let keyboardScreenEndFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+        if notification.name == UIWindow.keyboardWillHideNotification {
+            script.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height, right: 0)
+        }
+        script.scrollIndicatorInsets = script.contentInset
+        let selectedRange = script.selectedRange
+        script.scrollRangeToVisible(selectedRange)
     }
     
     // MARK: IB Actions
