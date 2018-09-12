@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		11C83001214217AB0016055A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C83000214217AB0016055A /* AppDelegate.swift */; };
 		11C83003214217AB0016055A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 11C83002214217AB0016055A /* GameScene.sks */; };
-		11C83005214217AB0016055A /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 11C83004214217AB0016055A /* Actions.sks */; };
 		11C83007214217AB0016055A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C83006214217AB0016055A /* GameScene.swift */; };
 		11C83009214217AB0016055A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C83008214217AB0016055A /* GameViewController.swift */; };
 		11C8300C214217AB0016055A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C8300A214217AB0016055A /* Main.storyboard */; };
@@ -18,10 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		11C82FFD214217AB0016055A /* FlappyPenguin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlappyPenguin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11C82FFD214217AB0016055A /* FruityPenguins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FruityPenguins.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C83000214217AB0016055A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11C83002214217AB0016055A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		11C83004214217AB0016055A /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		11C83006214217AB0016055A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		11C83008214217AB0016055A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		11C8300B214217AB0016055A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,7 +42,7 @@
 		11C82FF4214217AB0016055A = {
 			isa = PBXGroup;
 			children = (
-				11C82FFF214217AB0016055A /* FlappyPenguin */,
+				11C82FFF214217AB0016055A /* FruityPenguins */,
 				11C82FFE214217AB0016055A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,33 +50,88 @@
 		11C82FFE214217AB0016055A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11C82FFD214217AB0016055A /* FlappyPenguin.app */,
+				11C82FFD214217AB0016055A /* FruityPenguins.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		11C82FFF214217AB0016055A /* FlappyPenguin */ = {
+		11C82FFF214217AB0016055A /* FruityPenguins */ = {
 			isa = PBXGroup;
 			children = (
 				11C83000214217AB0016055A /* AppDelegate.swift */,
-				11C83002214217AB0016055A /* GameScene.sks */,
-				11C83004214217AB0016055A /* Actions.sks */,
-				11C83006214217AB0016055A /* GameScene.swift */,
-				11C83008214217AB0016055A /* GameViewController.swift */,
-				11C8300A214217AB0016055A /* Main.storyboard */,
+				11C830252149C7B00016055A /* Models */,
+				11C830202149C7680016055A /* Views */,
+				11C830222149C7880016055A /* Controllers */,
+				11C8301F2149C7510016055A /* Resources */,
+				11C830212149C76B0016055A /* Supporting Files */,
+			);
+			path = FruityPenguins;
+			sourceTree = "<group>";
+		};
+		11C8301F2149C7510016055A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				11C8300D214217AC0016055A /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		11C830202149C7680016055A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				11C830262149C7B50016055A /* Scenes */,
+				11C8300A214217AB0016055A /* Main.storyboard */,
 				11C8300F214217AC0016055A /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		11C830212149C76B0016055A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				11C83012214217AC0016055A /* Info.plist */,
 			);
-			path = FlappyPenguin;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11C830222149C7880016055A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				11C830242149C79C0016055A /* Scenes */,
+				11C83008214217AB0016055A /* GameViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		11C830242149C79C0016055A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				11C83006214217AB0016055A /* GameScene.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		11C830252149C7B00016055A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		11C830262149C7B50016055A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				11C83002214217AB0016055A /* GameScene.sks */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		11C82FFC214217AB0016055A /* FlappyPenguin */ = {
+		11C82FFC214217AB0016055A /* FruityPenguins */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11C83015214217AC0016055A /* Build configuration list for PBXNativeTarget "FlappyPenguin" */;
+			buildConfigurationList = 11C83015214217AC0016055A /* Build configuration list for PBXNativeTarget "FruityPenguins" */;
 			buildPhases = (
 				11C82FF9214217AB0016055A /* Sources */,
 				11C82FFA214217AB0016055A /* Frameworks */,
@@ -88,9 +141,9 @@
 			);
 			dependencies = (
 			);
-			name = FlappyPenguin;
+			name = FruityPenguins;
 			productName = FlappyPenguin;
-			productReference = 11C82FFD214217AB0016055A /* FlappyPenguin.app */;
+			productReference = 11C82FFD214217AB0016055A /* FruityPenguins.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +161,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 11C82FF8214217AB0016055A /* Build configuration list for PBXProject "FlappyPenguin" */;
+			buildConfigurationList = 11C82FF8214217AB0016055A /* Build configuration list for PBXProject "FruityPenguins" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,7 +174,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				11C82FFC214217AB0016055A /* FlappyPenguin */,
+				11C82FFC214217AB0016055A /* FruityPenguins */,
 			);
 		};
 /* End PBXProject section */
@@ -135,7 +188,6 @@
 				11C83003214217AB0016055A /* GameScene.sks in Resources */,
 				11C8300E214217AC0016055A /* Assets.xcassets in Resources */,
 				11C83011214217AC0016055A /* LaunchScreen.storyboard in Resources */,
-				11C83005214217AB0016055A /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +351,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Neil-Hiddink.FlappyPenguin";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Neil-Hiddink.FruityPenguins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,7 +369,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Neil-Hiddink.FlappyPenguin";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Neil-Hiddink.FruityPenguins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -327,7 +379,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		11C82FF8214217AB0016055A /* Build configuration list for PBXProject "FlappyPenguin" */ = {
+		11C82FF8214217AB0016055A /* Build configuration list for PBXProject "FruityPenguins" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				11C83013214217AC0016055A /* Debug */,
@@ -336,7 +388,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		11C83015214217AC0016055A /* Build configuration list for PBXNativeTarget "FlappyPenguin" */ = {
+		11C83015214217AC0016055A /* Build configuration list for PBXNativeTarget "FruityPenguins" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				11C83016214217AC0016055A /* Debug */,
