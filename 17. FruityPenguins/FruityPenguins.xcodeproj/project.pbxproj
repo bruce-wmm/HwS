@@ -14,6 +14,7 @@
 		11C8300C214217AB0016055A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C8300A214217AB0016055A /* Main.storyboard */; };
 		11C8300E214217AC0016055A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11C8300D214217AC0016055A /* Assets.xcassets */; };
 		11C83011214217AC0016055A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C8300F214217AC0016055A /* LaunchScreen.storyboard */; };
+		11F63764214B3EBF00F45F46 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F63763214B3EBF00F45F46 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,14 @@
 		11C8300D214217AC0016055A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11C83010214217AC0016055A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11C83012214217AC0016055A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11F6375C214B3E8B00F45F46 /* launch.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = launch.caf; sourceTree = "<group>"; };
+		11F6375D214B3E8B00F45F46 /* wrong.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = wrong.caf; sourceTree = "<group>"; };
+		11F6375E214B3E8B00F45F46 /* swoosh2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swoosh2.caf; sourceTree = "<group>"; };
+		11F6375F214B3E8B00F45F46 /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = whack.caf; sourceTree = "<group>"; };
+		11F63760214B3E8C00F45F46 /* explosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = explosion.caf; sourceTree = "<group>"; };
+		11F63761214B3E8C00F45F46 /* swoosh3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swoosh3.caf; sourceTree = "<group>"; };
+		11F63762214B3E8C00F45F46 /* swoosh1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = swoosh1.caf; sourceTree = "<group>"; };
+		11F63763214B3EBF00F45F46 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				11C83000214217AB0016055A /* AppDelegate.swift */,
-				11C830252149C7B00016055A /* Models */,
+				11F6375A214B3DE900F45F46 /* Models */,
 				11C830202149C7680016055A /* Views */,
 				11C830222149C7880016055A /* Controllers */,
 				11C8301F2149C7510016055A /* Resources */,
@@ -71,6 +80,7 @@
 		11C8301F2149C7510016055A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				11F6375B214B3E7900F45F46 /* Sounds */,
 				11C8300D214217AC0016055A /* Assets.xcassets */,
 			);
 			name = Resources;
@@ -89,6 +99,7 @@
 		11C830212149C76B0016055A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				11F63763214B3EBF00F45F46 /* Helper.swift */,
 				11C83012214217AC0016055A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -111,19 +122,33 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		11C830252149C7B00016055A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		11C830262149C7B50016055A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				11C83002214217AB0016055A /* GameScene.sks */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		11F6375A214B3DE900F45F46 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		11F6375B214B3E7900F45F46 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				11F63760214B3E8C00F45F46 /* explosion.caf */,
+				11F6375C214B3E8B00F45F46 /* launch.caf */,
+				11F63762214B3E8C00F45F46 /* swoosh1.caf */,
+				11F6375E214B3E8B00F45F46 /* swoosh2.caf */,
+				11F63761214B3E8C00F45F46 /* swoosh3.caf */,
+				11F6375F214B3E8B00F45F46 /* whack.caf */,
+				11F6375D214B3E8B00F45F46 /* wrong.caf */,
+			);
+			name = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +226,7 @@
 				11C83007214217AB0016055A /* GameScene.swift in Sources */,
 				11C83009214217AB0016055A /* GameViewController.swift in Sources */,
 				11C83001214217AB0016055A /* AppDelegate.swift in Sources */,
+				11F63764214B3EBF00F45F46 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
