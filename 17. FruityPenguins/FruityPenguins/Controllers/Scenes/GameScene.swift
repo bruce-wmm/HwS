@@ -46,6 +46,8 @@ class GameScene: SKScene {
     var chainDelay = 3.0
     var nextSequenceQueued = true
     
+    var gameEnded = false
+    
     // MARK: Scene Life Cycle
     
     override func didMove(to view: SKView) {
@@ -236,6 +238,7 @@ class GameScene: SKScene {
     }
     
     func tossEnemies() {
+        guard !gameEnded else { return }
         popupTime *= 0.991
         chainDelay *= 0.99
         physicsWorld.speed *= 1.02
@@ -277,6 +280,42 @@ class GameScene: SKScene {
         nextSequenceQueued = false
     }
     
+    func subtractLife() {
+        lives -= 1
+        run(SKAction.playSoundFileNamed("wrong.caf", waitForCompletion: false))
+        var life: SKSpriteNode
+        if lives == 2 {
+            life = livesImages[0]
+        } else if lives == 1 {
+            life = livesImages[1]
+        } else {
+            life = livesImages[2]
+            endGame(triggeredByBomb: false)
+        }
+        life.texture = SKTexture(imageNamed: "sliceLifeGone")
+        life.xScale = 1.3
+        life.yScale = 1.3
+        life.run(SKAction.scale(to: 1, duration:0.1))
+    }
+    
+    func endGame(triggeredByBomb: Bool) {
+        if gameEnded {
+            return
+        }
+        gameEnded = true
+        physicsWorld.speed = 0
+        isUserInteractionEnabled = false
+        if bombSoundEffect != nil {
+            bombSoundEffect.stop()
+            bombSoundEffect = nil
+        }
+        if triggeredByBomb {
+            livesImages[0].texture = SKTexture(imageNamed: "sliceLifeGone")
+            livesImages[1].texture = SKTexture(imageNamed: "sliceLifeGone")
+            livesImages[2].texture = SKTexture(imageNamed: "sliceLifeGone")
+        }
+    }
+    
     // MARK: Touch Methods
     
     override func touchesBegan(_ touches: Set<UITouch>, with event:
@@ -300,12 +339,47 @@ class GameScene: SKScene {
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard !gameEnded else { return }
         guard let touch = touches.first else { return }
         let location = touch.location(in: self)
         activeSlicePoints.append(location)
         redrawActiveSlice()
         if !isSwooshSoundActive {
             playSwooshSound()
+        }
+        
+        let nodesAtPoint = nodes(at: location)
+        for node in nodesAtPoint {
+            if node.name == "enemy" {
+                let emitter = SKEmitterNode(fileNamed: "sliceHitEnemy")!
+                emitter.position = node.position
+                addChild(emitter)
+                node.name = ""
+                node.physicsBody?.isDynamic = false
+                let scaleOut = SKAction.scale(to: 0.001, duration:0.2)
+                let fadeOut = SKAction.fadeOut(withDuration: 0.2)
+                let group = SKAction.group([scaleOut, fadeOut])
+                node.run(SKAction.sequence([group, SKAction.removeFromParent()]))
+                score += 1
+                let index = activeEnemies.index(of: node as! SKSpriteNode)!
+                activeEnemies.remove(at: index)
+                run(SKAction.playSoundFileNamed("whack.caf", waitForCompletion:
+                    false))
+            } else if node.name == "bomb" {
+                let emitter = SKEmitterNode(fileNamed: "sliceHitBomb")!
+                emitter.position = node.parent!.position
+                addChild(emitter)
+                node.name = ""
+                node.parent?.physicsBody?.isDynamic = false
+                let scaleOut = SKAction.scale(to: 0.001, duration:0.2)
+                let fadeOut = SKAction.fadeOut(withDuration: 0.2)
+                let group = SKAction.group([scaleOut, fadeOut])
+                node.parent?.run(SKAction.sequence([group, SKAction.removeFromParent()]))
+                let index = activeEnemies.index(of: node.parent as! SKSpriteNode)!
+                activeEnemies.remove(at: index)
+                run(SKAction.playSoundFileNamed("explosion.caf", waitForCompletion: false))
+                endGame(triggeredByBomb: true)
+            }
         }
     }
     
