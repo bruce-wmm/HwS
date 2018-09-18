@@ -12,6 +12,17 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Debug with print statements
+        print("Hello, world!")
+        
+        // Debug with assert statements
+        assert(1 == 1, "DANGER. WILL. ROBINSON.")
+        
+        // Debug with breakpoints
+        for i in 1 ... 100 {
+            print("Got number \(i)")
+        }
     }
 
 }
