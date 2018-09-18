@@ -51,29 +51,8 @@ class GameScene: SKScene {
     // MARK: Scene Life Cycle
     
     override func didMove(to view: SKView) {
-        let background = SKSpriteNode(imageNamed: "sliceBackground")
-        background.anchorPoint = CGPoint(x: 0, y: 0)
-        background.position = CGPoint(x: 0, y: 0)
-        background.blendMode = .replace
-        background.zPosition = -1
-        addChild(background)
-        
-        physicsWorld.gravity = CGVector(dx: 0, dy: -6)
-        physicsWorld.speed = 0.85
-        
-        createScore()
-        createLives()
-        createSlices()
-        
-        sequence = [.oneNoBomb, .oneNoBomb, .twoWithOneBomb, .twoWithOneBomb, .three, .one, .chain]
-        for _ in 0 ... 1000 {
-            let nextSequence = SequenceType(rawValue: RandomInt(min: 2, max: 7))!
-            sequence.append(nextSequence)
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [unowned
-            self] in
-            self.tossEnemies()
-        }
+        super.didMove(to: view)
+        setupUI()
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -99,8 +78,7 @@ class GameScene: SKScene {
             }
         } else {
             if !nextSequenceQueued {
-                DispatchQueue.main.asyncAfter(deadline: .now() +
-                popupTime) { [unowned self] in
+                DispatchQueue.main.asyncAfter(deadline: .now() + popupTime) { [unowned self] in
                     self.tossEnemies()
                 }
                 nextSequenceQueued = true
@@ -110,6 +88,31 @@ class GameScene: SKScene {
     }
     
     // MARK: Helper Methods
+    
+    func setupUI() {
+        let background = SKSpriteNode(imageNamed: "sliceBackground")
+        background.anchorPoint = CGPoint(x: 0, y: 0)
+        background.position = CGPoint(x: 0, y: 0)
+        background.blendMode = .replace
+        background.zPosition = -1
+        addChild(background)
+        
+        physicsWorld.gravity = CGVector(dx: 0, dy: -6)
+        physicsWorld.speed = 0.85
+        
+        createScore()
+        createLives()
+        createSlices()
+        
+        sequence = [.oneNoBomb, .oneNoBomb, .twoWithOneBomb, .twoWithOneBomb, .three, .one, .chain]
+        for _ in 0 ... 1000 {
+            let nextSequence = SequenceType(rawValue: RandomInt(min: 2, max: 7))!
+            sequence.append(nextSequence)
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [unowned self] in
+            self.tossEnemies()
+        }
+    }
     
     func createScore() {
         scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
@@ -299,12 +302,10 @@ class GameScene: SKScene {
     }
     
     func endGame(triggeredByBomb: Bool) {
-        if gameEnded {
-            return
-        }
+        guard !gameEnded else { return }
         gameEnded = true
         physicsWorld.speed = 0
-        isUserInteractionEnabled = false
+        //isUserInteractionEnabled = false
         if bombSoundEffect != nil {
             bombSoundEffect.stop()
             bombSoundEffect = nil
@@ -314,14 +315,35 @@ class GameScene: SKScene {
             livesImages[1].texture = SKTexture(imageNamed: "sliceLifeGone")
             livesImages[2].texture = SKTexture(imageNamed: "sliceLifeGone")
         }
+        
+        let newGameLabel = SKLabelNode(text: "Swipe Anywhere for New Game")
+        newGameLabel.name = "newGameLabel"
+        newGameLabel.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
+        newGameLabel.fontName = "Menlo"
+        newGameLabel.fontSize = 40.0
+        newGameLabel.fontColor = UIColor.white
+        addChild(newGameLabel)
     }
     
     // MARK: Touch Methods
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event:
-        UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-
+        
+        if childNode(withName: "newGameLabel") != nil {
+            for node in children {
+                node.removeFromParent()
+            }
+            lives = 3
+            score = 0
+            popupTime = 0.9
+            sequencePosition = 0
+            chainDelay = 3.0
+            nextSequenceQueued = true
+            gameEnded = false
+            setupUI()
+        }
+        
         activeSlicePoints.removeAll(keepingCapacity: true)
 
         if let touch = touches.first {
