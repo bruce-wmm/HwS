@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		11A516A42151988600F60FD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A516A32151988600F60FD7 /* AppDelegate.swift */; };
-		11A516A62151988600F60FD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A516A52151988600F60FD7 /* ViewController.swift */; };
+		11A516A62151988600F60FD7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A516A52151988600F60FD7 /* HomeViewController.swift */; };
 		11A516A92151988600F60FD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A516A72151988600F60FD7 /* Main.storyboard */; };
 		11A516AB2151988700F60FD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A516AA2151988700F60FD7 /* Assets.xcassets */; };
 		11A516AE2151988700F60FD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A516AC2151988700F60FD7 /* LaunchScreen.storyboard */; };
+		11A516BB21528C5600F60FD7 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A516BA21528C5600F60FD7 /* NoteCell.swift */; };
+		11A516BD215292D600F60FD7 /* FolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A516BC215292D600F60FD7 /* FolderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11A516A02151988600F60FD7 /* AppleNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A516A32151988600F60FD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11A516A52151988600F60FD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		11A516A52151988600F60FD7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		11A516A82151988600F60FD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11A516AA2151988700F60FD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11A516AD2151988700F60FD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11A516AF2151988700F60FD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11A516BA21528C5600F60FD7 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		11A516BC215292D600F60FD7 /* FolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 		11A516B5215198A300F60FD7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				11A516BA21528C5600F60FD7 /* NoteCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -83,7 +88,8 @@
 		11A516B7215198B200F60FD7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				11A516A52151988600F60FD7 /* ViewController.swift */,
+				11A516A52151988600F60FD7 /* HomeViewController.swift */,
+				11A516BC215292D600F60FD7 /* FolderViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -175,7 +181,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11A516A62151988600F60FD7 /* ViewController.swift in Sources */,
+				11A516BD215292D600F60FD7 /* FolderViewController.swift in Sources */,
+				11A516BB21528C5600F60FD7 /* NoteCell.swift in Sources */,
+				11A516A62151988600F60FD7 /* HomeViewController.swift in Sources */,
 				11A516A42151988600F60FD7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
