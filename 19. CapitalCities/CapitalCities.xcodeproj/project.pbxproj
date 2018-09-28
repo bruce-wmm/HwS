@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		110CC89B215E3569000D615B /* Capital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CC89A215E3569000D615B /* Capital.swift */; };
+		110CC89D215E3FE6000D615B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CC89C215E3FE6000D615B /* DetailViewController.swift */; };
 		11A516812151943D00F60FD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A516802151943D00F60FD7 /* AppDelegate.swift */; };
 		11A516832151943D00F60FD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A516822151943D00F60FD7 /* ViewController.swift */; };
 		11A516862151943D00F60FD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A516842151943D00F60FD7 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		110CC89A215E3569000D615B /* Capital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capital.swift; sourceTree = "<group>"; };
+		110CC89C215E3FE6000D615B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		11A5167D2151943D00F60FD7 /* CapitalCities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapitalCities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A516802151943D00F60FD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11A516822151943D00F60FD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				11A516822151943D00F60FD7 /* ViewController.swift */,
+				110CC89C215E3FE6000D615B /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				11A516832151943D00F60FD7 /* ViewController.swift in Sources */,
 				11A516812151943D00F60FD7 /* AppDelegate.swift in Sources */,
 				110CC89B215E3569000D615B /* Capital.swift in Sources */,
+				110CC89D215E3FE6000D615B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

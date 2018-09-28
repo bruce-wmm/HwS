@@ -23,8 +23,10 @@ class ViewController: UIViewController {
                                        info: "Often called the City of Light."),
                                Capital(title: "Rome", coordinate: CLLocationCoordinate2D(latitude: 41.9, longitude: 12.5),
                                        info: "Has a whole country inside it."),
-                               Capital(title: "Washington DC", coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667),
+                               Capital(title: "Washington, D.C.", coordinate: CLLocationCoordinate2D(latitude: 38.895111, longitude: -77.036667),
                                        info: "Named after George himself.")]
+    
+    var currentCapital: Capital?
     
     // MARK: IB Outlets
     
@@ -51,6 +53,8 @@ extension ViewController: MKMapViewDelegate {
                 annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 annotationView!.canShowCallout = true
                 
+                currentCapital = (annotation as! Capital)
+                
                 let button = UIButton(type: .detailDisclosure)
                 annotationView!.rightCalloutAccessoryView = button
             } else {
@@ -61,6 +65,12 @@ extension ViewController: MKMapViewDelegate {
         }
         
         return nil
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as! DetailViewController
+        detailVC.capital = currentCapital
+        present(detailVC, animated: true)
     }
 }
 
