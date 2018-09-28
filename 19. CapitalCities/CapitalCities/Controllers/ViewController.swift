@@ -43,12 +43,24 @@ class ViewController: UIViewController {
 
 extension ViewController: MKMapViewDelegate {
     
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let identifier = "Capital"
+        if annotation is Capital {
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            if annotationView == nil {
+                annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                annotationView!.canShowCallout = true
+                
+                let button = UIButton(type: .detailDisclosure)
+                annotationView!.rightCalloutAccessoryView = button
+            } else {
+                annotationView!.annotation = annotation
+            }
+            
+            return annotationView
+        }
         
-    }
-    
-    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, didChange newState: MKAnnotationView.DragState, fromOldState oldState: MKAnnotationView.DragState) {
-        
+        return nil
     }
 }
 
