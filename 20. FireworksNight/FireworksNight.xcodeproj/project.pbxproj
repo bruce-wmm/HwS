@@ -18,7 +18,6 @@
 		110CC8CC215E5D95000D615B /* explode.sks in Resources */ = {isa = PBXBuildFile; fileRef = 110CC8CA215E5D95000D615B /* explode.sks */; };
 		11A05DE0215E7FD8000EE335 /* GameScene-iPad.sks in Resources */ = {isa = PBXBuildFile; fileRef = 11A05DDF215E7FD8000EE335 /* GameScene-iPad.sks */; };
 		11A05DE3215E96BD000EE335 /* stars.sks in Resources */ = {isa = PBXBuildFile; fileRef = 11A05DE1215E96BD000EE335 /* stars.sks */; };
-		11A05DE4215E96BD000EE335 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11A05DE2215E96BD000EE335 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +34,6 @@
 		110CC8CA215E5D95000D615B /* explode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explode.sks; sourceTree = "<group>"; };
 		11A05DDF215E7FD8000EE335 /* GameScene-iPad.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "GameScene-iPad.sks"; sourceTree = "<group>"; };
 		11A05DE1215E96BD000EE335 /* stars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = stars.sks; sourceTree = "<group>"; };
-		11A05DE2215E96BD000EE335 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +142,6 @@
 				110CC8CA215E5D95000D615B /* explode.sks */,
 				110CC8C9215E5D95000D615B /* fuse.sks */,
 				11A05DE1215E96BD000EE335 /* stars.sks */,
-				11A05DE2215E96BD000EE335 /* Assets.xcassets */,
 			);
 			path = "Special Effects";
 			sourceTree = "<group>";
@@ -214,7 +211,6 @@
 				110CC8BB215E5CA4000D615B /* LaunchScreen.storyboard in Resources */,
 				11A05DE3215E96BD000EE335 /* stars.sks in Resources */,
 				110CC8CC215E5D95000D615B /* explode.sks in Resources */,
-				11A05DE4215E96BD000EE335 /* Assets.xcassets in Resources */,
 				11A05DE0215E7FD8000EE335 /* GameScene-iPad.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

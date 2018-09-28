@@ -6,6 +6,7 @@
 //  Copyright © 2018 Neil Hiddink. All rights reserved.
 //
 
+import UIKit
 import SpriteKit
 import GameplayKit
 
@@ -43,6 +44,15 @@ class GameScene: SKScene {
         
         gameTimer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(launchFireworks),
                                          userInfo: nil, repeats: true)
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        for (index, firework) in fireworks.enumerated().reversed() {
+            if firework.position.y > 900 {
+                fireworks.remove(at: index)
+                firework.removeFromParent()
+            }
+        }
     }
     
     // MARK: - Helper Methods
@@ -107,4 +117,40 @@ class GameScene: SKScene {
                 break
         }
     }
+    
+    func checkTouches(_ touches: Set<UITouch>) {
+        guard let touch = touches.first else { return }
+        let location = touch.location(in: self)
+
+        for node in nodes(at: location) {
+            if node is SKSpriteNode {
+                let sprite = node as! SKSpriteNode
+                if sprite.name == "firework" {
+                    for parent in fireworks {
+                        let firework = parent.children[0] as! SKSpriteNode
+                        if firework.name == "selected" && firework.color != sprite.color {
+                                firework.name = "firework"
+                                firework.colorBlendFactor = 1
+                        }
+                    }
+                    sprite.name = "selected"
+                    sprite.colorBlendFactor = 0
+                }
+            }
+        }
+    }
+    
+    // MARK: - Touch Methods
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        checkTouches(touches)
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesMoved(touches, with: event)
+        checkTouches(touches)
+    }
+    
+    
 }
