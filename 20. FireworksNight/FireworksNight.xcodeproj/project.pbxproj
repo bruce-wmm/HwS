@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		110CC8AB215E5CA3000D615B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CC8AA215E5CA3000D615B /* AppDelegate.swift */; };
-		110CC8AD215E5CA3000D615B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 110CC8AC215E5CA3000D615B /* GameScene.sks */; };
+		110CC8AD215E5CA3000D615B /* GameScene-iPhone.sks in Resources */ = {isa = PBXBuildFile; fileRef = 110CC8AC215E5CA3000D615B /* GameScene-iPhone.sks */; };
 		110CC8B1215E5CA3000D615B /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CC8B0215E5CA3000D615B /* GameScene.swift */; };
 		110CC8B3215E5CA3000D615B /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110CC8B2215E5CA3000D615B /* GameViewController.swift */; };
 		110CC8B6215E5CA3000D615B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 110CC8B4215E5CA3000D615B /* Main.storyboard */; };
@@ -16,12 +16,13 @@
 		110CC8BB215E5CA4000D615B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 110CC8B9215E5CA4000D615B /* LaunchScreen.storyboard */; };
 		110CC8CB215E5D95000D615B /* fuse.sks in Resources */ = {isa = PBXBuildFile; fileRef = 110CC8C9215E5D95000D615B /* fuse.sks */; };
 		110CC8CC215E5D95000D615B /* explode.sks in Resources */ = {isa = PBXBuildFile; fileRef = 110CC8CA215E5D95000D615B /* explode.sks */; };
+		11A05DE0215E7FD8000EE335 /* GameScene-iPad.sks in Resources */ = {isa = PBXBuildFile; fileRef = 11A05DDF215E7FD8000EE335 /* GameScene-iPad.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		110CC8A7215E5CA3000D615B /* FireworksNight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireworksNight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		110CC8AA215E5CA3000D615B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		110CC8AC215E5CA3000D615B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		110CC8AC215E5CA3000D615B /* GameScene-iPhone.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "GameScene-iPhone.sks"; sourceTree = "<group>"; };
 		110CC8B0215E5CA3000D615B /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		110CC8B2215E5CA3000D615B /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		110CC8B5215E5CA3000D615B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 		110CC8BC215E5CA4000D615B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		110CC8C9215E5D95000D615B /* fuse.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fuse.sks; sourceTree = "<group>"; };
 		110CC8CA215E5D95000D615B /* explode.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explode.sks; sourceTree = "<group>"; };
+		11A05DDF215E7FD8000EE335 /* GameScene-iPad.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "GameScene-iPad.sks"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +87,8 @@
 		110CC8C3215E5D22000D615B /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				110CC8AC215E5CA3000D615B /* GameScene.sks */,
+				110CC8AC215E5CA3000D615B /* GameScene-iPhone.sks */,
+				11A05DDF215E7FD8000EE335 /* GameScene-iPad.sks */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -199,11 +202,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				110CC8B6215E5CA3000D615B /* Main.storyboard in Resources */,
-				110CC8AD215E5CA3000D615B /* GameScene.sks in Resources */,
+				110CC8AD215E5CA3000D615B /* GameScene-iPhone.sks in Resources */,
 				110CC8CB215E5D95000D615B /* fuse.sks in Resources */,
 				110CC8B8215E5CA4000D615B /* Assets.xcassets in Resources */,
 				110CC8BB215E5CA4000D615B /* LaunchScreen.storyboard in Resources */,
 				110CC8CC215E5D95000D615B /* explode.sks in Resources */,
+				11A05DE0215E7FD8000EE335 /* GameScene-iPad.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

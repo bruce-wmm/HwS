@@ -18,9 +18,21 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let view = self.view as! SKView? {
-            if let scene = SKScene(fileNamed: "GameScene") {
-                scene.scaleMode = .aspectFit
-                view.presentScene(scene)
+            
+            let mode = SKSceneScaleMode.aspectFit
+            switch UIDevice.current.model {
+                case "iPhone":
+                    if let scene = SKScene(fileNamed: "GameScene-iPhone") {
+                        scene.scaleMode = mode
+                        view.presentScene(scene)
+                    }
+                case "iPad":
+                    if let scene = SKScene(fileNamed: "GameScene-iPad") {
+                        scene.scaleMode = mode
+                        view.presentScene(scene)
+                    }
+                default:
+                    break
             }
             
             view.ignoresSiblingOrder = true
