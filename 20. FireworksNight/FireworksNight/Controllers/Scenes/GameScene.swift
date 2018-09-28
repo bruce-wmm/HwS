@@ -31,14 +31,16 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
-        let background = SKSpriteNode(imageNamed: "background")
-        background.anchorPoint = CGPoint.zero
-        background.position = CGPoint.zero
-        background.size = CGSize(width: frame.width, height: frame.height)
-        background.blendMode = .replace
-        background.zPosition = -1
-        addChild(background)
-
+        let moon = childNode(withName: "moon") as! SKSpriteNode
+        moon.texture = SKTexture(imageNamed: "moon")
+        
+        let stars = SKEmitterNode(fileNamed: "stars")!
+        stars.advanceSimulationTime(1.0)
+        stars.particlePositionRange = CGVector(dx: frame.width, dy: frame.height)
+        stars.position = CGPoint(x: frame.width / 2, y: frame.height / 2)
+        stars.zPosition = -1
+        addChild(stars)
+        
         gameTimer = Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(launchFireworks),
                                          userInfo: nil, repeats: true)
     }
