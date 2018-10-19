@@ -90,8 +90,14 @@ class GameScene: SKScene {
     
     // MARK: - Touch Methods
     
-    func touchDown(at location : CGPoint) {
-        player.run(SKAction.move(to: location, duration: 0.5))
+    func touchDown(at point : CGPoint) {
+        var location = point
+        if location.y < 100 {
+            location.y = 100
+        } else if location.y > (frame.height - 100) {
+            location.y = frame.height - 100
+        }
+        player.position = location
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -109,6 +115,10 @@ class GameScene: SKScene {
 extension GameScene: SKPhysicsContactDelegate {
     
     func didBegin(_ contact: SKPhysicsContact) {
-        
+        let explosion = SKEmitterNode(fileNamed: "explosion")!
+        explosion.position = player.position
+        addChild(explosion)
+        player.removeFromParent()
+        isGameOver = true
     }
 }
