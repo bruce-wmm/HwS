@@ -21,16 +21,31 @@ class GameScene: SKScene {
     
     // MARK: - Properties
     
+    var player: SKSpriteNode!
+    var lastTouchPosition: CGPoint?
+    
     // MARK: - Scene Life Cycle
     
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
+        physicsWorld.gravity = CGVector(dx: 0, dy: 0)
+        
+        let background = SKSpriteNode(imageNamed: "background.jpg")
+        background.position = CGPoint(x: 512, y: 384)
+        background.blendMode = .replace
+        background.zPosition = -1
+        addChild(background)
+        
         loadLevel()
+        createPlayer()
     }
     
     override func update(_ currentTime: TimeInterval) {
-
+        if let currentTouch = lastTouchPosition {
+            let diff = CGPoint(x: currentTouch.x - player.position.x, y: currentTouch.y - player.position.y)
+            physicsWorld.gravity = CGVector(dx: diff.x / 100, dy: diff.y / 100)
+        }
     }
     
     // MARK: - Helper Methods
@@ -87,6 +102,18 @@ class GameScene: SKScene {
         }
     }
     
+    func createPlayer() {
+        player = SKSpriteNode(imageNamed: "player")
+        player.position = CGPoint(x: 96, y: 672)
+        player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width / 2)
+        player.physicsBody?.allowsRotation = false
+        player.physicsBody?.linearDamping = 0.5
+        player.physicsBody?.categoryBitMask = PhysicsCategory.Player
+        player.physicsBody?.contactTestBitMask = PhysicsCategory.Star | PhysicsCategory.Vortex | PhysicsCategory.Finish
+        player.physicsBody?.collisionBitMask = PhysicsCategory.Wall
+        addChild(player)
+    }
+    
     // MARK: - Touch Methods
     
     func touchDown(at location: CGPoint) {
@@ -94,11 +121,24 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first { touchDown(at: touch.location(in: self)) }
+        if let touch = touches.first {
+            let location = touch.location(in: self)
+            lastTouchPosition = location
+        }
+    }
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            let location = touch.location(in: self)
+            lastTouchPosition = location
+        }
     }
     
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first { touchDown(at: touch.location(in: self)) }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        lastTouchPosition = nil
+    }
+    
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        lastTouchPosition = nil
     }
     
 }
