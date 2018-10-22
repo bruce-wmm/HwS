@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import CoreMotion
 
 struct PhysicsCategory {
     static let Player: UInt32 = 0b1 // 1
@@ -23,6 +24,7 @@ class GameScene: SKScene {
     
     var player: SKSpriteNode!
     var lastTouchPosition: CGPoint?
+    var motionManager: CMMotionManager!
     
     // MARK: - Scene Life Cycle
     
@@ -30,6 +32,7 @@ class GameScene: SKScene {
         super.didMove(to: view)
         
         physicsWorld.gravity = CGVector(dx: 0, dy: 0)
+        physicsWorld.contactDelegate = self
         
         let background = SKSpriteNode(imageNamed: "background.jpg")
         background.position = CGPoint(x: 512, y: 384)
@@ -37,15 +40,25 @@ class GameScene: SKScene {
         background.zPosition = -1
         addChild(background)
         
+        motionManager = CMMotionManager()
+        motionManager.startAccelerometerUpdates()
+        
         loadLevel()
         createPlayer()
     }
     
     override func update(_ currentTime: TimeInterval) {
+        #if targetEnvironment(simulator)
         if let currentTouch = lastTouchPosition {
             let diff = CGPoint(x: currentTouch.x - player.position.x, y: currentTouch.y - player.position.y)
             physicsWorld.gravity = CGVector(dx: diff.x / 100, dy: diff.y / 100)
         }
+        #else
+        if let accelerometerData = motionManager.accelerometerData {
+            // Flip x and y acceleration due to coordinate systems in UIKit vs. SpriteKit for landscape
+            physicsWorld.gravity = CGVector(dx: accelerometerData.acceleration.y * -50, dy: accelerometerData.acceleration.x * 50)
+        }
+        #endif
     }
     
     // MARK: - Helper Methods
@@ -141,4 +154,12 @@ class GameScene: SKScene {
         lastTouchPosition = nil
     }
     
+}
+
+// MARK: - GameScene: SKPhysicsContactDelegate
+
+extension GameScene: SKPhysicsContactDelegate {
+    func didBegin(_ contact: SKPhysicsContact) {
+        
+    }
 }
