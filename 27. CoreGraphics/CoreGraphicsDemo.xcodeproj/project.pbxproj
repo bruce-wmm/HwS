@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		111564D22181417300090DE9 /* CoreGraphics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreGraphics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		111564D22181417300090DE9 /* CoreGraphicsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreGraphicsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		111564D52181417300090DE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		111564D72181417300090DE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		111564DA2181417300090DE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,7 +38,7 @@
 		111564C92181417300090DE9 = {
 			isa = PBXGroup;
 			children = (
-				111564D42181417300090DE9 /* CoreGraphics */,
+				111564D42181417300090DE9 /* CoreGraphicsDemo */,
 				111564D32181417300090DE9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,12 +46,12 @@
 		111564D32181417300090DE9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				111564D22181417300090DE9 /* CoreGraphics.app */,
+				111564D22181417300090DE9 /* CoreGraphicsDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		111564D42181417300090DE9 /* CoreGraphics */ = {
+		111564D42181417300090DE9 /* CoreGraphicsDemo */ = {
 			isa = PBXGroup;
 			children = (
 				111564D52181417300090DE9 /* AppDelegate.swift */,
@@ -61,7 +61,7 @@
 				111564EA2181418900090DE9 /* Resources */,
 				111564EB2181418D00090DE9 /* Supporting Files */,
 			);
-			path = CoreGraphics;
+			path = CoreGraphicsDemo;
 			sourceTree = "<group>";
 		};
 		111564E72181417800090DE9 /* Models */ = {
@@ -107,9 +107,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		111564D12181417300090DE9 /* CoreGraphics */ = {
+		111564D12181417300090DE9 /* CoreGraphicsDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 111564E42181417300090DE9 /* Build configuration list for PBXNativeTarget "CoreGraphics" */;
+			buildConfigurationList = 111564E42181417300090DE9 /* Build configuration list for PBXNativeTarget "CoreGraphicsDemo" */;
 			buildPhases = (
 				111564CE2181417300090DE9 /* Sources */,
 				111564CF2181417300090DE9 /* Frameworks */,
@@ -119,9 +119,9 @@
 			);
 			dependencies = (
 			);
-			name = CoreGraphics;
+			name = CoreGraphicsDemo;
 			productName = CoreGraphics;
-			productReference = 111564D22181417300090DE9 /* CoreGraphics.app */;
+			productReference = 111564D22181417300090DE9 /* CoreGraphicsDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -139,7 +139,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 111564CD2181417300090DE9 /* Build configuration list for PBXProject "CoreGraphics" */;
+			buildConfigurationList = 111564CD2181417300090DE9 /* Build configuration list for PBXProject "CoreGraphicsDemo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -152,7 +152,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				111564D12181417300090DE9 /* CoreGraphics */,
+				111564D12181417300090DE9 /* CoreGraphicsDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -329,7 +329,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Neil-Hiddink.CoreGraphics";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Neil-Hiddink.CoreGraphicsDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -347,7 +347,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Neil-Hiddink.CoreGraphics";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Neil-Hiddink.CoreGraphicsDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -357,7 +357,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		111564CD2181417300090DE9 /* Build configuration list for PBXProject "CoreGraphics" */ = {
+		111564CD2181417300090DE9 /* Build configuration list for PBXProject "CoreGraphicsDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				111564E22181417300090DE9 /* Debug */,
@@ -366,7 +366,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		111564E42181417300090DE9 /* Build configuration list for PBXNativeTarget "CoreGraphics" */ = {
+		111564E42181417300090DE9 /* Build configuration list for PBXNativeTarget "CoreGraphicsDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				111564E52181417300090DE9 /* Debug */,

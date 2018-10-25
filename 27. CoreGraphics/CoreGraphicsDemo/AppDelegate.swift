@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  CoreGraphics
+//  CoreGraphicsDemo
 //
 //  Created by Neil Hiddink on 10/24/18.
 //  Copyright © 2018 Neil Hiddink. All rights reserved.
