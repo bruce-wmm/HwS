@@ -26,6 +26,15 @@ class GameScene: SKScene {
     var lastTouchPosition: CGPoint?
     var motionManager: CMMotionManager!
     
+    var scoreLabel: SKLabelNode!
+    var score = 0 {
+        didSet {
+            scoreLabel.text = "Score: \(score)"
+        }
+    }
+    
+    var isGameOver = false
+    
     // MARK: - Scene Life Cycle
     
     override func didMove(to view: SKView) {
@@ -40,6 +49,12 @@ class GameScene: SKScene {
         background.zPosition = -1
         addChild(background)
         
+        scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
+        scoreLabel.text = "Score: 0"
+        scoreLabel.horizontalAlignmentMode = .left
+        scoreLabel.position = CGPoint(x: 16, y: 16)
+        addChild(scoreLabel)
+        
         motionManager = CMMotionManager()
         motionManager.startAccelerometerUpdates()
         
@@ -48,6 +63,7 @@ class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
+        guard isGameOver == false else { return }
         #if targetEnvironment(simulator)
         if let currentTouch = lastTouchPosition {
             let diff = CGPoint(x: currentTouch.x - player.position.x, y: currentTouch.y - player.position.y)
@@ -127,6 +143,27 @@ class GameScene: SKScene {
         addChild(player)
     }
     
+    func playerCollided(with node: SKNode) {
+        if node.name == "vortex" {
+            player.physicsBody?.isDynamic = false
+            isGameOver = true
+            score -= 1
+            let move = SKAction.move(to: node.position, duration: 0.25)
+            let scale = SKAction.scale(to: 0.0001, duration: 0.25)
+            let remove = SKAction.removeFromParent()
+            let sequence = SKAction.sequence([move, scale, remove])
+            player.run(sequence) { [unowned self] in
+                self.createPlayer()
+                self.isGameOver = false
+            }
+        } else if node.name == "star" {
+            node.removeFromParent()
+            score += 1
+        } else if node.name == "finish" {
+            // TODO: Load Next Level...
+        }
+    }
+    
     // MARK: - Touch Methods
     
     func touchDown(at location: CGPoint) {
@@ -160,6 +197,10 @@ class GameScene: SKScene {
 
 extension GameScene: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
-        
+        if contact.bodyA.node == player {
+            playerCollided(with: contact.bodyB.node!)
+        } else if contact.bodyB.node == player {
+            playerCollided(with: contact.bodyA.node!)
+        }
     }
 }
