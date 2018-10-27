@@ -21,11 +21,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Nothing to see here"
+        
         let notificationCenter = NotificationCenter.default
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard),
                                        name: UIWindow.keyboardWillHideNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard),
                                        name: UIWindow.keyboardWillChangeFrameNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(saveSecretMessage), name: UIApplication.willResignActiveNotification, object: nil)
     }
     
     // MARK: - Helper Methods
@@ -44,10 +47,27 @@ class ViewController: UIViewController {
         secret.scrollRangeToVisible(selectedRange)
     }
     
+    func unlockSecretMessage() {
+        secret.isHidden = false
+        title = "Secret stuff!"
+        if let text = KeychainWrapper.standard.string(forKey: "SecretMessage") {
+            secret.text = text
+        }
+    }
+    
+    @objc func saveSecretMessage() {
+        if !secret.isHidden {
+            _ = KeychainWrapper.standard.set(secret.text, forKey: "SecretMessage")
+            secret.resignFirstResponder()
+            secret.isHidden = true
+            title = "Nothing to see here"
+        }
+    }
+    
     // MARK: - IB Actions
     
     @IBAction func authenticateTapped(_ sender: UIButton) {
-        
+        unlockSecretMessage()
     }
 }
 
