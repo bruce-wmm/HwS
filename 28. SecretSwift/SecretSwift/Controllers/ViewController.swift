@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 // MARK: - ViewController: UIViewController
 
@@ -67,7 +68,29 @@ class ViewController: UIViewController {
     // MARK: - IB Actions
     
     @IBAction func authenticateTapped(_ sender: UIButton) {
-        unlockSecretMessage()
+        let context = LAContext()
+        var error: NSError?
+        
+        #if swift(>=4.0)
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            let reason = "Identify yourself!"
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { [unowned self] (success, authenticationError) in
+                DispatchQueue.main.async {
+                    if success {
+                        self.unlockSecretMessage()
+                    } else {
+                        let alert = UIAlertController(title: "Biometry Error", message: "An authentication issue occurred when evaluating the biometric information collected. Please try again.", preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                }
+            }
+        } else {
+            let alert = UIAlertController(title: "No Biometry", message: "No local authentication methods are available on the current device.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
+        #endif
     }
 }
 
