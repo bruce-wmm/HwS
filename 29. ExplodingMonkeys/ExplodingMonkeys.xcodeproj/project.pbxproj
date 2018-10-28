@@ -16,6 +16,8 @@
 		11FAB66A2184F893006F899B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FAB6682184F893006F899B /* LaunchScreen.storyboard */; };
 		11FAB67A2184F984006F899B /* hitBuilding.sks in Resources */ = {isa = PBXBuildFile; fileRef = 11FAB6782184F984006F899B /* hitBuilding.sks */; };
 		11FAB67B2184F984006F899B /* hitPlayer.sks in Resources */ = {isa = PBXBuildFile; fileRef = 11FAB6792184F984006F899B /* hitPlayer.sks */; };
+		11FAB6802185100D006F899B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FAB67F2185100D006F899B /* Helper.swift */; };
+		11FAB6822185102F006F899B /* BuildingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FAB6812185102F006F899B /* BuildingNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		11FAB66B2184F893006F899B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11FAB6782184F984006F899B /* hitBuilding.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hitBuilding.sks; sourceTree = "<group>"; };
 		11FAB6792184F984006F899B /* hitPlayer.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = hitPlayer.sks; sourceTree = "<group>"; };
+		11FAB67F2185100D006F899B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		11FAB6812185102F006F899B /* BuildingNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +79,8 @@
 		11FAB6712184F8A5006F899B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				11FAB6782184F984006F899B /* hitBuilding.sks */,
-				11FAB6792184F984006F899B /* hitPlayer.sks */,
+				11FAB6812185102F006F899B /* BuildingNode.swift */,
+				11FAB683218511D8006F899B /* Special Effects */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -104,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				11FAB66B2184F893006F899B /* Info.plist */,
+				11FAB67F2185100D006F899B /* Helper.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +143,15 @@
 				11FAB65F2184F892006F899B /* GameScene.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		11FAB683218511D8006F899B /* Special Effects */ = {
+			isa = PBXGroup;
+			children = (
+				11FAB6782184F984006F899B /* hitBuilding.sks */,
+				11FAB6792184F984006F899B /* hitPlayer.sks */,
+			);
+			path = "Special Effects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,8 +229,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				11FAB6602184F892006F899B /* GameScene.swift in Sources */,
+				11FAB6822185102F006F899B /* BuildingNode.swift in Sources */,
 				11FAB6622184F892006F899B /* GameViewController.swift in Sources */,
 				11FAB65A2184F892006F899B /* AppDelegate.swift in Sources */,
+				11FAB6802185100D006F899B /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
