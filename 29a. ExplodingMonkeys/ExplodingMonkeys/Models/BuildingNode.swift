@@ -23,6 +23,7 @@ class BuildingNode: SKSpriteNode {
         name = "building"
         currentImage = drawBuilding(size: size)
         texture = SKTexture(image: currentImage)
+        configurePhysics()
     }
     
     func configurePhysics() {

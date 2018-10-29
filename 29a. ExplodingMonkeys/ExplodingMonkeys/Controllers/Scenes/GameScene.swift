@@ -18,9 +18,9 @@ class GameScene: SKScene {
     var buildings = [BuildingNode]()
     weak var viewController: GameViewController!
     
-    var player1: PlayerNode!
-    var player2: PlayerNode!
-    var banana: BananaNode!
+    var player1: SKSpriteNode!
+    var player2: SKSpriteNode!
+    var banana: SKSpriteNode!
     var currentPlayer = 1
 
     // MARK: - Scene Life Cycle
@@ -186,17 +186,14 @@ extension GameScene: SKPhysicsContactDelegate {
         
         if let firstNode = firstBody.node {
             if let secondNode = secondBody.node {
-                if firstNode.name == "banana" && secondNode.name ==
-                    "building" {
+                if firstNode.name == "banana" && secondNode.name == "building" {
                     bananaHit(building: secondNode as! BuildingNode, atPoint: contact.contactPoint)
                 }
-                if firstNode.name == "banana" && secondNode.name ==
-                    "player1" {
-                    destroy(player: player1)
+                if firstNode.name == "banana" && secondNode.name == "player1" {
+                    destroy(player: player1 as! PlayerNode)
                 }
-                if firstNode.name == "banana" && secondNode.name ==
-                    "player2" {
-                    destroy(player: player2)
+                if firstNode.name == "banana" && secondNode.name == "player2" {
+                    destroy(player: player2 as! PlayerNode)
                 }
             }
         }
