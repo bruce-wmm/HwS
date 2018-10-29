@@ -16,6 +16,7 @@ class GameScene: SKScene {
     // MARK: - Properties
     
     var buildings = [BuildingNode]()
+    weak var viewController: GameViewController!
 
     // MARK: - Scene Life Cycle
     
@@ -43,6 +44,10 @@ class GameScene: SKScene {
             addChild(building)
             buildings.append(building)
         }
+    }
+    
+    func launch(angle: Int, velocity: Int) {
+        
     }
     
     // MARK: - Touch Methods
