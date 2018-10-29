@@ -17,6 +17,11 @@ class GameScene: SKScene {
     
     var buildings = [BuildingNode]()
     weak var viewController: GameViewController!
+    
+    var player1: SKSpriteNode!
+    var player2: SKSpriteNode!
+    var banana: SKSpriteNode!
+    var currentPlayer = 1
 
     // MARK: - Scene Life Cycle
     
@@ -25,6 +30,7 @@ class GameScene: SKScene {
         
         backgroundColor = UIColor(hue: 0.669, saturation: 0.99, brightness: 0.67, alpha: 1)
         createBuildings()
+        createPlayers()
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -44,6 +50,22 @@ class GameScene: SKScene {
             addChild(building)
             buildings.append(building)
         }
+    }
+    
+    func createPlayers() {
+        player1 = PlayerNode(texture: SKTexture(imageNamed: "player"), color: UIColor.clear, size: CGSize(width: 50.0, height: 50.0))
+        player1.name = "player1"
+        let player1Building = buildings[1]
+        player1.position = CGPoint(x: player1Building.position.x,
+                                   y: player1Building.position.y + ((player1Building.size.height + player1.size.height) / 2))
+        addChild(player1)
+        
+        player2 = PlayerNode(texture: SKTexture(imageNamed: "player"), color: UIColor.clear, size: CGSize(width: 50.0, height: 50.0))
+        player2.name = "player2"
+        let player2Building = buildings[buildings.count - 2]
+        player2.position = CGPoint(x: player2Building.position.x,
+                                   y: player2Building.position.y + ((player2Building.size.height + player2.size.height) / 2))
+        addChild(player2)
     }
     
     func launch(angle: Int, velocity: Int) {

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Neil Hiddink. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import SpriteKit
 
 // MARK: - BuildingNode: SKSpriteNode
