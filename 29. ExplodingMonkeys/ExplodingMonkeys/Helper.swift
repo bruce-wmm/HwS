@@ -16,6 +16,10 @@ struct PhysicsCategory {
     static let Building: UInt32 = 0b10 // 4
 }
 
+func deg2rad(degrees: Int) -> Double {
+    return Double(degrees) * Double.pi / 180.0
+}
+
 func RandomInt(min: Int, max: Int) -> Int {
 	if max < min { return min }
 	return Int(arc4random_uniform(UInt32((max - min) + 1))) + min
