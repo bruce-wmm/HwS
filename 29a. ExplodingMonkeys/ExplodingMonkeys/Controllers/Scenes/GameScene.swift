@@ -18,9 +18,9 @@ class GameScene: SKScene {
     var buildings = [BuildingNode]()
     weak var viewController: GameViewController!
     
-    var player1: SKSpriteNode!
-    var player2: SKSpriteNode!
-    var banana: SKSpriteNode!
+    var player1: PlayerNode!
+    var player2: PlayerNode!
+    var banana: BananaNode!
     var currentPlayer = 1
 
     // MARK: - Scene Life Cycle
@@ -29,6 +29,9 @@ class GameScene: SKScene {
         super.didMove(to: view)
         
         backgroundColor = UIColor(hue: 0.669, saturation: 0.99, brightness: 0.67, alpha: 1)
+        
+        physicsWorld.contactDelegate = self
+        
         createBuildings()
         createPlayers()
     }
@@ -77,7 +80,7 @@ class GameScene: SKScene {
             banana = nil
         }
         
-        banana = BananaNode(texture: SKTexture(imageNamed: "banana"), color: UIColor.clear, size: CGSize(width: 10.0, height: 10.0))
+        banana = BananaNode(texture: SKTexture(imageNamed: "banana"), color: UIColor.clear, size: CGSize(width: 20.0, height: 20.0))
         addChild(banana)
         
         if currentPlayer == 1 {
@@ -103,6 +106,46 @@ class GameScene: SKScene {
         }
     }
     
+    func changePlayer() {
+        if currentPlayer == 1 {
+            currentPlayer = 2
+        } else {
+            currentPlayer = 1
+        }
+        viewController.activatePlayer(number: currentPlayer)
+    }
+    
+    func bananaHit(building: BuildingNode, atPoint contactPoint: CGPoint) {
+        let buildingLocation = convert(contactPoint, to: building)
+        building.hitAt(point: buildingLocation)
+        let explosion = SKEmitterNode(fileNamed: "hitBuilding")!
+        explosion.position = contactPoint
+        addChild(explosion)
+        banana.name = ""
+        banana?.removeFromParent()
+        banana = nil
+        changePlayer()
+    }
+    
+    func destroy(player: PlayerNode) {
+        let explosion = SKEmitterNode(fileNamed: "hitPlayer")!
+        explosion.position = player.position
+        addChild(explosion)
+        player.removeFromParent()
+        banana?.removeFromParent()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [unowned self] in
+            let newGame = GameScene(size: self.size)
+            newGame.viewController = self.viewController
+            self.viewController.currentGame = newGame
+            self.changePlayer()
+            
+            newGame.currentPlayer = self.currentPlayer
+            let transition = SKTransition.doorway(withDuration: 1.5)
+            self.view?.presentScene(newGame, transition: transition)
+        }
+    }
+    
     // MARK: - Touch Methods
     
     func touchDown(at location: CGPoint) {
@@ -115,6 +158,42 @@ class GameScene: SKScene {
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first { self.touchDown(at: touch.location(in: self)) }
+    }
+    
+}
+
+// MARK: - GameScene: SKPhysicsContactDelegate
+
+extension GameScene: SKPhysicsContactDelegate {
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        var firstBody: SKPhysicsBody
+        var secondBody: SKPhysicsBody
+        
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        } else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        if let firstNode = firstBody.node {
+            if let secondNode = secondBody.node {
+                if firstNode.name == "banana" && secondNode.name ==
+                    "building" {
+                    bananaHit(building: secondNode as! BuildingNode, atPoint: contact.contactPoint)
+                }
+                if firstNode.name == "banana" && secondNode.name ==
+                    "player1" {
+                    destroy(player: player1)
+                }
+                if firstNode.name == "banana" && secondNode.name ==
+                    "player2" {
+                    destroy(player: player2)
+                }
+            } }
+
     }
     
 }

@@ -10,10 +10,10 @@ import Foundation
 import UIKit
 
 struct PhysicsCategory {
-    static let None: UInt32 = 0b0 // 0
-    static let Player: UInt32 = 0b1 // 1
-    static let Banana: UInt32 = 0b10 // 2
-    static let Building: UInt32 = 0b10 // 4
+    static let None:     UInt32 = 0b0   // 0
+    static let Banana:   UInt32 = 0b1   // 1
+    static let Building: UInt32 = 0b10  // 2
+    static let Player:   UInt32 = 0b100 // 4
 }
 
 func deg2rad(degrees: Int) -> Double {
