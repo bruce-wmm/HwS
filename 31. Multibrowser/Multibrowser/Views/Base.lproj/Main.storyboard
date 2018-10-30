@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.15" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.15" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LxX-0G-fUm">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,12 +17,63 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pU3-NP-S7N">
+                                <rect key="frame" x="0.0" y="124" width="768" height="900"/>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PUm-5N-P3A">
+                                <rect key="frame" x="5" y="75" width="758" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="oU0-pd-jwZ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="RfA-58-b5e"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PUm-5N-P3A" secondAttribute="trailing" constant="5" id="7Yr-Jp-TYV"/>
+                            <constraint firstItem="pU3-NP-S7N" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9iJ-ko-Fh9"/>
+                            <constraint firstItem="PUm-5N-P3A" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="De0-iL-j76"/>
+                            <constraint firstItem="PUm-5N-P3A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="GnD-qv-MOQ"/>
+                            <constraint firstItem="pU3-NP-S7N" firstAttribute="top" secondItem="PUm-5N-P3A" secondAttribute="bottom" constant="5" id="M33-4b-hlM"/>
+                            <constraint firstItem="pU3-NP-S7N" firstAttribute="top" secondItem="PUm-5N-P3A" secondAttribute="bottom" constant="5" id="MEL-ox-O1r"/>
+                            <constraint firstItem="pU3-NP-S7N" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Wfm-2i-AhX"/>
+                            <constraint firstItem="pU3-NP-S7N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mWI-GK-vcS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="66C-dH-VmC"/>
+                    <connections>
+                        <outlet property="addressBar" destination="PUm-5N-P3A" id="5HZ-0Y-Hei"/>
+                        <outlet property="stackView" destination="pU3-NP-S7N" id="xh5-Jf-89t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="903.90625" y="121.87499999999999"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9Wy-vh-mBu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LxX-0G-fUm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AEM-SA-Xx5">
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bc5-6S-yAt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t44-8r-7ss" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="122"/>
         </scene>
     </scenes>
 </document>

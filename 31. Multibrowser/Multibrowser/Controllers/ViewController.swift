@@ -8,13 +8,31 @@
 
 import UIKit
 
+// MARK: ViewController: UIViewController
+
 class ViewController: UIViewController {
 
+    //MARK: - Properties
+    
+    
+    
+    //MARK: - IB Outlets
+    
+    @IBOutlet var addressBar: UITextField!
+    @IBOutlet var stackView: UIStackView!
+    
+    //MARK: View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 
+}
 
+//MARK: - ViewController: UITextFieldDelegate
+
+extension ViewController: UITextFieldDelegate {
+    
 }
 
