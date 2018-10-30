@@ -9,10 +9,17 @@
 import GameplayKit
 import UIKit
 
-class SelectionViewController: UITableViewController {
-	var items = [String]() // this is the array that will store the filenames to load
-	var dirty = false
+// MARK: - SelectionViewController: UITableViewController
 
+class SelectionViewController: UITableViewController {
+	
+    // MARK: - Properties
+    
+    var items = [String]() // this is the array that will store the filenames to load
+	var dirty = false
+    
+    // MARK: - View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,13 +53,8 @@ class SelectionViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        animTimer.invalidate()
-    }
 
-    // MARK: - Table view data source
+    // MARK: - UITableViewDataSource, UITableViewDelegate
 
 	override func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections.
@@ -118,7 +120,7 @@ class SelectionViewController: UITableViewController {
 
 		return cell
     }
-
+    
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let vc = ImageViewController()
 		vc.image = items[indexPath.row % items.count]

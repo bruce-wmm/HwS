@@ -8,13 +8,20 @@
 
 import UIKit
 
+// MARK: - ImageViewController: UIViewController
+
 class ImageViewController: UIViewController {
-	weak var owner: SelectionViewController!
+	
+    // MARK: - Properties
+    
+    weak var owner: SelectionViewController!
 	var image: String!
 	var animTimer: Timer!
 
 	var imageView: UIImageView!
 
+    // MARK: - View Life Cycle
+    
 	override func loadView() {
 		super.loadView()
 		
@@ -67,13 +74,20 @@ class ImageViewController: UIViewController {
 
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-
+        
 		imageView.alpha = 0
 
 		UIView.animate(withDuration: 3) { [unowned self] in
 			self.imageView.alpha = 1
 		}
 	}
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        animTimer.invalidate()
+    }
+    
+    // MARK: - Touch Methods
 
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 		let defaults = UserDefaults.standard
