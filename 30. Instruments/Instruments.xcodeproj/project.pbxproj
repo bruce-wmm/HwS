@@ -111,7 +111,7 @@
 		11FAB73F2187C3A5006F899B /* ROFL-Thumb@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ROFL-Thumb@3x.jpg"; sourceTree = "<group>"; };
 		11FAB7402187C3A5006F899B /* LMAO-Thumb@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "LMAO-Thumb@3x.jpg"; sourceTree = "<group>"; };
 		11FAB7412187C3A5006F899B /* ROFL-Large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ROFL-Large.jpg"; sourceTree = "<group>"; };
-		51BE9E591A2667CD00578AA0 /* Project30.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project30.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		51BE9E591A2667CD00578AA0 /* Instruments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instruments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51BE9E5D1A2667CD00578AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51BE9E5E1A2667CD00578AA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51BE9E651A2667CD00578AA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,8 +143,8 @@
 		11FAB70E2187C1F3006F899B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				51BE9E801A266A3800578AA0 /* ImageViewController.swift */,
 				51BE9E7E1A26680100578AA0 /* SelectionViewController.swift */,
+				51BE9E801A266A3800578AA0 /* ImageViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -230,7 +230,7 @@
 		51BE9E5A1A2667CD00578AA0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				51BE9E591A2667CD00578AA0 /* Project30.app */,
+				51BE9E591A2667CD00578AA0 /* Instruments.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -259,9 +259,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		51BE9E581A2667CD00578AA0 /* Project30 */ = {
+		51BE9E581A2667CD00578AA0 /* Instruments */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 51BE9E781A2667CD00578AA0 /* Build configuration list for PBXNativeTarget "Project30" */;
+			buildConfigurationList = 51BE9E781A2667CD00578AA0 /* Build configuration list for PBXNativeTarget "Instruments" */;
 			buildPhases = (
 				51BE9E551A2667CD00578AA0 /* Sources */,
 				51BE9E561A2667CD00578AA0 /* Frameworks */,
@@ -271,9 +271,9 @@
 			);
 			dependencies = (
 			);
-			name = Project30;
+			name = Instruments;
 			productName = Project30;
-			productReference = 51BE9E591A2667CD00578AA0 /* Project30.app */;
+			productReference = 51BE9E591A2667CD00578AA0 /* Instruments.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -307,7 +307,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				51BE9E581A2667CD00578AA0 /* Project30 */,
+				51BE9E581A2667CD00578AA0 /* Instruments */,
 			);
 		};
 /* End PBXProject section */
@@ -538,7 +538,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		51BE9E781A2667CD00578AA0 /* Build configuration list for PBXNativeTarget "Project30" */ = {
+		51BE9E781A2667CD00578AA0 /* Build configuration list for PBXNativeTarget "Instruments" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				51BE9E791A2667CD00578AA0 /* Debug */,

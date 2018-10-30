@@ -70,23 +70,38 @@ class SelectionViewController: UITableViewController {
 		let path = Bundle.main.path(forResource: imageRootName, ofType: nil)!
 		let original = UIImage(contentsOfFile: path)!
 
-		let renderer = UIGraphicsImageRenderer(size: original.size)
-
-		let rounded = renderer.image { ctx in
-			ctx.cgContext.addEllipse(in: CGRect(origin: CGPoint.zero, size: original.size))
-			ctx.cgContext.clip()
-
-			original.draw(at: CGPoint.zero)
-		}
-
-		cell.imageView?.image = rounded
-
-		// give the images a nice shadow to make them look a bit more dramatic
-		cell.imageView?.layer.shadowColor = UIColor.black.cgColor
-		cell.imageView?.layer.shadowOpacity = 1
-		cell.imageView?.layer.shadowRadius = 10
-		cell.imageView?.layer.shadowOffset = CGSize.zero
-
+//        let renderer = UIGraphicsImageRenderer(size: original.size)
+//        let rounded = renderer.image { ctx in
+//            ctx.cgContext.addEllipse(in: CGRect(origin: CGPoint.zero, size: original.size))
+//            ctx.cgContext.clip()
+//
+//            original.draw(at: CGPoint.zero)
+//        }
+//
+//        cell.imageView?.image = rounded
+//
+//        // give the images a nice shadow to make them look a bit more dramatic
+//        cell.imageView?.layer.shadowColor = UIColor.black.cgColor
+//        cell.imageView?.layer.shadowOpacity = 1
+//        cell.imageView?.layer.shadowRadius = 10
+//        cell.imageView?.layer.shadowOffset = CGSize.zero
+        
+        let renderRect = CGRect(origin: CGPoint.zero, size: CGSize(width: 90, height: 90))
+        let renderer = UIGraphicsImageRenderer(size: renderRect.size)
+        let rounded = renderer.image { ctx in
+            ctx.cgContext.addEllipse(in: renderRect)
+            ctx.cgContext.clip()
+            original.draw(in: renderRect)
+        }
+        cell.imageView?.image = rounded
+        
+        // give the images a nice shadow to make them look a bit more dramatic
+        cell.imageView?.layer.shadowColor = UIColor.black.cgColor
+        cell.imageView?.layer.shadowOpacity = 1
+        cell.imageView?.layer.shadowRadius = 10
+        cell.imageView?.layer.shadowOffset = CGSize.zero
+        cell.imageView?.layer.shadowPath = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 90, height: 90)).cgPath
+            
 		// each image stores how often it's been tapped
 		let defaults = UserDefaults.standard
 		cell.textLabel?.text = "\(defaults.integer(forKey: currentImage))"
