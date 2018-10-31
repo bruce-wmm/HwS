@@ -1,5 +1,7 @@
 # Hacking With Swift
 
+Beginner to advanced project-based tutorials for Swift, written in Swift 4.2 for iOS 12. To start learning, buy a book, or find out more about the series, visit [hackingwithswift.com](https://www.hackingwithswift.com/read).
+
 📱 = App
 
 🕹 = Game
