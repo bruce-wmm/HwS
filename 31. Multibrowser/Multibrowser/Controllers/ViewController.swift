@@ -34,10 +34,23 @@ class ViewController: UIViewController {
         navigationItem.rightBarButtonItems = [delete, add]
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        if traitCollection.horizontalSizeClass == .compact {
+            stackView.axis = .vertical
+        } else {
+            stackView.axis = .horizontal
+        }
+    }
+    
     //MARK: - Helper Methods
     
     func setDefaultTitle() {
         title = "Multibrowser"
+    }
+    
+    func updateUI(for webView: WKWebView) {
+        title = webView.title
+        addressBar.text = webView.url?.absoluteString ?? ""
     }
     
     @objc func addWebView() {
@@ -84,6 +97,8 @@ class ViewController: UIViewController {
         
         activeWebView = webView
         webView.layer.borderWidth = 3
+        
+        updateUI(for: webView)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -109,6 +124,12 @@ class ViewController: UIViewController {
 extension ViewController: WKNavigationDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        if webView == activeWebView {
+            updateUI(for: webView)
+        }
     }
 }
 
