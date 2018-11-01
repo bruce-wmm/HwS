@@ -24,7 +24,19 @@ class ViewController: UIViewController {
         projects.append(["Project 7: Whitehouse Petitions", "JSON, Data, UITabBarController"])
         projects.append(["Project 8: 7 Swifty Words", "addTarget(), enumerated(), count, index(of:), property observers, range operators."])
     }
+    
+    // MARK: - Helper Methods
 
+    func makeAttributedString(title: String, subtitle: String) -> NSAttributedString {
+            let titleAttributes = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .headline),
+                                   NSAttributedString.Key.foregroundColor: UIColor.red]
+            let subtitleAttributes = [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .subheadline)]
+            let titleString = NSMutableAttributedString(string: "\(title)\n", attributes: titleAttributes)
+            let subtitleString = NSAttributedString(string: subtitle, attributes: subtitleAttributes)
+            titleString.append(subtitleString)
+            return titleString
+    }
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -39,7 +51,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = "\(projects[indexPath.row][0]): \(projects[indexPath.row][1])"
+        cell.textLabel?.attributedText = makeAttributedString(title: projects[indexPath.row][0], subtitle: projects[indexPath.row][1])
         return cell
     }
 
