@@ -1,0 +1,64 @@
+//
+//  SelectGenreViewController.swift
+//  NameThatTune
+//
+//  Created by Neil Hiddink on 11/2/18.
+//  Copyright © 2018 Neil Hiddink. All rights reserved.
+//
+
+import UIKit
+
+// MARK: - SelectGenreViewController: UITableViewController
+
+class SelectGenreViewController: UITableViewController {
+    
+    // MARK: - Properties
+    
+    static var genres = ["Unknown", "Blues", "Classical", "Electronic", "Jazz",
+                         "Metal", "Pop", "Reggae", "RnB", "Rock", "Soul"]
+    
+    // MARK: - View Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        title = "Select genre"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Genre", style: .plain, target: nil, action: nil)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    }
+    
+}
+
+// MARK: - UITableView Delegate and Data Source Methods
+
+extension SelectGenreViewController {
+    
+    // MARK: Delegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) {
+            let genre = cell.textLabel?.text ?? SelectGenreViewController.genres[0]
+            let addCommentsVC = AddCommentsViewController()
+            addCommentsVC.genre = genre
+            navigationController?.pushViewController(addCommentsVC, animated: true)
+        }
+    }
+    
+    // MARK: Data Source
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return SelectGenreViewController.genres.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = SelectGenreViewController.genres[indexPath.row]
+        cell.accessoryType = .disclosureIndicator
+        return cell
+    }
+    
+}

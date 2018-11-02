@@ -114,7 +114,8 @@ class RecordTuneViewController: UIViewController {
     }
     
     @objc func nextTapped() {
-        
+        let selectGenreVC = SelectGenreViewController()
+        navigationController?.pushViewController(selectGenreVC, animated: true)
     }
     
     @objc func playTapped() {

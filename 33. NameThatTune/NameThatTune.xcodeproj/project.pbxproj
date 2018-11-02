@@ -13,6 +13,8 @@
 		11DBF3A0218BF95300471560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11DBF39F218BF95300471560 /* Assets.xcassets */; };
 		11DBF3A3218BF95300471560 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11DBF3A1218BF95300471560 /* LaunchScreen.storyboard */; };
 		11DBF3B0218BFE8000471560 /* RecordTuneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DBF3AF218BFE8000471560 /* RecordTuneViewController.swift */; };
+		11DBF3B2218D0B7A00471560 /* SelectGenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DBF3B1218D0B7A00471560 /* SelectGenreViewController.swift */; };
+		11DBF3B4218D11BE00471560 /* AddCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DBF3B3218D11BE00471560 /* AddCommentsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		11DBF3A2218BF95300471560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11DBF3A4218BF95300471560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11DBF3AF218BFE8000471560 /* RecordTuneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTuneViewController.swift; sourceTree = "<group>"; };
+		11DBF3B1218D0B7A00471560 /* SelectGenreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGenreViewController.swift; sourceTree = "<group>"; };
+		11DBF3B3218D11BE00471560 /* AddCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,8 @@
 			children = (
 				11DBF39A218BF95200471560 /* ViewController.swift */,
 				11DBF3AF218BFE8000471560 /* RecordTuneViewController.swift */,
+				11DBF3B1218D0B7A00471560 /* SelectGenreViewController.swift */,
+				11DBF3B3218D11BE00471560 /* AddCommentsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -179,7 +185,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				11DBF3B0218BFE8000471560 /* RecordTuneViewController.swift in Sources */,
+				11DBF3B4218D11BE00471560 /* AddCommentsViewController.swift in Sources */,
 				11DBF39B218BF95200471560 /* ViewController.swift in Sources */,
+				11DBF3B2218D0B7A00471560 /* SelectGenreViewController.swift in Sources */,
 				11DBF399218BF95200471560 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
