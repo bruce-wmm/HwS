@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController {
 
@@ -37,12 +38,21 @@ class ViewController: UIViewController {
             return titleString
     }
     
+    func showProject(_ number: Int) {
+        if let url = URL(string: "https://www.hackingwithswift.com/read/\(number + 1)") {
+        let config = SFSafariViewController.Configuration()
+        config.entersReaderIfAvailable = true
+        let vc = SFSafariViewController(url: url, configuration: config)
+        present(vc, animated: true)
+    }
+}
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        showProject(indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
