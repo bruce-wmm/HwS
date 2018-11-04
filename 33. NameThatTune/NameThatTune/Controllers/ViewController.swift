@@ -12,6 +12,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - Properties
+    
+    static var isDirty = true
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {

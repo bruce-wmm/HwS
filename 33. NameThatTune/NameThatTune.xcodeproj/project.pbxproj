@@ -15,6 +15,8 @@
 		11DBF3B0218BFE8000471560 /* RecordTuneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DBF3AF218BFE8000471560 /* RecordTuneViewController.swift */; };
 		11DBF3B2218D0B7A00471560 /* SelectGenreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DBF3B1218D0B7A00471560 /* SelectGenreViewController.swift */; };
 		11DBF3B4218D11BE00471560 /* AddCommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DBF3B3218D11BE00471560 /* AddCommentsViewController.swift */; };
+		11DBF3B6218E65CA00471560 /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DBF3B5218E65CA00471560 /* SubmitViewController.swift */; };
+		11DBF3BA218E699000471560 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DBF3B9218E699000471560 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,9 @@
 		11DBF3AF218BFE8000471560 /* RecordTuneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTuneViewController.swift; sourceTree = "<group>"; };
 		11DBF3B1218D0B7A00471560 /* SelectGenreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGenreViewController.swift; sourceTree = "<group>"; };
 		11DBF3B3218D11BE00471560 /* AddCommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentsViewController.swift; sourceTree = "<group>"; };
+		11DBF3B5218E65CA00471560 /* SubmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
+		11DBF3B7218E698E00471560 /* NameThatTune.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NameThatTune.entitlements; sourceTree = "<group>"; };
+		11DBF3B9218E699000471560 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11DBF3BA218E699000471560 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +52,7 @@
 			children = (
 				11DBF397218BF95200471560 /* NameThatTune */,
 				11DBF396218BF95200471560 /* Products */,
+				11DBF3B8218E699000471560 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +67,7 @@
 		11DBF397218BF95200471560 /* NameThatTune */ = {
 			isa = PBXGroup;
 			children = (
+				11DBF3B7218E698E00471560 /* NameThatTune.entitlements */,
 				11DBF398218BF95200471560 /* AppDelegate.swift */,
 				11DBF3AA218BF95900471560 /* Models */,
 				11DBF3AC218BF95E00471560 /* Views */,
@@ -84,6 +92,7 @@
 				11DBF3AF218BFE8000471560 /* RecordTuneViewController.swift */,
 				11DBF3B1218D0B7A00471560 /* SelectGenreViewController.swift */,
 				11DBF3B3218D11BE00471560 /* AddCommentsViewController.swift */,
+				11DBF3B5218E65CA00471560 /* SubmitViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -111,6 +120,14 @@
 				11DBF3A4218BF95300471560 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11DBF3B8218E699000471560 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11DBF3B9218E699000471560 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +162,14 @@
 				TargetAttributes = {
 					11DBF394218BF95200471560 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -188,6 +213,7 @@
 				11DBF3B4218D11BE00471560 /* AddCommentsViewController.swift in Sources */,
 				11DBF39B218BF95200471560 /* ViewController.swift in Sources */,
 				11DBF3B2218D0B7A00471560 /* SelectGenreViewController.swift in Sources */,
+				11DBF3B6218E65CA00471560 /* SubmitViewController.swift in Sources */,
 				11DBF399218BF95200471560 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +360,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NameThatTune/NameThatTune.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7G4UHWJ29G;
 				INFOPLIST_FILE = NameThatTune/Info.plist;
@@ -352,6 +379,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NameThatTune/NameThatTune.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7G4UHWJ29G;
 				INFOPLIST_FILE = NameThatTune/Info.plist;
