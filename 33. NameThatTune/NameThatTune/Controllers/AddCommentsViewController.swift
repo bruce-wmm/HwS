@@ -20,11 +20,10 @@ class AddCommentsViewController: UIViewController {
     
     // MARK: - View Life Cycle
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func loadView() {
         view = UIView()
         view.backgroundColor = .white
+        
         comments = UITextView()
         comments.translatesAutoresizingMaskIntoConstraints = false
         comments.delegate = self
@@ -36,8 +35,30 @@ class AddCommentsViewController: UIViewController {
         comments.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         comments.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Comments"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Submit", style: .plain, target: self, action: #selector(submitTapped))
+        comments.text = placeholder
+    }
+    
+    // MARK: - Helper Methods
 
+    @objc func submitTapped() {
+        let submitVC = SubmitViewController()
+        submitVC.genre = genre
+        if comments.text == placeholder {
+            submitVC.comments = ""
+        } else {
+            submitVC.comments = comments.text
+        }
+        navigationController?.pushViewController(submitVC, animated: true)
+    }
+    
 }
+
+// MARK: - AddCommentsViewController: UITextViewDelegate
 
 extension AddCommentsViewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
