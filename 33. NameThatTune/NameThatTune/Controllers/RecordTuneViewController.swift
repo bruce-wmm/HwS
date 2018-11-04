@@ -125,7 +125,7 @@ class RecordTuneViewController: UIViewController {
             tunePlayer.play()
         } catch {
             let alert = UIAlertController(title: "Playback failed",
-                                          message: "There was a problem playing your whistle; please try re-recording.",
+                                          message: "There was a problem playing your tune; please try re-recording.",
                                           preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
                 present(alert, animated: true)
@@ -179,7 +179,7 @@ class RecordTuneViewController: UIViewController {
         } else {
             recordButton.setTitle("Tap to Record", for: .normal)
             let alert = UIAlertController(title: "Record failed",
-                                          message: "There was a problem recording your whistle; please try again.",
+                                          message: "There was a problem recording your tune; please try again.",
                                           preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             present(alert, animated: true)
