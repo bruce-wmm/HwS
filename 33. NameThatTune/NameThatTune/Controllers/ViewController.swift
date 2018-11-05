@@ -26,6 +26,7 @@ class ViewController: UITableViewController {
         title = "Name that Tune"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTune))
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Home", style: .plain, target: nil, action: nil)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Genres", style: .plain, target: self, action: #selector(selectGenre))
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
@@ -99,6 +100,11 @@ class ViewController: UITableViewController {
         }
         
         return titleString
+    }
+    
+    @objc func selectGenre() {
+        let myGenresVC = MyGenresViewController()
+        navigationController?.pushViewController(myGenresVC, animated: true)
     }
 
     // MARK: - UITableView Delegate and Data Source Methods
