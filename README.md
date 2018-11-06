@@ -1,79 +1,88 @@
 ![Hacking With Swift Logo](https://github.com/nhiddink/HackingWithSwift/blob/master/00.%20Introduction%20to%20Swift/HackingWithSwift%20Logo.png)
 
-#### Beginner to advanced project-based tutorials for Swift, written in Swift 4.2 and iOS 12. To start learning, buy a book, or find out more about the series, visit [hackingwithswift.com](https://www.hackingwithswift.com/read).
-
-| KEY |
-| --- |
-📱 = App
-🕹 = Game
-🛠 = Technique
+#### Neil Hiddink's portfolio of apps built while reading Paul Hudson's book [Hacking With Swift](https://www.hackingwithswift.com/read). 
 
 ### Beginner 📕
 
-| #  | Project                   | Topics Learned |
-| -- | ------------------------- | -------------- |
-| 0  | 🛠 Introduction to Swift  | Playgrounds, Constants & Variables, Data Types, Operators, String Interpolation, Arrays & Dictionaries, Conditional Statements, Control Flow, Functions & Methods, Optionals, Enumerations, Classes & Structures, Property Observers, Access Control, Typecasting, Closures |
-| 1  | 📱 Storm Viewer           | Xcode, UIKit, UIViewController, `super`, viewDidLoad(), FileManager, Bundle, `try-catch` Blocks, print(), Storyboards & Interface Builder, UITableView, UITableViewDelegate, UITableViewDataSource, UIImageView, UIImage, UIButton, Auto Layout, Outlets & Actions, UINavigationController |
-| 2  | 🕹 Guess the Flag          | UIButton, Asset Catalogs, Retina displays & @2x and @3x images, UIControlState, CALayer, UIView, UIColor, CGColor, Random Numbers, UIAlertController, UIAlertAction, UILabel |
-| 3  | 🛠 Social Media  | UIActivityViewController, UINavigationBar, UIBarButtonItem, `#selector` & `@objc`, Info.plist, Privacy & Permissions |
-| 4  | 📱Easy Browser            |                |
-| 5  | 🕹 Word Scramble          |                |
-| 6  | 🛠 Shopping List          |                |
-| 7  | 📱 WH Petitions Pt. 1     |                |
-| 8  | 🕹 Seven Swifty Words     |                |
-| 9  | 🛠 WH Petitions Pt. 2     |                |
-| 10 | 📱 Names to Faces Pt. 1   |                |
-| 11 | 🕹 Peggle                 |                |
-| 12 | 🛠 Names to Faces Pt. 2   |                |
-| 13 | 📱 Instafilter            |                |
-| 14 | 🕹 Whack-a-Penguin        |                |
-| 15 | 🛠 Core Animation         |                |
+| #    | Project                      | Topics Learned   | Progress   |
+| :--: | :--------------------------: | :--------------: | :--------: |
+| 0    | 🛠<br>Introduction to Swift  | Playgrounds, Constants & Variables, Data Types, Operators, String Interpolation, Arrays & Dictionaries, Conditional Statements, Control Flow, Functions & Methods, Optionals, Enumerations, Classes & Structures, Property Observers, Access Control, Typecasting, Closures | ✅ |
+| 1    | 📱<br>Storm Viewer           | Xcode, UIKit, UIViewController, `super`, viewDidLoad(), FileManager, Bundle, `try-catch` Blocks, print(), Storyboards & Interface Builder, UITableView, UITableViewDelegate, UITableViewDataSource, UIImageView, UIImage, UIButton, Auto Layout, Outlets & Actions, UINavigationController | ✅ |
+| 2    | 🕹<br>Guess the Flag         | UIButton, Asset Catalogs, Retina displays & @2x and @3x images, UIControlState, CALayer, UIView, UIColor, CGColor, Random Numbers, UIAlertController, UIAlertAction, UILabel | ✅ |
+| 3    | 🛠 Social Media              | UIActivityViewController, UINavigationBar, UIBarButtonItem, `#selector` & `@objc`, Info.plist, Privacy & Permissions | ✅ |
+| 4    | 📱<br>Easy Browser           | WKWebView, URL, URLRequest, UIToolbar, UIProgressView, KVO Design Pattern, WKNavigationDelegate | ✅ |
+| 5    | 🕹<br>Word Scramble          | String Methods, NSRange, UITextChecker, lowercased(), IndexPath | ✅ |
+| 6    | 🛠<br>Auto Layout            | Ctrl-drag, Visual Format Language | ✅ |
+| 7    | 📱<br>WH Petitions           | UITabBarController, Parsing JSON, Codable, didFinishLaunchingWithOptions | ✅ |
+| 8    | 🕹<br>Seven Swifty Words     | addTarget(), enumerated(), index(of:), joined(), replacingOccurrences(), Property Observers, Range Operators | ✅ |
+| 9    | 🛠<br>Grand Central Dispatch |                | ✅ |
+| 10   | 📱<br>Names to Faces   |                | ✅ |
+| 11   | 🕹<br>Peggle                 |                | ✅ |
+| 12   | 🛠<br>User Defaults   |                | ✅ |
+| 13   | 📱<br>Instafilter            |                | ✅ |
+| 14   | 🕹<br>Whack-a-Penguin        |                | ✅ |
+| 15   | 🛠<br>Core Animation         |                | ✅ |
 
 ### Intermediate 📗
 
-| #  | Project Name             | Topics Learned |
-| -- | ------------------------ | - |
-| 16 | 📱 JavaScript Injection  |   |
-| 17 | 🕹 Fruity Penguins       |   |
-| 18 | 🛠 Debugging             |   |
-| 19 | 📱 Capital Cities        |   |
-| 20 | 🕹 Fireworks Night       |   |
-| 21 | 🛠 Local Notifications   |   |
-| 22 | 📱 Detect-A-Beacon       |   |
-| 23 | 🕹 Space Race            |   |
-| 24 | 🛠 Swift Extensions      |   |
-| 25 | 📱 Selfie Share          |   |
-| 26 | 🕹 Marble Maze           |   |
-| 27 | 🛠 Core Graphics         |   |
-| 28 | 📱 Secret Swift          |   |
-| 29 | 🕹 Exploding Monkeys     |   |
-| 30 | 🛠 Instruments           |   |
+| #  | Project Name             | Topics Learned | Progress |
+| -- | ------------------------ | - | -------- |
+| 16 | 📱<br>JavaScript Injection  |   | ✅ |
+| 17 | 🕹<br>Fruity Penguins       |   | ✅ |
+| 18 | 🛠<br>Debugging             |   | ✅ |
+| 19 | 📱<br>Capital Cities        |   | ✅ |
+| 20 | 🕹<br>Fireworks Night       |   | ✅ |
+| 21 | 🛠<br>Local Notifications   |   | ✅ |
+| 22 | 📱<br>Detect-A-Beacon       |   | ✅ |
+| 23 | 🕹<br>Space Race            |   | ✅ |
+| 24 | 🛠<br>Swift Extensions      |   | ✅ |
+| 25 | 📱 Selfie Share          |   | ✅ |
+| 26 | 🕹 Marble Maze           |   | ✅ |
+| 27 | 🛠 Core Graphics         |   | ✅ |
+| 28 | 📱 Secret Swift          |   | ✅ |
+| 29 | 🕹 Exploding Monkeys     |   | ✅ |
+| 30 | 🛠 Instruments           |   | ✅ |
 
 ## Advanced 📘
 
-| #  | Project Name                | Topics Learned |
-| -- | --------------------------- | -------------- |
-| 31 | 📱 Multibrowswer            |                |
-| 32 | 📱 SwiftSearcher            |                |
-| 33 | 📱 Name That Tune           |                |
-| 34 | 🕹 Four in a Row            |                |
-| 35 | 🕹 Random Numbers           |                |
-| 36 | 🕹 Crashy Plane             |                |
-| 37 | 🕹 Psychic Tester           |                |
-| 38 | 🛠 Github Commits           |                |
-| 39 | 🛠 Unit testing with XCTest |                |
+| #  | Project Name                | Topics Learned | Progress |
+| -- | --------------------------- | -------------- | -------- |
+| 31 | 📱 Multibrowswer            |                | ✅ |
+| 32 | 📱 SwiftSearcher            |                | ✅ |
+| 33 | 📱 Name That Tune           |                | ✅ |
+| 34 | 🕹 Four in a Row            |                | ⚠️ |
+| 35 | 🕹 Random Numbers           |                | 🛑 |
+| 36 | 🕹 Crashy Plane             |                | 🛑 |
+| 37 | 🕹 Psychic Tester           |                | 🛑 |
+| 38 | 🛠 Github Commits           |                | 🛑 |
+| 39 | 🛠 Unit testing with XCTest |                | 🛑 |
 
 ## Challenges 📙
 
-| #  | Project Name             | Topics Learned |
-| -- | ------------------------ | - |
-| 1 | 🛠 Fizz Buzz              |   |
-| 2 | 🕹 Fruity Penguins       |   |
-| 3 | 🛠 Debugging             |   |
-| 4 | 📱 Capital Cities        |   |
-| 5 | 🕹 Fireworks Night       |   |
-| 6 | 🛠 Local Notifications   |   |
-| 7 | 📱 Detect-A-Beacon       |   |
-| 8 | 🕹 Space Race            |   |
-| 9 | 🛠 Swift Extensions      |   |
-| 10 | 📱 Selfie Share          |   |
+| #  | Project Name          | Topics Learned | Progress |
+| -- | --------------------- | - | --- |
+| 1  | 🛠<br>Fizz Buzz          |    |
+| 2  | 📱<br>World Information     |   |
+| 3  | 📱<br>Shopping List           |   |
+| 4  | 🕹<br>Hangman      |   |
+| 5  | 🛠<br>Storm Viewer Collection View     |   |
+| 6  | 📱<br>Countries |   |
+| 7  | 🕹<br>Shooting Gallery     |   |
+| 8  | 🛠<br>Swift Extensions          |   | ⚠️ |
+| 9  | 🛠<br>Core Graphics Sandbox |   | ⚠️ |
+| 10 | 📱<br>Private Photos       |   | ⚠️ |
+
+|  KEY  |
+| ----- |
+📱 = App
+🕹 = Game
+🛠 = Technique
+✅ = Complete
+⚠️ = In Progress
+🛑 = Not Started
+
+## Legal
+
+![Shield.io MIT License Shield](https://img.shields.io/github/license/mashape/apistatus.svg)
+
+Swift and the Swift logo are trademarks of Apple Inc., the Hacking With Swift logo is a trademark of Paul Hudson.
