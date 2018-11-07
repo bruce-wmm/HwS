@@ -59,18 +59,19 @@
 
 ## Challenges 📙
 
-| #    | Project Name          | Topics Learned | Progress |
-| :--: | :---------------------: | :-: | :---: |
-| 1    | 🛠<br>Fizz Buzz          |    |
-| 2    | 📱<br>World Information     |   |
-| 3    | 📱<br>Shopping List           |   |
-| 4    | 🕹<br>Hangman      |   |
-| 5    | 🛠<br>Storm Viewer Collection View     |   |
-| 6    | 📱<br>Countries |   |
-| 7    | 🕹<br>Shooting Gallery     |   |
-| 8    | 🛠<br>Swift Extensions          |   | ⚠️ |
-| 9    | 🛠<br>Core Graphics Sandbox |   | ⚠️ |
-| 10   | 📱<br>Private Photos       |   | ⚠️ |
+| #    | Project Name                 | Progress |
+| :--: | :--------------------------: | :------: |
+| 1    | 🛠<br>Fizz Buzz              | ✅ |
+| 2    | 📱<br>World Flags            | ⚠️ |
+| 3    | 📱<br>Shopping List          | ⚠️ |
+| 4    | 🕹<br>Hangman                | ⚠️ |
+| 5    | 🛠<br> Storm Viewer v2.0     | ⚠️ |
+| 6    | 📱<br>World Facts            | ⚠️ |
+| 7    | 📱<br>Apple Notes Clone      | ⚠️ |
+| 8    | 🕹<br>Target Practice        | ⚠️ |
+| 9    | 🛠<br>Swift Extensions       | ⚠️ |
+| 10    | 🛠<br>Core Graphics Rainbow | ⚠️ |
+| 11   | 📱<br>Private Photos         | ⚠️ |
 
 |  KEY  |
 | ----- |
