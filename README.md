@@ -13,7 +13,7 @@
 | 4    | 📱<br>Easy Browser           | WKWebView, URL, URLRequest, UIToolbar, UIProgressView, KVO Design Pattern, WKNavigationDelegate | ✅ |
 | 5    | 🕹<br>Word Scramble          | String Methods, NSRange, UITextChecker, lowercased(), IndexPath | ✅ |
 | 6    | 🛠<br>Auto Layout            | Ctrl-drag, Visual Format Language | ✅ |
-| 7    | 📱<br>WH Petitions           | UITabBarController, Parsing JSON, didFinishLaunchingWithOptions | ✅ |
+| 7    | 📱<br>WH Petitions           | UITabBarController, Parsing JSON, SwiftyJSON didFinishLaunchingWithOptions | ✅ |
 | 8    | 🕹<br>Seven Swifty Words     | addTarget(), enumerated(), index(of:), joined(), replacingOccurrences(), Property Observers, Range Operators | ✅ |
 | 9    | 🛠<br>Grand Central Dispatch | async(), DispatchQueue.main, Quality of Service, global(), performSelector(inBackground:) | ✅ |
 | 10   | 📱<br>Names to Faces   | UICollectionView, UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerController, UUID, Custom NSObject Classes | ✅ |
@@ -25,52 +25,52 @@
 
 ### Intermediate 📗
 
-| #  | Project Name             | Topics Learned | Progress |
-| -- | ------------------------ | - | -------- |
-| 16 | 📱<br>JavaScript Injection  |   | ✅ |
-| 17 | 🕹<br>Fruity Penguins       |   | ✅ |
-| 18 | 🛠<br>Debugging             |   | ✅ |
-| 19 | 📱<br>Capital Cities        |   | ✅ |
-| 20 | 🕹<br>Fireworks Night       |   | ✅ |
-| 21 | 🛠<br>Local Notifications   |   | ✅ |
-| 22 | 📱<br>Detect-A-Beacon       |   | ✅ |
-| 23 | 🕹<br>Space Race            |   | ✅ |
-| 24 | 🛠<br>Swift Extensions      |   | ✅ |
-| 25 | 📱 Selfie Share          |   | ✅ |
-| 26 | 🕹 Marble Maze           |   | ✅ |
-| 27 | 🛠 Core Graphics         |   | ✅ |
-| 28 | 📱 Secret Swift          |   | ✅ |
-| 29 | 🕹 Exploding Monkeys     |   | ✅ |
-| 30 | 🛠 Instruments           |   | ✅ |
+| #    | Project Name                | Topics Learned | Progress |
+| :--: | :-------------------------: | :-: | :--------: |
+| 16   | 📱<br>JavaScript Injection  | NSExtensionItem, plists, NSDictionary, UITextView, NSItemProvider, kUTTypePropertyList, Keyboard Notifications, NSValue, CGRect, CGPoint, CGSize, UIEdgeInsets | ✅ |
+| 17   | 🕹<br>Fruity Penguins       | SKShapeNode, CGPath, UIBezierPath, AVAudioPlayer, CaseIterable & Custom Enums, Default Method Parameters | ✅ |
+| 18   | 🛠<br>Debugging             | `print`, `assert`, breakpoints, Visual Debugging | ✅ |
+| 19   | 📱<br>Capital Cities        | MKMapView, MKAnnotation, MKPinAnnotationView, CLLocationCoordinate2D, dequeueReusableAnnotationView() | ✅ |
+| 20   | 🕹<br>Fireworks Night       | Timer, SKNode, follow(), motionBegan(), prefersStatusBarHidden, Timer.invalidate() | ✅ |
+| 21   | 🛠<br>Local Notifications   | UNUserNotificationCenter, UNNotificationRequest, UNNotificationAction, UNNotificationCategory, UNUserNotificationCenterDelegate, UNNotificationDefaultActionIdentifier | ✅ |
+| 22   | 📱<br>Detect-A-Beacon       | Core Location, CLBeaconRegion, CLLocationManager, startMonitoring(for:), startRangingBeacons(in:), `uuidgen`, CLBeaconRegion, CLProximity | ✅ |
+| 23   | 🕹<br>Space Race            | Per-Pixel Collision Detection, Advancing Particle Systems, Adjust Linear & Angular Damping, touchesEnded(), touchesMoved(), touchesBegan() | ✅ |
+| 24   | 🛠<br>Swift Extensions      | `mutating`, Protocol-Oriented Programming, Methods as Verbs, Properties as State, ExSwift | ✅ |
+| 25   | 📱 Selfie Share             | MCSession, MCBrowswerViewController, showConnectionPrompt(), MCPeerID, MCAdvertiserAssistant, MCSessionDelegate, MCBrowserViewControllerDelegate, Data, data(using:), String.Encoding.utf8 | ✅ |
+| 26   | 🕹 Marble Maze              | categoryBitMask, collisionBitMask, contactTestBitMask, CMMotionManager, update() | ✅ |
+| 27   | 🛠 Core Graphics            | UIGraphicsImageRenderer, UIGraphicsImageRendererContext, CGContext, addRect(), addEllipse(), String.draw(with:), UIFont, NSMutableParagraphStyle(), NSAttributedString | ✅ |
+| 28   | 📱 Secret Swift             | KeychainWrapper, resignFirstResponder(), NotificationCenter, UIApplication.willResignActiveNotification, LocalAuthentication, LAContext, canEvaluatePolicy(), .deviceOwnerAuthenticationWithBiometrics, evaluatePolicy(), `[unowned self]`, `self`, Privacy for Touch ID & Face ID | ✅ |
+| 29   | 🕹 Exploding Monkeys        | UIKit + SpriteKit, Texture Atlases, Scene Transitions, Destructable Terrain | ✅ |
+| 30   | 🛠 Instruments              | TimeProfiler, Color Blended Layers, Color Offscreen-Rendered Yellow, Color Hits Green and Misses Red | ✅ |
 
 ## Advanced 📘
 
-| #  | Project Name                | Topics Learned | Progress |
-| -- | --------------------------- | -------------- | -------- |
-| 31 | 📱 Multibrowswer            |                | ✅ |
-| 32 | 📱 SwiftSearcher            |                | ✅ |
-| 33 | 📱 Name That Tune           |                | ✅ |
-| 34 | 🕹 Four in a Row            |                | ⚠️ |
-| 35 | 🕹 Random Numbers           |                | 🛑 |
-| 36 | 🕹 Crashy Plane             |                | 🛑 |
-| 37 | 🕹 Psychic Tester           |                | 🛑 |
-| 38 | 🛠 Github Commits           |                | 🛑 |
-| 39 | 🛠 Unit testing with XCTest |                | 🛑 |
+| #    | Project Name                | Topics Learned   | Progress   |
+| :--: | :-------------------------: | :--------------: | :--------: |
+| 31   | 📱 Multibrowswer            |                  | ✅ |
+| 32   | 📱 SwiftSearcher            |                  | ✅ |
+| 33   | 📱 Name That Tune           |                  | ✅ |
+| 34   | 🕹 Four in a Row            |                  | ⚠️ |
+| 35   | 🕹 Random Numbers           |                  | 🛑 |
+| 36   | 🕹 Crashy Plane             |                  | 🛑 |
+| 37   | 🕹 Psychic Tester           |                  | 🛑 |
+| 38   | 🛠 Github Commits           |                  | 🛑 |
+| 39   | 🛠 Unit testing with XCTest |                  | 🛑 |
 
 ## Challenges 📙
 
-| #  | Project Name          | Topics Learned | Progress |
-| -- | --------------------- | - | --- |
-| 1  | 🛠<br>Fizz Buzz          |    |
-| 2  | 📱<br>World Information     |   |
-| 3  | 📱<br>Shopping List           |   |
-| 4  | 🕹<br>Hangman      |   |
-| 5  | 🛠<br>Storm Viewer Collection View     |   |
-| 6  | 📱<br>Countries |   |
-| 7  | 🕹<br>Shooting Gallery     |   |
-| 8  | 🛠<br>Swift Extensions          |   | ⚠️ |
-| 9  | 🛠<br>Core Graphics Sandbox |   | ⚠️ |
-| 10 | 📱<br>Private Photos       |   | ⚠️ |
+| #    | Project Name          | Topics Learned | Progress |
+| :--: | :---------------------: | :-: | :---: |
+| 1    | 🛠<br>Fizz Buzz          |    |
+| 2    | 📱<br>World Information     |   |
+| 3    | 📱<br>Shopping List           |   |
+| 4    | 🕹<br>Hangman      |   |
+| 5    | 🛠<br>Storm Viewer Collection View     |   |
+| 6    | 📱<br>Countries |   |
+| 7    | 🕹<br>Shooting Gallery     |   |
+| 8    | 🛠<br>Swift Extensions          |   | ⚠️ |
+| 9    | 🛠<br>Core Graphics Sandbox |   | ⚠️ |
+| 10   | 📱<br>Private Photos       |   | ⚠️ |
 
 |  KEY  |
 | ----- |
