@@ -26,7 +26,7 @@
 ### Intermediate 📗
 
 | #    | Project Name                | Topics Learned | Progress |
-| :--: | :-------------------------: | :-: | :--------: |
+| :--: | :-------------------------: | :------------: | :------: |
 | 16   | 📱<br>JavaScript Injection  | NSExtensionItem, plists, NSDictionary, UITextView, NSItemProvider, kUTTypePropertyList, Keyboard Notifications, NSValue, CGRect, CGPoint, CGSize, UIEdgeInsets | ✅ |
 | 17   | 🕹<br>Fruity Penguins       | SKShapeNode, CGPath, UIBezierPath, AVAudioPlayer, CaseIterable & Custom Enums, Default Method Parameters | ✅ |
 | 18   | 🛠<br>Debugging             | `print`, `assert`, breakpoints, Visual Debugging | ✅ |
@@ -38,7 +38,7 @@
 | 24   | 🛠<br>Swift Extensions      | `mutating`, Protocol-Oriented Programming, Methods as Verbs, Properties as State, ExSwift | ✅ |
 | 25   | 📱 Selfie Share             | MCSession, MCBrowswerViewController, showConnectionPrompt(), MCPeerID, MCAdvertiserAssistant, MCSessionDelegate, MCBrowserViewControllerDelegate, Data, data(using:), String.Encoding.utf8 | ✅ |
 | 26   | 🕹 Marble Maze              | categoryBitMask, collisionBitMask, contactTestBitMask, CMMotionManager, update() | ✅ |
-| 27   | 🛠 Core Graphics            | UIGraphicsImageRenderer, UIGraphicsImageRendererContext, CGContext, addRect(), addEllipse(), String.draw(with:), UIFont, NSMutableParagraphStyle(), NSAttributedString | ✅ |
+| 27   | 🛠 Core Graphics            | UIGraphicsImageRenderer, UIGraphicsImageRendererContext, CGContext, addRect(), addEllipse(), String.draw(with:), UIFont, NSMutableParagraphStyle() | ✅ |
 | 28   | 📱 Secret Swift             | KeychainWrapper, resignFirstResponder(), NotificationCenter, UIApplication.willResignActiveNotification, LocalAuthentication, LAContext, canEvaluatePolicy(), .deviceOwnerAuthenticationWithBiometrics, evaluatePolicy(), `[unowned self]`, `self`, Privacy for Touch ID & Face ID | ✅ |
 | 29   | 🕹 Exploding Monkeys        | UIKit + SpriteKit, Texture Atlases, Scene Transitions, Destructable Terrain | ✅ |
 | 30   | 🛠 Instruments              | TimeProfiler, Color Blended Layers, Color Offscreen-Rendered Yellow, Color Hits Green and Misses Red | ✅ |
@@ -47,9 +47,9 @@
 
 | #    | Project Name                | Topics Learned   | Progress   |
 | :--: | :-------------------------: | :--------------: | :--------: |
-| 31   | 📱 Multibrowswer            |                  | ✅ |
-| 32   | 📱 SwiftSearcher            |                  | ✅ |
-| 33   | 📱 Name That Tune           |                  | ✅ |
+| 31   | 📱 Multibrowswer            | UIStackView, iPad Multitasking, addArrangedSubview(), WKNavigationDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate, App Transport Security | ✅ |
+| 32   | 📱 SwiftSearcher            | Dynamic Type, NSAttributedString, SFSafariViewController, SFSafariViewControllerDelegate, Core Spotlight, UIContentSizeCategoryDidChange | ✅ |
+| 33   | 📱 Name That Tune           | AVAudioRecorder, AVAudioSession, requestRecordPermission(), CloudKit, CKRecord, CKAsset, CloudKit Dashboard, CKQueryOperation, NSPredicate, CKRecord.Reference, fetch(withRecordID:), save(), CKQuerySubscription, NSSortDescriptor | ✅ |
 | 34   | 🕹 Four in a Row            |                  | ⚠️ |
 | 35   | 🕹 Random Numbers           |                  | 🛑 |
 | 36   | 🕹 Crashy Plane             |                  | 🛑 |
