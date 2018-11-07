@@ -13,15 +13,15 @@
 | 4    | 📱<br>Easy Browser           | WKWebView, URL, URLRequest, UIToolbar, UIProgressView, KVO Design Pattern, WKNavigationDelegate | ✅ |
 | 5    | 🕹<br>Word Scramble          | String Methods, NSRange, UITextChecker, lowercased(), IndexPath | ✅ |
 | 6    | 🛠<br>Auto Layout            | Ctrl-drag, Visual Format Language | ✅ |
-| 7    | 📱<br>WH Petitions           | UITabBarController, Parsing JSON, Codable, didFinishLaunchingWithOptions | ✅ |
+| 7    | 📱<br>WH Petitions           | UITabBarController, Parsing JSON, didFinishLaunchingWithOptions | ✅ |
 | 8    | 🕹<br>Seven Swifty Words     | addTarget(), enumerated(), index(of:), joined(), replacingOccurrences(), Property Observers, Range Operators | ✅ |
-| 9    | 🛠<br>Grand Central Dispatch |                | ✅ |
-| 10   | 📱<br>Names to Faces   |                | ✅ |
-| 11   | 🕹<br>Peggle                 |                | ✅ |
-| 12   | 🛠<br>User Defaults   |                | ✅ |
-| 13   | 📱<br>Instafilter            |                | ✅ |
-| 14   | 🕹<br>Whack-a-Penguin        |                | ✅ |
-| 15   | 🛠<br>Core Animation         |                | ✅ |
+| 9    | 🛠<br>Grand Central Dispatch | async(), DispatchQueue.main, Quality of Service, global(), performSelector(inBackground:) | ✅ |
+| 10   | 📱<br>Names to Faces   | UICollectionView, UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UIImagePickerController, UUID, Custom NSObject Classes | ✅ |
+| 11   | 🕹<br>Peggle                 | CGFloat, SKSpriteNode, UITouch, SKPhysicsBody, circleOfRadius, SKPhysicsContactDelegate, SKLabelNode, SKEmitterNode | ✅ |
+| 12   | 🛠<br>User Defaults   | NSCoding, Codable | ✅ |
+| 13   | 📱<br>Instafilter            | UISlider, CIContext, CIFilter | ✅ |
+| 14   | 🕹<br>Whack-a-Penguin        | SKCropNode, SKTexture, SKActions, asyncAfter() | ✅ |
+| 15   | 🛠<br>Core Animation         | `switch`, `case`, animate(withDuration:), CGAffineTransform, CGFloat.pi | ✅ |
 
 ### Intermediate 📗
 
