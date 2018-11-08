@@ -1,4 +1,4 @@
-![Hacking With Swift Logo](https://github.com/nhiddink/HackingWithSwift/blob/master/00.%20Introduction%20to%20Swift/HackingWithSwift%20Logo.png)
+![Hacking With Swift Logo](https://github.com/nhiddink/HackingWithSwift/blob/master/logo.png)
 
 #### Neil Hiddink's portfolio of apps built while reading Paul Hudson's book [Hacking With Swift](https://www.hackingwithswift.com/read). 
 
@@ -61,17 +61,17 @@
 
 | #    | Project Name                 | Progress |
 | :--: | :--------------------------: | :------: |
-| 1    | 🛠<br>Fizz Buzz              | ✅ |
-| 2    | 📱<br>World Flags            | ⚠️ |
-| 3    | 📱<br>Shopping List          | ⚠️ |
-| 4    | 🕹<br>Hangman                | ⚠️ |
-| 5    | 🛠<br> Storm Viewer v2.0     | ⚠️ |
-| 6    | 📱<br>World Facts            | ⚠️ |
-| 7    | 📱<br>Apple Notes Clone      | ⚠️ |
-| 8    | 🕹<br>Target Practice        | ⚠️ |
-| 9    | 🛠<br>Swift Extensions       | ⚠️ |
-| 10    | 🛠<br>Core Graphics Rainbow | ⚠️ |
-| 11   | 📱<br>Private Photos         | ⚠️ |
+| 0    | 🛠<br>Fizz Buzz              | ✅ |
+| 1    | 📱<br>World Flags            | ⚠️ |
+| 2    | 📱<br>Shopping List          | ⚠️ |
+| 3    | 🕹<br>Hangman                | ⚠️ |
+| 4    | 🛠<br> Storm Viewer v2.0     | ⚠️ |
+| 5    | 📱<br>World Facts            | ⚠️ |
+| 6    | 📱<br>Apple Notes Clone      | ⚠️ |
+| 7    | 🕹<br>Target Practice        | ⚠️ |
+| 8    | 🛠<br>Swift Extensions       | ⚠️ |
+| 9    | 🛠<br>Core Graphics Rainbow | ⚠️ |
+| 10   | 📱<br>Private Photos         | ⚠️ |
 
 |  KEY  |
 | ----- |
