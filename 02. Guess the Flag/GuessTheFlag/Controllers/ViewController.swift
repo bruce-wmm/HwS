@@ -8,11 +8,11 @@
 
 import UIKit
 
-// MARK: ViewController: UIViewController
+// MARK: - ViewController: UIViewController
 
 class ViewController: UIViewController {
 
-    // MARK: Properties
+    // MARK: - Properties
     
     var countries = [String]()
     var buttons = [UIButton]()
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     var score = 0
     
-    // MARK: IB Outlets
+    // MARK: - IB Outlets
     
     @IBOutlet weak var topButton: UIButton!
     @IBOutlet weak var topStatusLabel: UILabel!
@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         askQuestion()
     }
     
-    // MARK: Private Methods
+    // MARK: - Helper Methods
     
     private func resetGame(action: UIAlertAction! = nil) {
         
@@ -122,7 +122,7 @@ class ViewController: UIViewController {
         present(alert, animated: true)
     }
 
-    // MARK: IB Actions
+    // MARK: - IB Actions
     
     @IBAction func buttonTapped(_ sender: UIButton) {
         
