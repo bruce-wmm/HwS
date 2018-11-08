@@ -1,0 +1,176 @@
+//
+//  ViewController.swift
+//  CoreGraphicsDemo
+//
+//  Created by Neil Hiddink on 10/24/18.
+//  Copyright © 2018 Neil Hiddink. All rights reserved.
+//
+
+import UIKit
+
+// MARK: - ViewController: UIViewController
+
+class ViewController: UIViewController {
+
+    // MARK: - Properties
+    
+    var currentDrawType = 0
+    
+    // MARK: - IB Outlets
+    
+    @IBOutlet var imageView: UIImageView!
+    
+    // MARK: - View Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        drawRectangle()
+    }
+    
+    // MARK: Helper Methods
+    
+    func drawRectangle() {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width:
+            512, height: 512))
+        let img = renderer.image { ctx in
+            let rectangle = CGRect(x: 5, y: 5, width: 502, height: 502)
+            ctx.cgContext.setFillColor(UIColor.red.cgColor)
+            ctx.cgContext.setStrokeColor(UIColor.black.cgColor)
+            ctx.cgContext.setLineWidth(10)
+            ctx.cgContext.addRect(rectangle)
+            ctx.cgContext.drawPath(using: .fillStroke)
+        }
+        imageView.image = img
+    }
+    
+    func drawCircle() {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width:
+            512, height: 512))
+        let img = renderer.image { ctx in
+            let rectangle = CGRect(x: 5, y: 5, width: 502, height: 502)
+            ctx.cgContext.setFillColor(UIColor.red.cgColor)
+            ctx.cgContext.setStrokeColor(UIColor.black.cgColor)
+            ctx.cgContext.setLineWidth(10)
+            ctx.cgContext.addEllipse(in: rectangle)
+            ctx.cgContext.drawPath(using: .fillStroke)
+        }
+        imageView.image = img
+    }
+    
+    func drawCheckerboard() {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+        let img = renderer.image { ctx in
+            ctx.cgContext.setFillColor(UIColor.black.cgColor)
+            for row in 0 ..< 8 {
+                for col in 0 ..< 8 {
+                    if (row + col) % 2 == 0 {
+                        ctx.cgContext.fill(CGRect(x: col * 64, y: row * 64, width: 64, height: 64))
+                    }
+                }
+            }
+        }
+        imageView.image = img
+    }
+    
+    func drawRotatedSquares() {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+        let img = renderer.image { ctx in
+            ctx.cgContext.translateBy(x: 256, y: 256)
+            let rotations = 16
+            let amount = Double.pi / Double(rotations)
+            for _ in 0 ..< rotations {
+                ctx.cgContext.rotate(by: CGFloat(amount))
+                ctx.cgContext.addRect(CGRect(x: -128, y: -128, width: 256, height: 256))
+            }
+            ctx.cgContext.setStrokeColor(UIColor.black.cgColor)
+            ctx.cgContext.strokePath()
+        }
+        imageView.image = img
+    }
+    
+    func drawLines() {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+        let img = renderer.image { ctx in
+            ctx.cgContext.translateBy(x: 256, y: 256)
+            var first = true
+            var length: CGFloat = 256
+            for _ in 0 ..< 256 {
+                ctx.cgContext.rotate(by: CGFloat.pi / 2)
+                if first {
+                    ctx.cgContext.move(to: CGPoint(x: length, y: 50))
+                    first = false
+                } else {
+                    ctx.cgContext.addLine(to: CGPoint(x: length, y: 50))
+                }
+                length *= 0.99
+            }
+            ctx.cgContext.setStrokeColor(UIColor.black.cgColor)
+            ctx.cgContext.strokePath()
+        }
+        imageView.image = img
+    }
+    
+    func drawImagesAndText() {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+        let img = renderer.image { ctx in
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.alignment = .center
+            let attrs = [NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Thin", size: 36)!,
+                         NSAttributedString.Key.paragraphStyle: paragraphStyle]
+            let string = "The best-laid schemes o'\nmice an' men gang aft agley"
+            string.draw(with: CGRect(x: 32, y: 32, width: 448, height: 448), options: .usesLineFragmentOrigin, attributes: attrs, context: nil)
+            
+            let mouse = UIImage(named: "mouse")
+            mouse?.draw(at: CGPoint(x: 300, y: 150))
+        }
+        imageView.image = img
+    }
+    
+    func drawRainbow() {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+        let rainbow = renderer.image { ctx in
+            UIColor.white.set()
+            ctx.fill(CGRect(x: 0, y: 0, width: 512, height: 512))
+            ctx.cgContext.translateBy(x: 0, y: 256)
+            let colors = [UIColor.red, UIColor.orange, UIColor.yellow,
+                          UIColor.green, UIColor.blue, UIColor.purple, UIColor.white]
+            var drawRect = CGRect(x: 5, y: 5, width: 502, height: 502)
+            for color in colors {
+                drawRect = drawRect.insetBy(dx: 20, dy: 20)
+                ctx.cgContext.setFillColor(color.cgColor)
+                ctx.cgContext.addEllipse(in: drawRect)
+                ctx.cgContext.drawPath(using: .fill)
+            }
+        }
+        imageView.image = rainbow
+    }
+    
+    // MARK: - IB Actions
+    
+    @IBAction func redrawTapped(_ sender: UIButton) {
+        currentDrawType += 1
+        if currentDrawType > 6 {
+            currentDrawType = 0
+        }
+        switch currentDrawType {
+        case 0:
+            drawRectangle()
+        case 1:
+            drawCircle()
+        case 2:
+            drawCheckerboard()
+        case 3:
+            drawRotatedSquares()
+        case 4:
+            drawLines()
+        case 5:
+            drawImagesAndText()
+        case 6:
+            drawRainbow()
+        default:
+            break
+        }
+    }
+    
+}
