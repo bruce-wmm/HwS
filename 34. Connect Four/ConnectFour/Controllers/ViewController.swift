@@ -19,6 +19,9 @@ class ViewController: UIViewController {
     override var shouldAutorotate: Bool { return true }
     override var prefersStatusBarHidden: Bool { return true }
     
+    var placedChips = [[UIView]]()
+    var board: Board!
+    
     // MARK: - IB Outlets
     
     @IBOutlet var columnButtons: [UIButton]!
@@ -28,19 +31,21 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let view = self.view as! SKView? {
-
-            if let scene = SKScene(fileNamed: "GameScene") {
-                
-                scene.scaleMode = .aspectFill
-                view.presentScene(scene)
+        for _ in 0 ..< Board.width {
+            placedChips.append([UIView]())
+        }
+        resetBoard()
+    }
+    
+    // MARK: - Helper Methods
+    
+    func resetBoard() {
+        board = Board()
+        for i in 0 ..< placedChips.count {
+            for chip in placedChips[i] {
+                chip.removeFromSuperview()
             }
-            
-            view.ignoresSiblingOrder = true
-            view.showsPhysics = true
-            view.showsFPS = true
-            view.showsNodeCount = true
+            placedChips[i].removeAll(keepingCapacity: true)
         }
     }
     
