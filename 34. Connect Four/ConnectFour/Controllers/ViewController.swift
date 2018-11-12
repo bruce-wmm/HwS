@@ -26,7 +26,6 @@ class ViewController: UIViewController {
     
     @IBOutlet var columnButtons: [UIButton]!
     
-    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
