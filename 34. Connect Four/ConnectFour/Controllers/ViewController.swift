@@ -1,5 +1,5 @@
 //
-//  GameViewController.swift
+//  ViewController.swift
 //  ConnectFour
 //
 //  Created by Neil Hiddink on 11/7/18.
@@ -10,14 +10,19 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-// MARK: - GameViewController: UIViewController
+// MARK: - ViewController: UIViewController
 
-class GameViewController: UIViewController {
-
+class ViewController: UIViewController {
+    
     // MARK: - Properties
     
     override var shouldAutorotate: Bool { return true }
     override var prefersStatusBarHidden: Bool { return true }
+    
+    // MARK: - IB Outlets
+    
+    @IBOutlet var columnButtons: [UIButton]!
+    
     
     // MARK: - View Life Cycle
     
@@ -37,6 +42,12 @@ class GameViewController: UIViewController {
             view.showsFPS = true
             view.showsNodeCount = true
         }
+    }
+    
+    // MARK: - IB Actions
+    
+    @IBAction func makeMove(_ sender: UIButton) {
+    
     }
     
 }

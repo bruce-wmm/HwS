@@ -10,7 +10,7 @@
 		11DBF3CE219392D000471560 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DBF3CD219392D000471560 /* AppDelegate.swift */; };
 		11DBF3D0219392D000471560 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 11DBF3CF219392D000471560 /* GameScene.sks */; };
 		11DBF3D4219392D000471560 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DBF3D3219392D000471560 /* GameScene.swift */; };
-		11DBF3D6219392D000471560 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DBF3D5219392D000471560 /* GameViewController.swift */; };
+		11DBF3D6219392D000471560 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DBF3D5219392D000471560 /* ViewController.swift */; };
 		11DBF3D9219392D000471560 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11DBF3D7219392D000471560 /* Main.storyboard */; };
 		11DBF3DB219392D200471560 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11DBF3DA219392D200471560 /* Assets.xcassets */; };
 		11DBF3DE219392D200471560 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11DBF3DC219392D200471560 /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		11DBF3CD219392D000471560 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11DBF3CF219392D000471560 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		11DBF3D3219392D000471560 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		11DBF3D5219392D000471560 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		11DBF3D5219392D000471560 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		11DBF3D8219392D000471560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11DBF3DA219392D200471560 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11DBF3DD219392D200471560 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				11DBF3E82193937E00471560 /* Scenes */,
-				11DBF3D5219392D000471560 /* GameViewController.swift */,
+				11DBF3D5219392D000471560 /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11DBF3D4219392D000471560 /* GameScene.swift in Sources */,
-				11DBF3D6219392D000471560 /* GameViewController.swift in Sources */,
+				11DBF3D6219392D000471560 /* ViewController.swift in Sources */,
 				11DBF3CE219392D000471560 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,7 +353,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Neil-Hiddink.FourInARow";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Neil-Hiddink.ConnectFour";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -371,7 +371,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Neil-Hiddink.FourInARow";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Neil-Hiddink.ConnectFour";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
