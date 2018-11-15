@@ -23,10 +23,12 @@ class Board: NSObject {
     static var width = 7
     static var height = 6
     var slots = [ChipColor]()
+    var currentPlayer: Player
     
     // MARK: - Initialization
     
     override init() {
+        currentPlayer = Player.allPlayers[0]
         for _ in 0 ..< Board.width * Board.height {
             slots.append(.none)
         }
@@ -60,6 +62,14 @@ class Board: NSObject {
         if let row = nextEmptySlot(in: column) {
             set(chip: chip, in: column, row: row)
         }
+    }
+    
+    func isFull() -> Bool {
+        return false
+    }
+    
+    func isWin(for player: Player) -> Bool {
+        return false
     }
     
 }
