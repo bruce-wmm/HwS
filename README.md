@@ -50,7 +50,7 @@
 | 31   | 📱 Multibrowswer            | UIStackView, iPad Multitasking, addArrangedSubview(), WKNavigationDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate, App Transport Security | ✅ |
 | 32   | 📱 SwiftSearcher            | Dynamic Type, NSAttributedString, SFSafariViewController, SFSafariViewControllerDelegate, Core Spotlight, UIContentSizeCategoryDidChange | ✅ |
 | 33   | 📱 Name That Tune           | AVAudioRecorder, AVAudioSession, requestRecordPermission(), CloudKit, CKRecord, CKAsset, CloudKit Dashboard, CKQueryOperation, NSPredicate, CKRecord.Reference, fetch(withRecordID:), save(), CKQuerySubscription, NSSortDescriptor | ✅ |
-| 34   | 🕹 Four in a Row            |                  | ⚠️ |
+| 34   | 🕹 Four in a Row            | GameplayKit AI, GKGameModel, GKGameModelPlayer, GKGameModelUpdate, AI Heuristics, NSCopying, GKMinmaxStrategist | ✅ |
 | 35   | 🕹 Random Numbers           |                  | 🛑 |
 | 36   | 🕹 Crashy Plane             |                  | 🛑 |
 | 37   | 🕹 Psychic Tester           |                  | 🛑 |
