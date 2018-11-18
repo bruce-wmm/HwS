@@ -51,8 +51,8 @@
 | 32   | 📱<br>[SwiftSearcher](https://github.com/nhiddink/HackingWithSwift/tree/master/32.%20Swift%20Searcher)            | Dynamic Type, NSAttributedString, SFSafariViewController, SFSafariViewControllerDelegate, Core Spotlight, UIContentSizeCategoryDidChange | ✅ |
 | 33   | 📱<br>[Name That Tune](https://github.com/nhiddink/HackingWithSwift/tree/master/33.%20Name%20that%20Tune)          | AVAudioRecorder, AVAudioSession, requestRecordPermission(), CloudKit, CKRecord, CKAsset, CloudKit Dashboard, CKQueryOperation, NSPredicate, CKRecord.Reference, fetch(withRecordID:), save(), CKQuerySubscription, NSSortDescriptor | ✅ |
 | 34   | 🕹<br>[Four in a Row](https://github.com/nhiddink/HackingWithSwift/tree/master/34.%20Connect%20Four)            | GameplayKit AI, GKGameModel, GKGameModelPlayer, GKGameModelUpdate, AI Heuristics, NSCopying, GKMinmaxStrategist | ✅ |
-| 35   | 🕹<br>Random Numbers           |                  | ⚠️ |
-| 36   | 🕹<br>Crashy Plane             |                  | 🛑 |
+| 35   | 🕹<br>Random Numbers           | Int.random(in:), Float.random(in:), Double.random(in:), CGFloat.random(in:), Bool.random(), arc4random(), GKRandomSource.sharedRandom(), GKLinearCongruentialRandomSource, GKMersenneTwisterRandomSource, GKARC4RandomSource, GKRandomDistribution, GKShuffledDistribution, GKGaussianDistribution, Fisher-Yates Algorithm, arrayByShufflingObjects(in:) | ✅ |
+| 36   | 🕹<br>Crashy Plane             |                  | ⚠️ |
 | 37   | 🕹<br>Psychic Tester           |                  | 🛑 |
 | 38   | 🛠<br>Github Commits           |                  | 🛑 |
 | 39   | 🛠<br>Unit testing with XCTest |                  | 🛑 |
