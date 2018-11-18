@@ -34,3 +34,18 @@ print(GKRandomSource.sharedRandom().nextInt())
 print(GKRandomSource.sharedRandom().nextInt(upperBound: 6))
 
 
+// GKARC4RandomSource and other GameplayKit options
+let cong = GKLinearCongruentialRandomSource() // highest performance + lowest randomness
+cong.nextInt(upperBound: 20)
+
+
+let arc4 = GKARC4RandomSource() // balanced performance + balanced randomness
+arc4.nextInt(upperBound: 20)
+
+// If you need maximum randomness, use:
+let mersenne = GKMersenneTwisterRandomSource() // lowest performance + highest randomness
+mersenne.nextInt(upperBound: 20)
+
+// NOTE: Dropping values by "force flushing" arc4random ensures unique sequences
+// Apple suggests 769 values at a minimum
+arc4.dropValues(1024)
