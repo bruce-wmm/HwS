@@ -23,3 +23,14 @@ func RandomInt(min: Int, max: Int) -> Int {
     return Int(arc4random_uniform(UInt32((max - min) + 1))) +
     min
 }
+
+// Generating random numbers with GameplayKit: GKRandomSource
+import GameplayKit
+
+// Some very specific reasons why this could not be random on Apple Documentation
+print(GKRandomSource.sharedRandom().nextInt())
+
+// In a range, identical to arc4random
+print(GKRandomSource.sharedRandom().nextInt(upperBound: 6))
+
+
