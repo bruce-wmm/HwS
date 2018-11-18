@@ -49,3 +49,30 @@ mersenne.nextInt(upperBound: 20)
 // NOTE: Dropping values by "force flushing" arc4random ensures unique sequences
 // Apple suggests 769 values at a minimum
 arc4.dropValues(1024)
+
+// GKRandomDistribution, GKShuffledDistribution and GKGaussianDistribution
+
+let d6 = GKRandomDistribution.d6()
+d6.nextInt()
+
+let d20 = GKRandomDistribution.d20()
+d20.nextInt()
+
+let crazy = GKRandomDistribution(lowestValue: 1, highestValue: 11539)
+crazy.nextInt()
+
+// Dice are built into GameplayKit, but really they're simple versions of this:
+let distribution = GKRandomDistribution(lowestValue: 10, highestValue: 20)
+print(distribution.nextInt(upperBound: 11)) // ...bad idea, since you already set a highestValue
+
+// Special constructors for distributions
+let rand = GKMersenneTwisterRandomSource()
+let distribution2 = GKRandomDistribution(randomSource: rand, lowestValue: 10, highestValue: 20)
+print(distribution2.nextInt())
+
+let shuffled = GKShuffledDistribution(lowestValue: 1, highestValue: 20) // theoretically the first and second rolls are always unique.
+print(shuffled)
+
+let gauss = GKGaussianDistribution(lowestValue: 1, highestValue: 20)
+print(gauss)
+
