@@ -55,6 +55,8 @@ class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
+        guard player != nil else { return }
+        
         let value = player.physicsBody!.velocity.dy * 0.001
         let rotate = SKAction.rotate(toAngle: value, duration: 0.1)
         player.run(rotate)
@@ -224,7 +226,9 @@ class GameScene: SKScene {
             player.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
             player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 20))
         case .dead:
-            break
+            let scene = GameScene(fileNamed: "GameScene")!
+            let transition = SKTransition.moveIn(with: SKTransitionDirection.right, duration: 1)
+            self.view?.presentScene(scene, transition: transition)
         }
     }
     
@@ -259,6 +263,9 @@ extension GameScene: SKPhysicsContactDelegate {
             }
             let sound = SKAction.playSoundFileNamed("explosion.wav", waitForCompletion: false)
             run(sound)
+            gameOver.alpha = 1
+            gameState = .dead
+            backgroundMusic.run(SKAction.stop())
             player.removeFromParent()
             speed = 0
         }
