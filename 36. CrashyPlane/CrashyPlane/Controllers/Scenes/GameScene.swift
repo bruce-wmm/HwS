@@ -25,7 +25,8 @@ class GameScene: SKScene {
         createSky()
         createBackground()
         createGround()
-        createRocks()
+        
+        spawnRocks()
     }
     
     // MARK: - Helper Methods
@@ -124,6 +125,17 @@ class GameScene: SKScene {
         bottomRock.run(moveSequence)
         rockCollision.run(moveSequence)
     }
+    
+    func spawnRocks() {
+        let create = SKAction.run { [unowned self] in
+            self.createRocks()
+        }
+        let wait = SKAction.wait(forDuration: 3)
+        let sequence = SKAction.sequence([create, wait])
+        let repeatForever = SKAction.repeatForever(sequence)
+        run(repeatForever)
+    }
+    
     // MARK: - Touch Methods
     
     func touchDown(at location: CGPoint) {
