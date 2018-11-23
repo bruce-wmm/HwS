@@ -164,6 +164,7 @@ class GameScene: SKScene {
 
         let rockCollision = SKSpriteNode(color: UIColor.red, size: CGSize(width: 32, height: frame.height))
         rockCollision.physicsBody = SKPhysicsBody(rectangleOf: rockCollision.size)
+        rockCollision.color = UIColor.clear
         rockCollision.physicsBody?.isDynamic = false
         rockCollision.name = "scoreDetect"
         addChild(topRock)
