@@ -39,6 +39,12 @@ class GameScene: SKScene {
         spawnRocks()
     }
     
+    override func update(_ currentTime: TimeInterval) {
+        let value = player.physicsBody!.velocity.dy * 0.001
+        let rotate = SKAction.rotate(toAngle: value, duration: 0.1)
+        player.run(rotate)
+    }
+    
     // MARK: - Helper Methods
     
     func createPlayer() {
@@ -168,7 +174,8 @@ class GameScene: SKScene {
     // MARK: - Touch Methods
     
     func touchDown(at location: CGPoint) {
-        
+        player.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+        player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 20))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
