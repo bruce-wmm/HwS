@@ -208,7 +208,19 @@ extension GameScene: SKPhysicsContactDelegate {
             score += 1
             return
         }
+        
         guard contact.bodyA.node != nil && contact.bodyB.node != nil else { return }
+        
+        if contact.bodyA.node == player || contact.bodyB.node == player {
+            if let explosion = SKEmitterNode(fileNamed: "PlayerExplosion") {
+                explosion.position = player.position
+                addChild(explosion)
+            }
+            let sound = SKAction.playSoundFileNamed("explosion.wav", waitForCompletion: false)
+            run(sound)
+            player.removeFromParent()
+            speed = 0
+        }
     }
     
 }
