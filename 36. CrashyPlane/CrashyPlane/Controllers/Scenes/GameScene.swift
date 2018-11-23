@@ -21,6 +21,7 @@ class GameScene: SKScene {
             scoreLabel.text = "SCORE: \(score)"
         }
     }
+    var backgroundMusic: SKAudioNode!
     
     // MARK: - Scene Life Cycle
     
@@ -29,6 +30,11 @@ class GameScene: SKScene {
         
         physicsWorld.gravity = CGVector(dx: 0, dy: -5.0)
         physicsWorld.contactDelegate = self
+        
+        if let musicURL = Bundle.main.url(forResource: "music", withExtension: "m4a") {
+            backgroundMusic = SKAudioNode(url: musicURL)
+            addChild(backgroundMusic)
+        }
         
         createPlayer()
         createScore()
