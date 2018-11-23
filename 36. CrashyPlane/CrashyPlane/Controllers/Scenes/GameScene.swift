@@ -111,6 +111,10 @@ class GameScene: SKScene {
             ground.zPosition = -10
             ground.position = CGPoint(x: (groundTexture.size().width / 2.0 + (groundTexture.size().width * CGFloat(i))), y: groundTexture.size().height / 2)
             addChild(ground)
+            
+            ground.physicsBody = SKPhysicsBody(texture: ground.texture!, size: ground.texture!.size())
+            ground.physicsBody?.isDynamic = false
+            
             let moveLeft = SKAction.moveBy(x: -groundTexture.size().width, y: 0, duration: 5)
             let moveReset = SKAction.moveBy(x: groundTexture.size().width, y: 0, duration: 0)
             let moveLoop = SKAction.sequence([moveLeft, moveReset])
