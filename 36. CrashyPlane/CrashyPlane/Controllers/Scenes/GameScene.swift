@@ -27,6 +27,9 @@ class GameScene: SKScene {
     override func didMove(to view: SKView) {
         super.didMove(to: view)
         
+        physicsWorld.gravity = CGVector(dx: 0, dy: -5.0)
+        physicsWorld.contactDelegate = self
+        
         createPlayer()
         createScore()
         createSky()
@@ -44,6 +47,12 @@ class GameScene: SKScene {
         player.zPosition = 10
         player.position = CGPoint(x: frame.width / 6, y: frame.height * 0.75)
         addChild(player)
+        
+        player.physicsBody = SKPhysicsBody(texture: playerTexture, size: playerTexture.size())
+        player.physicsBody!.contactTestBitMask = player.physicsBody!.collisionBitMask
+        player.physicsBody?.isDynamic = true
+        // player.physicsBody?.collisionBitMask = 0
+        
         let frame2 = SKTexture(imageNamed: "player-2")
         let frame3 = SKTexture(imageNamed: "player-3")
         let animation = SKAction.animate(with: [playerTexture, frame2, frame3, frame2], timePerFrame: 0.01)
@@ -161,4 +170,14 @@ class GameScene: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first { touchDown(at: touch.location(in: self)) }
     }
+}
+
+// MARK: - GameScene: SKPhysicsContactDelegate
+
+extension GameScene: SKPhysicsContactDelegate {
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        
+    }
+    
 }
