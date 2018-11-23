@@ -25,6 +25,7 @@ class GameScene: SKScene {
         createSky()
         createBackground()
         createGround()
+        createRocks()
     }
     
     // MARK: - Helper Methods
@@ -92,6 +93,37 @@ class GameScene: SKScene {
         }
     }
     
+    func createRocks() {
+        let rockTexture = SKTexture(imageNamed: "rock")
+        let topRock = SKSpriteNode(texture: rockTexture)
+        topRock.zRotation = .pi
+        topRock.xScale = -1.0
+        let bottomRock = SKSpriteNode(texture: rockTexture)
+        topRock.zPosition = -20
+        bottomRock.zPosition = -20
+
+        let rockCollision = SKSpriteNode(color: UIColor.red, size: CGSize(width: 32, height: frame.height))
+        rockCollision.name = "scoreDetect"
+        addChild(topRock)
+        addChild(bottomRock)
+        addChild(rockCollision)
+
+        let xPosition = frame.width + topRock.frame.width
+        let max = Int(frame.height / 3)
+        let yPosition = CGFloat.random(in: CGFloat(-50)...CGFloat(max))
+        
+        let rockDistance: CGFloat = 70 // gap between rocks
+
+        topRock.position = CGPoint(x: xPosition, y: yPosition + topRock.size.height + rockDistance)
+        bottomRock.position = CGPoint(x: xPosition, y: yPosition - rockDistance)
+        rockCollision.position = CGPoint(x: xPosition + (rockCollision.size.width * 2), y: frame.midY)
+        let endPosition = frame.width + (topRock.frame.width * 2)
+        let moveAction = SKAction.moveBy(x: -endPosition, y: 0, duration: 6.2)
+        let moveSequence = SKAction.sequence([moveAction, SKAction.removeFromParent()])
+        topRock.run(moveSequence)
+        bottomRock.run(moveSequence)
+        rockCollision.run(moveSequence)
+    }
     // MARK: - Touch Methods
     
     func touchDown(at location: CGPoint) {
