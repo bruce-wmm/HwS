@@ -8,6 +8,12 @@
 
 import SpriteKit
 
+enum GameState {
+    case showingLogo
+    case playing
+    case dead
+}
+
 // MARK: - GameScene: SKScene
 
 class GameScene: SKScene {
@@ -22,6 +28,9 @@ class GameScene: SKScene {
         }
     }
     var backgroundMusic: SKAudioNode!
+    var logo: SKSpriteNode!
+    var gameOver: SKSpriteNode!
+    var gameState = GameState.showingLogo
     
     // MARK: - Scene Life Cycle
     
@@ -41,8 +50,8 @@ class GameScene: SKScene {
         createSky()
         createBackground()
         createGround()
+        createLogos()
         
-        spawnRocks()
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -62,7 +71,7 @@ class GameScene: SKScene {
         
         player.physicsBody = SKPhysicsBody(texture: playerTexture, size: playerTexture.size())
         player.physicsBody!.contactTestBitMask = player.physicsBody!.collisionBitMask
-        player.physicsBody?.isDynamic = true
+        player.physicsBody?.isDynamic = false
         player.physicsBody?.collisionBitMask = 0
         
         let frame2 = SKTexture(imageNamed: "player-2")
@@ -186,11 +195,37 @@ class GameScene: SKScene {
         run(repeatForever)
     }
     
+    func createLogos() {
+        logo = SKSpriteNode(imageNamed: "logo")
+        logo.position = CGPoint(x: frame.midX, y: frame.midY)
+        addChild(logo)
+        gameOver = SKSpriteNode(imageNamed: "gameover")
+        gameOver.position = CGPoint(x: frame.midX, y: frame.midY)
+        gameOver.alpha = 0
+        addChild(gameOver)
+    }
+    
     // MARK: - Touch Methods
     
     func touchDown(at location: CGPoint) {
-        player.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
-        player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 20))
+        switch gameState {
+        case .showingLogo:
+            gameState = .playing
+            let fadeOut = SKAction.fadeOut(withDuration: 0.5)
+            let remove = SKAction.removeFromParent()
+            let wait = SKAction.wait(forDuration: 0.5)
+            let activatePlayer = SKAction.run { [unowned self] in
+                self.player.physicsBody?.isDynamic = true
+                self.spawnRocks()
+            }
+            let sequence = SKAction.sequence([fadeOut, wait, activatePlayer, remove])
+            logo.run(sequence)
+        case .playing:
+            player.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+            player.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 20))
+        case .dead:
+            break
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
