@@ -19,6 +19,7 @@
 		1142CAD721A9FDBF00CD8898 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1142CAD621A9FDBF00CD8898 /* InterfaceController.swift */; };
 		1142CAD921A9FDBF00CD8898 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1142CAD821A9FDBF00CD8898 /* ExtensionDelegate.swift */; };
 		1142CADB21A9FDBF00CD8898 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1142CADA21A9FDBF00CD8898 /* Assets.xcassets */; };
+		11B41F8321AF8977002B5420 /* PhantomFromSpace.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11B41F8221AF8977002B5420 /* PhantomFromSpace.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		1142CAD821A9FDBF00CD8898 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		1142CADA21A9FDBF00CD8898 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1142CADC21A9FDBF00CD8898 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11B41F8221AF8977002B5420 /* PhantomFromSpace.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PhantomFromSpace.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 		1142CAEC21A9FE2300CD8898 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				11B41F8221AF8977002B5420 /* PhantomFromSpace.mp3 */,
 				1142CABA21A9FDBE00CD8898 /* Assets.xcassets */,
 			);
 			name = Resources;
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1142CABE21A9FDBE00CD8898 /* LaunchScreen.storyboard in Resources */,
+				11B41F8321AF8977002B5420 /* PhantomFromSpace.mp3 in Resources */,
 				1142CABB21A9FDBE00CD8898 /* Assets.xcassets in Resources */,
 				1142CAB921A9FDBD00CD8898 /* Main.storyboard in Resources */,
 			);
