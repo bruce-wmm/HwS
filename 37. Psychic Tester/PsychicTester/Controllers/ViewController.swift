@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        createParticles()
         loadCards()        
     }
 
@@ -95,6 +96,28 @@ class ViewController: UIViewController {
             }
         }
         perform(#selector(loadCards), with: nil, afterDelay: 2)
+    }
+    
+    func createParticles() {
+        let particleEmitter = CAEmitterLayer()
+        particleEmitter.emitterPosition = CGPoint(x: view.frame.width / 2.0, y: -50)
+        particleEmitter.emitterShape = CAEmitterLayerEmitterShape.line
+        particleEmitter.emitterSize = CGSize(width: view.frame.width, height: 1)
+        particleEmitter.renderMode = CAEmitterLayerRenderMode.additive
+        let cell = CAEmitterCell()
+        cell.birthRate = 2
+        cell.lifetime = 5.0
+        cell.velocity = 100
+        cell.velocityRange = 50
+        cell.emissionLongitude = .pi
+        cell.spinRange = 5
+        cell.scale = 0.5
+        cell.scaleRange = 0.25
+        cell.color = UIColor(white: 1, alpha: 0.1).cgColor
+        cell.alphaSpeed = -0.025
+        cell.contents = UIImage(named: "particle")?.cgImage
+        particleEmitter.emitterCells = [cell]
+        gradientView.layer.addSublayer(particleEmitter)
     }
 }
 
