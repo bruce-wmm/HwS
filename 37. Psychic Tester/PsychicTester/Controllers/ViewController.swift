@@ -20,7 +20,8 @@ class ViewController: UIViewController {
     // MARK: - IB Outlets
     
     @IBOutlet var cardContainer: UIView!
-   
+    @IBOutlet var gradientView: UIView!
+    
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
