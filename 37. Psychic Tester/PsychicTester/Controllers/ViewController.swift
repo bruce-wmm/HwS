@@ -8,6 +8,7 @@
 
 import UIKit
 import GameplayKit
+import AVFoundation
 
 // MARK: - ViewController: UIViewController
 
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
     // MARK: - Properties
     
     var allCards = [CardViewController]()
+    var musicPlayer: AVAudioPlayer!
     
     // MARK: - IB Outlets
     
@@ -28,7 +30,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         createParticles()
-        loadCards()        
+        loadCards()
+        playBackgroundMusic()
     }
 
     // MARK: - Helper Methods
@@ -118,6 +121,16 @@ class ViewController: UIViewController {
         cell.contents = UIImage(named: "particle")?.cgImage
         particleEmitter.emitterCells = [cell]
         gradientView.layer.addSublayer(particleEmitter)
+    }
+    
+    func playBackgroundMusic() {
+        guard let musicURL = Bundle.main.url(forResource: "PhantomFromSpace", withExtension: ".mp3") else { return }
+        
+        if let player = try? AVAudioPlayer(contentsOf: musicURL) {
+            musicPlayer = player
+            musicPlayer.numberOfLoops = -1
+            musicPlayer.play()
+        }
     }
 }
 
