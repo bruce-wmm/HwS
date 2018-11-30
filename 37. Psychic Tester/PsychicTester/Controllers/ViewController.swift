@@ -42,6 +42,17 @@ class ViewController: UIViewController {
             session.activate()
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let instructions = "Please ensure your Apple Watch is configured correctly. On your iPhone, launch Apple's 'Watch' configuration app then choose General > Wake Screen. On that screen, please disable Wake Screen On Wrist Raise, then select Wake For 70 Seconds. On your Apple Watch, please swipe up on your watch face and enable Silent Mode. You're done!"
+        
+        let alert = UIAlertController(title: "Adjust Settings", message: instructions, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "I'm ready.", style: .default))
+        
+        present(alert, animated: true)
+    }
 
     // MARK: - Helper Methods
     
