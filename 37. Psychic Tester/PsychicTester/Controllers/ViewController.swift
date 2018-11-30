@@ -9,6 +9,7 @@
 import UIKit
 import GameplayKit
 import AVFoundation
+import WatchConnectivity
 
 // MARK: - ViewController: UIViewController
 
@@ -18,6 +19,8 @@ class ViewController: UIViewController {
     
     var allCards = [CardViewController]()
     var musicPlayer: AVAudioPlayer!
+    
+    var lastMessage: CFAbsoluteTime = 0
     
     // MARK: - IB Outlets
     
@@ -32,6 +35,12 @@ class ViewController: UIViewController {
         createParticles()
         loadCards()
         playBackgroundMusic()
+        
+        if WCSession.isSupported() {
+            let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
     }
 
     // MARK: - Helper Methods
@@ -132,6 +141,18 @@ class ViewController: UIViewController {
             musicPlayer.play()
         }
     }
+    
+    func sendWatchMessage() {
+        let currentTime = CFAbsoluteTimeGetCurrent()
+        guard lastMessage + 0.5 < currentTime else { return }
+
+        if (WCSession.default.isReachable) {
+            let message = ["Message": "Hello"] // example message only
+            WCSession.default.sendMessage(message, replyHandler: nil)
+        }
+
+        lastMessage = CFAbsoluteTimeGetCurrent()
+    }
 
     // MARK: - Touch Methods
     
@@ -149,9 +170,24 @@ class ViewController: UIViewController {
                         card.isCorrect = true
                     }
                 }
+                
+                if card.isCorrect {
+                    sendWatchMessage()
+                }
             }
         }
     }
     
 }
 
+// MARK: - ViewController: WCSessionDelegate
+
+extension ViewController: WCSessionDelegate {
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) { }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) { }
+    
+    func sessionDidDeactivate(_ session: WCSession) { }
+    
+}
