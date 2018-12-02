@@ -12,6 +12,7 @@
 		11DB6F2C21B4954900160D35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11DB6F2A21B4954900160D35 /* Main.storyboard */; };
 		11DB6F2E21B4954B00160D35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11DB6F2D21B4954B00160D35 /* Assets.xcassets */; };
 		11DB6F3121B4954B00160D35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11DB6F2F21B4954B00160D35 /* LaunchScreen.storyboard */; };
+		11DB6F4021B4995800160D35 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DB6F3F21B4995800160D35 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		11DB6F2D21B4954B00160D35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11DB6F3021B4954B00160D35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11DB6F3221B4954B00160D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11DB6F3F21B4995800160D35 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		11DB6F3A21B4973700160D35 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				11DB6F3F21B4995800160D35 /* SwiftyJSON.swift */,
 				11DB6F3221B4954B00160D35 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -175,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11DB6F4021B4995800160D35 /* SwiftyJSON.swift in Sources */,
 				11DB6F2921B4954900160D35 /* ViewController.swift in Sources */,
 				11DB6F2721B4954900160D35 /* AppDelegate.swift in Sources */,
 			);
