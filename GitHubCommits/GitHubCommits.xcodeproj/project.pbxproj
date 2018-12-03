@@ -14,6 +14,7 @@
 		11DB6F3121B4954B00160D35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11DB6F2F21B4954B00160D35 /* LaunchScreen.storyboard */; };
 		11DB6F4021B4995800160D35 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DB6F3F21B4995800160D35 /* SwiftyJSON.swift */; };
 		11DB6F4221B49B1500160D35 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DB6F4121B49B1500160D35 /* DetailViewController.swift */; };
+		11DB6F4521B49CA400160D35 /* GitHubCommits.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11DB6F4321B49CA400160D35 /* GitHubCommits.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		11DB6F3221B4954B00160D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11DB6F3F21B4995800160D35 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		11DB6F4121B49B1500160D35 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		11DB6F4421B49CA400160D35 /* GitHubCommits.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GitHubCommits.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		11DB6F3921B4972E00160D35 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				11DB6F4321B49CA400160D35 /* GitHubCommits.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				11DB6F2921B4954900160D35 /* ViewController.swift in Sources */,
 				11DB6F2721B4954900160D35 /* AppDelegate.swift in Sources */,
 				11DB6F4221B49B1500160D35 /* DetailViewController.swift in Sources */,
+				11DB6F4521B49CA400160D35 /* GitHubCommits.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +388,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		11DB6F4321B49CA400160D35 /* GitHubCommits.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				11DB6F4421B49CA400160D35 /* GitHubCommits.xcdatamodel */,
+			);
+			currentVersion = 11DB6F4421B49CA400160D35 /* GitHubCommits.xcdatamodel */;
+			path = GitHubCommits.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 11DB6F1B21B4954900160D35 /* Project object */;
 }

@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 // MARK: - ViewController: UIViewController
 
 class ViewController: UIViewController {
 
+    // MARK: Properties
+    
+    var container: NSPersistentContainer!
+    
     // MARK: IB Outlets
     
     @IBOutlet weak var tableView: UITableView!
@@ -21,6 +26,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        container = NSPersistentContainer(name: "GitHubCommits")
+        
+        container.loadPersistentStores { (storeDescription, error) in
+            if let error = error {
+                print("Unresolved error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    // MARK: Helper Methods
+    
+    func saveContext() {
+        if container.viewContext.hasChanges {
+            do {
+                try container.viewContext.save()
+            } catch {
+                print("An error occurred while saving: \(error.localizedDescription)")
+            }
+        }
     }
 
 }
