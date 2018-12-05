@@ -34,6 +34,7 @@ class ViewController: UIViewController {
             }
         }
         
+        performSelector(inBackground: #selector(fetchCommits), with: nil)
     }
     
     // MARK: Helper Methods
@@ -46,6 +47,31 @@ class ViewController: UIViewController {
                 print("An error occurred while saving: \(error.localizedDescription)")
             }
         }
+    }
+    
+    @objc func fetchCommits() {
+        if let data = try? String(contentsOf: URL(string: "https://api.github.com/repos/apple/swift/commits?per_page=100")!) {
+            let jsonCommits = JSON(parseJSON: data)
+            let jsonCommitArray = jsonCommits.arrayValue
+            
+            print("Received \(jsonCommitArray.count) new commits.")
+            
+            DispatchQueue.main.async { [unowned self] in
+                for jsonCommit in jsonCommitArray {
+                    let commit = Commit(context: self.container.viewContext)
+                    self.configure(commit: commit, usingJSON: jsonCommit)
+                }
+                self.saveContext()
+            }
+        }
+    }
+    
+    func configure(commit: Commit, usingJSON json: JSON) {
+        commit.sha = json["sha"].stringValue
+        commit.message = json["commit"]["message"].stringValue
+        commit.url = json["html_url"].stringValue
+        let formatter = ISO8601DateFormatter()
+        commit.date = formatter.date(from: json["commit"]["committer"]["date"].stringValue) ?? Date()
     }
 
 }
