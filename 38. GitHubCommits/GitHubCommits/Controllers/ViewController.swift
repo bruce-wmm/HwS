@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     // MARK: Properties
     
     var container: NSPersistentContainer!
+    var commits = [Commit]()
     
     // MARK: IB Outlets
     
@@ -35,6 +36,8 @@ class ViewController: UIViewController {
         }
         
         performSelector(inBackground: #selector(fetchCommits), with: nil)
+        
+        loadSavedData()
     }
     
     // MARK: Helper Methods
@@ -62,6 +65,7 @@ class ViewController: UIViewController {
                     self.configure(commit: commit, usingJSON: jsonCommit)
                 }
                 self.saveContext()
+                self.loadSavedData()
             }
         }
     }
@@ -72,6 +76,19 @@ class ViewController: UIViewController {
         commit.url = json["html_url"].stringValue
         let formatter = ISO8601DateFormatter()
         commit.date = formatter.date(from: json["commit"]["committer"]["date"].stringValue) ?? Date()
+    }
+    
+    func loadSavedData() {
+        let request = Commit.createFetchRequest()
+        let sort = NSSortDescriptor(key: "date", ascending: false)
+        request.sortDescriptors = [sort]
+        do {
+            commits = try container.viewContext.fetch(request)
+            print("Got \(commits.count) commits")
+            tableView.reloadData()
+        } catch {
+            print("Fetch failed")
+        }
     }
 
 }
@@ -93,11 +110,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return commits.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Commit", for: indexPath)
+        
+        let commit = commits[indexPath.row]
+        cell.textLabel?.text = commit.message
+        cell.detailTextLabel?.text = commit.date.description
+        
         return cell
     }
     
