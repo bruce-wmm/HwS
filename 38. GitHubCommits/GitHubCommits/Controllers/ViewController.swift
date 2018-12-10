@@ -60,8 +60,9 @@ class ViewController: UIViewController {
     }
     
     @objc func fetchCommits() {
-        if let data = try? String(contentsOf: URL(string: "https://api.github.com/repos/apple/swift/commits?per_page=100")!) {
-            let jsonCommits = JSON(parseJSON: data)
+        let newestCommitDate = getNewestCommitDate()
+        if let data = try? String(contentsOf: URL(string: "https://api.github.com/repos/apple/swift/commits?per_page=100&since=\(newestCommitDate)")!) {
+        let jsonCommits = JSON(parseJSON: data)
             let jsonCommitArray = jsonCommits.arrayValue
             
             print("Received \(jsonCommitArray.count) new commits.")
@@ -146,6 +147,21 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(alert, animated: true)
     }
+    
+    func getNewestCommitDate() -> String {
+        let formatter = ISO8601DateFormatter()
+        let newest = Commit.createFetchRequest()
+        let sort = NSSortDescriptor(key: "date", ascending: false)
+        newest.sortDescriptors = [sort]
+        newest.fetchLimit = 1
+        if let commits = try? container.viewContext.fetch(newest) {
+            if commits.count > 0 {
+                return formatter.string(from:
+                    commits[0].date.addingTimeInterval(1))
+            }
+        }
+        return formatter.string(from: Date(timeIntervalSince1970: 0))
+    }
 
 }
 
@@ -159,6 +175,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         if let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailViewController {
             detailVC.detailItem = commits[indexPath.row]
             navigationController?.pushViewController(detailVC, animated: true)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let commit = commits[indexPath.row]
+            container.viewContext.delete(commit)
+            commits.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            saveContext()
         }
     }
     
