@@ -2,7 +2,7 @@
 //  Commit+CoreDataProperties.swift
 //  GitHubCommits
 //
-//  Created by Neil Hiddink on 12/4/18.
+//  Created by Neil Hiddink on 12/7/18.
 //  Copyright © 2018 Neil Hiddink. All rights reserved.
 //
 //
@@ -21,5 +21,6 @@ extension Commit {
     @NSManaged public var message: String
     @NSManaged public var sha: String
     @NSManaged public var url: String
+    @NSManaged public var author: Author
 
 }

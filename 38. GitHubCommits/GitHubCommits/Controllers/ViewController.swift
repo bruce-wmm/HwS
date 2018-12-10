@@ -83,6 +83,27 @@ class ViewController: UIViewController {
         commit.url = json["html_url"].stringValue
         let formatter = ISO8601DateFormatter()
         commit.date = formatter.date(from: json["commit"]["committer"]["date"].stringValue) ?? Date()
+        
+        var commitAuthor: Author!
+        
+        let authorRequest = Author.createFetchRequest() // check if author exists
+        authorRequest.predicate = NSPredicate(format: "name == %@", json["commit"]["committer"]["name"].stringValue)
+        
+        if let authors = try? container.viewContext.fetch(authorRequest) {
+            if authors.count > 0 {
+                commitAuthor = authors[0] // author exists
+            }
+        }
+        
+        if commitAuthor == nil {
+            
+            let author = Author(context: container.viewContext) // author does not exist, create one
+            author.name = json["commit"]["committer"]["name"].stringValue
+            author.email = json["commit"]["committer"]["email"].stringValue
+            commitAuthor = author
+        }
+        
+        commit.author = commitAuthor
     }
     
     func loadSavedData() {
@@ -149,7 +170,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         let commit = commits[indexPath.row]
         cell.textLabel?.text = commit.message
-        cell.detailTextLabel?.text = commit.date.description
+        cell.detailTextLabel!.text = "By \(commit.author.name) on \(commit.date.description)"
         
         return cell
     }

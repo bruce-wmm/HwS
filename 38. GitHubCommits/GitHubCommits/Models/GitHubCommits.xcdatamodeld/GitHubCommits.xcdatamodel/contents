@@ -13,6 +13,7 @@
         <attribute name="message" attributeType="String" syncable="YES"/>
         <attribute name="sha" attributeType="String" syncable="YES"/>
         <attribute name="url" attributeType="String" syncable="YES"/>
+        <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Author" syncable="YES"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="sha"/>
@@ -20,7 +21,7 @@
         </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="Commit" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="Commit" positionX="-63" positionY="-18" width="128" height="120"/>
         <element name="Author" positionX="-63" positionY="9" width="128" height="90"/>
     </elements>
 </model>
