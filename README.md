@@ -54,7 +54,7 @@
 | 35   | 🛠<br>[Random Numbers](https://github.com/nhiddink/HWS_Portfolio_Hiddink/tree/master/35.%20Random%20Numbers)           | Int.random(in:), Float.random(in:), Double.random(in:), CGFloat.random(in:), Bool.random(), arc4random(), GKRandomSource.sharedRandom(), GKLinearCongruentialRandomSource, GKMersenneTwisterRandomSource, GKARC4RandomSource, GKRandomDistribution, GKShuffledDistribution, GKGaussianDistribution, Fisher-Yates Algorithm, arrayByShufflingObjects(in:) | ✅ |
 | 36   | 🕹<br>[Crashy Plane](https://github.com/nhiddink/HWS_Portfolio_Hiddink/tree/master/36.%20Crashy%20Plane)             | Composed Methods,  Scale Modes, Parallax Scrolling, SpriteKit Physics, SKPhysicsContactDelegate, SKPhysicsBody, SKAudioNode, Managing Game State  | ✅ |
 | 37   | 🕹<br>[Psychic Tester](https://github.com/nhiddink/HWS_Portfolio_Hiddink/tree/master/37.%20Psychic%20Tester)           | WatchKit Extensions, 3D Touch, CAEmitterLayer, CAGradientLayer, @IBDesignable, @IBInspectable, transition(with:), WCSession, WKInterfaceLabel, WKInterfaceButton | ✅ |
-| 38   | 🛠<br>Github Commits (Core Data) | NSFetchRequest, NSManagedObject, NSPredicate, NSSortDescriptor, NSFetchedResultsController, ISO8601DateFormatter | ⚠️ |
+| 38   | 🛠<br>Github Commits (Core Data) | NSFetchRequest, NSManagedObject, NSPredicate, NSSortDescriptor, NSFetchedResultsController, ISO8601DateFormatter | ✅ |
 | 39   | 🛠<br>Unit testing with XCTest |                  | 🛑 |
 
 ## Challenges 📙
