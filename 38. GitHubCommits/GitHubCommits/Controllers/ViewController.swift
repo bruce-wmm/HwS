@@ -135,6 +135,10 @@ class ViewController: UIViewController {
             self.commitPredicate = NSPredicate(format: "date > %@", twelveHoursAgo as NSDate)
             self.loadSavedData()
         })
+        alert.addAction(UIAlertAction(title: "Show only Durian commits", style: .default) { [unowned self] _ in
+            self.commitPredicate = NSPredicate(format: "author.name == 'Joe Groff'")
+            self.loadSavedData()
+        })
         alert.addAction(UIAlertAction(title: "Show all commits", style: .default) { [unowned self] _ in
             self.commitPredicate = nil
             self.loadSavedData()
@@ -152,7 +156,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     // MARK: Delegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailViewController {
+            detailVC.detailItem = commits[indexPath.row]
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
     }
     
     // MARK: Data Source
