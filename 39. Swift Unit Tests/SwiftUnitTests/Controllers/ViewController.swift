@@ -19,3 +19,31 @@ class ViewController: UIViewController {
 
 }
 
+// MARK: - ViewController: UITableViewDelegate, UITableViewDataSource
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    // MARK: Delegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    // MARK: Data Source
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        return cell
+    }
+    
+}
+
+
