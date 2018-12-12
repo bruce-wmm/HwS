@@ -33,4 +33,10 @@ class SwiftUnitTestsTests: XCTestCase {
         XCTAssertEqual(playData.wordCounts["mortal"], 41, "Mortal does not appear 41 times")
     }
 
+    func testWordsLoadQuickly() {
+        measure {
+            _ = PlayData()
+        }
+    }
+    
 }
