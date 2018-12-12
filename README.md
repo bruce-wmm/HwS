@@ -55,7 +55,7 @@
 | 36   | 🕹<br>[Crashy Plane](https://github.com/nhiddink/HWS_Portfolio_Hiddink/tree/master/36.%20Crashy%20Plane)             | Composed Methods,  Scale Modes, Parallax Scrolling, SpriteKit Physics, SKPhysicsContactDelegate, SKPhysicsBody, SKAudioNode, Managing Game State  | ✅ |
 | 37   | 🕹<br>[Psychic Tester](https://github.com/nhiddink/HWS_Portfolio_Hiddink/tree/master/37.%20Psychic%20Tester)           | WatchKit Extensions, 3D Touch, CAEmitterLayer, CAGradientLayer, @IBDesignable, @IBInspectable, transition(with:), WCSession, WKInterfaceLabel, WKInterfaceButton | ✅ |
 | 38   | 🛠<br>[Github Commits (Core Data)](https://github.com/neilhiddink/HWS_Portfolio_Hiddink/tree/master/38.%20GitHubCommits) | NSFetchRequest, NSManagedObject, NSPredicate, NSSortDescriptor, NSFetchedResultsController, ISO8601DateFormatter | ✅ |
-| 39   | 🛠<br>Unit testing with XCTest | | ⚠️ |
+| 39   | 🛠<br>[Unit testing with XCTest](https://github.com/neilhiddink/HWS_Portfolio_Hiddink/tree/master/39.%20Swift%20Unit%20Tests) | XCTest, `filter()`, Test-Driven Development, Functional Programming, XCTestCase, NSCountedSet, UI Testing | ⚠️ |
 
 ## Challenges 📙
 
