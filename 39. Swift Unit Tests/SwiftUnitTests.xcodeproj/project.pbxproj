@@ -15,6 +15,7 @@
 		11FB683821C0B9AC00DF7435 /* SwiftUnitTestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FB683721C0B9AC00DF7435 /* SwiftUnitTestsTests.swift */; };
 		11FB684321C0B9AC00DF7435 /* SwiftUnitTestsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FB684221C0B9AC00DF7435 /* SwiftUnitTestsUITests.swift */; };
 		11FB685621C0BBCE00DF7435 /* plays.txt in Resources */ = {isa = PBXBuildFile; fileRef = 11FB685521C0BBCE00DF7435 /* plays.txt */; };
+		11FB685821C0BE9D00DF7435 /* PlayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FB685721C0BE9D00DF7435 /* PlayData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		11FB684221C0B9AC00DF7435 /* SwiftUnitTestsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUnitTestsUITests.swift; sourceTree = "<group>"; };
 		11FB684421C0B9AC00DF7435 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11FB685521C0BBCE00DF7435 /* plays.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plays.txt; sourceTree = "<group>"; };
+		11FB685721C0BE9D00DF7435 /* PlayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 		11FB685421C0BAAD00DF7435 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				11FB685721C0BE9D00DF7435 /* PlayData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11FB685821C0BE9D00DF7435 /* PlayData.swift in Sources */,
 				11FB682521C0B9AA00DF7435 /* ViewController.swift in Sources */,
 				11FB682321C0B9AA00DF7435 /* AppDelegate.swift in Sources */,
 			);
