@@ -15,7 +15,7 @@ class PlayData {
     // MARK: Properties
     
     var allWords = [String]()
-    var wordCounts = [String: Int]()
+    var wordCounts: NSCountedSet!
     
     // MARK: Initialization
     
@@ -24,14 +24,9 @@ class PlayData {
             if let plays = try? String(contentsOfFile: path) {
                 allWords = plays.components(separatedBy: CharacterSet.alphanumerics.inverted)
                 allWords = allWords.filter { $0 != "" }
-                for word in allWords {
-                    if wordCounts[word] == nil {
-                        wordCounts[word] = 1
-                    } else {
-                        wordCounts[word]! += 1
-                    }
-                }
-                allWords = Array(wordCounts.keys)
+                wordCounts = NSCountedSet(array: allWords)
+                let sorted = wordCounts.allObjects.sorted { wordCounts.count(for: $0) > wordCounts.count(for: $1) }
+                allWords = sorted as! [String]
             }
         }
     }
