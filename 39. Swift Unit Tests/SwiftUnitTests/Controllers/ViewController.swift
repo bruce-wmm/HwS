@@ -42,12 +42,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return playData.allWords.count
+        return playData.filteredWords.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlayCell", for: indexPath)
-        let word = playData.allWords[indexPath.row]
+        let word = playData.filteredWords[indexPath.row]
         cell.textLabel!.text = word
         cell.detailTextLabel!.text = "\(playData.wordCounts.count(for: word))"
         return cell
