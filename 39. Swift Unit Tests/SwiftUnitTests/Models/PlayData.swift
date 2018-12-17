@@ -30,8 +30,8 @@ class PlayData {
                 allWords = sorted as! [String]
             }
         }
-        // applyUserFilter("swift") // starter filter
-        filteredWords = allWords // no starter filter
+        applyUserFilter("swift") // starter filter
+//        filteredWords = allWords // no starter filter
     }
     
     // MARK: Helper Methods

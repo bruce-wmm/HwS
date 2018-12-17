@@ -63,6 +63,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="🎭 Shakespeare" id="vcf-Xy-mie"/>
+                    <connections>
+                        <outlet property="tableView" destination="C9u-ou-NJf" id="KeC-sU-CLw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

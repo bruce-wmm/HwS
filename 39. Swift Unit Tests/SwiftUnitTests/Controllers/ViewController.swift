@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     
     var playData = PlayData()
     
+    // MARK: IB Outlets
+    
+    @IBOutlet var tableView: UITableView!
+    
     // MARK: View Life Cycle
     
     override func viewDidLoad() {
@@ -51,6 +55,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel!.text = word
         cell.detailTextLabel!.text = "\(playData.wordCounts.count(for: word))"
         return cell
+    }
+    
+    @objc func searchTapped() {
+        let alert = UIAlertController(title: "Filter...", message: nil, preferredStyle: .alert)
+        alert.addTextField()
+        alert.addAction(UIAlertAction(title: "Filter", style: .default) { [unowned self] _ in
+            let userInput = alert.textFields?[0].text ?? "0"
+            self.playData.applyUserFilter(userInput)
+            self.tableView.reloadData()
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(alert, animated: true)
     }
     
 }
