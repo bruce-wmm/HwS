@@ -14,7 +14,7 @@ class SwiftUnitTestsTests: XCTestCase {
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
@@ -32,7 +32,7 @@ class SwiftUnitTestsTests: XCTestCase {
         XCTAssertEqual(playData.wordCounts.count(for: "fun"), 4, "Fun does not appear 4 times")
         XCTAssertEqual(playData.wordCounts.count(for: "mortal"), 41, "Mortal does not appear 41 times")
     }
-
+    
     func testWordsLoadQuickly() {
         measure {
             _ = PlayData()
