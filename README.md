@@ -1,6 +1,6 @@
 ![Hacking With Swift Logo](https://github.com/nhiddink/HackingWithSwift/blob/master/logo.png)
 
-#### Neil Hiddink's portfolio of apps built while reading Paul Hudson's book [Hacking With Swift](https://www.hackingwithswift.com/read). 
+#### Neil Hiddink's portfolio of work completed while reading Paul Hudson's book [Hacking With Swift](https://www.hackingwithswift.com/read). 
 
 ### Beginner 📕
 
@@ -72,6 +72,10 @@
 | 8    | 🛠<br>[Swift Extensions](https://github.com/nhiddink/HWS_Portfolio_Hiddink/tree/master/C08.%20Swift%20Extensions)       | ⚠️ |
 | 9    | 🛠<br>[Core Graphics Rainbow](https://github.com/nhiddink/HWS_Portfolio_Hiddink/tree/master/C09.%20Core%20Graphics%20Rainbow) | ⚠️ |
 | 10   | 📱<br>[Private Photos](https://github.com/nhiddink/HWS_Portfolio_Hiddink/tree/master/C10.%20Private%20Photos)         | ⚠️ |
+
+## Certificate of Completion 🎓
+
+![Certificate](https://github.com/neilhiddink/HWS_Portfolio_Hiddink/blob/master/certificate-hiddink.jpg)
 
 |  KEY  |
 | ----- |
