@@ -86,4 +86,4 @@
 
 ![Shield.io MIT License Shield](https://img.shields.io/github/license/mashape/apistatus.svg)
 
-Swift and the Swift logo are trademarks of Apple Inc., the Hacking With Swift logo is a trademark of Paul Hudson.
+Swift, the Swift logo, and Xcode are trademarks of Apple Inc., registered in the U.S. and other countries. Hacking with Swift is copyright Paul Hudson. All rights reserved.
