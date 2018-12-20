@@ -1,4 +1,4 @@
-![Hacking With Swift Logo](https://github.com/nhiddink/HackingWithSwift/blob/master/logo.png)
+<img src="https://github.com/nhiddink/HackingWithSwift/blob/master/logo.png" width="1000">
 
 #### Neil Hiddink's portfolio of work completed while reading Paul Hudson's book [Hacking With Swift](https://www.hackingwithswift.com/read). 
 
@@ -75,7 +75,7 @@
 
 ## Certificate of Completion 🎓
 
-![Certificate](https://github.com/neilhiddink/HWS_Portfolio_Hiddink/blob/master/certificate-hiddink.jpg)
+<img src="https://github.com/neilhiddink/HWS_Portfolio_Hiddink/blob/master/certificate-hiddink.jpg" width="500">
 
 |  KEY  |
 | ----- |
