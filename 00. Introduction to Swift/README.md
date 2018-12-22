@@ -1,4 +1,4 @@
-<img src="https://github.com/neilhiddink/HWS_Portfolio_Hiddink/blob/master/00.%20Introduction%20to%20Swift/swift-logo.png" width="250" alignment=center>
+<img src="https://github.com/neilhiddink/HWS_Portfolio_Hiddink/blob/master/00.%20Introduction%20to%20Swift/swift-logo.png" width="350">
 
 ### Introduction to Swift
 
