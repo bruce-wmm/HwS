@@ -37,6 +37,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11A1CBFA21CEFACF00A80203 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		11EF94B521136DD1005B7094 = {
 			isa = PBXGroup;
 			children = (
@@ -57,20 +64,13 @@
 			isa = PBXGroup;
 			children = (
 				11EF94C121136DD1005B7094 /* AppDelegate.swift */,
-				11EF94D321136DDC005B7094 /* Models */,
+				11A1CBFA21CEFACF00A80203 /* Models */,
 				11EF94D421136DE3005B7094 /* Views */,
 				11EF94D521136DEE005B7094 /* Controllers */,
 				11EF94D721136E08005B7094 /* Resources */,
 				11EF94D821136E10005B7094 /* Supporting Files */,
 			);
 			path = WordScramble;
-			sourceTree = "<group>";
-		};
-		11EF94D321136DDC005B7094 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		11EF94D421136DE3005B7094 /* Views */ = {
