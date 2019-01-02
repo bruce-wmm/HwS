@@ -4,9 +4,16 @@
 
 ### Challenges 📚
 
-| #    | Challenge                | Topic   | Difficulty | Progress |
-| :--: | :----------------------: | :-----: | :--------: | :------: |
-| 1    | Are the letters unique?  | Strings | 1️⃣         | ⚠️       |
+| #    | Challenge                    | Topic   | Difficulty | Progress.  |
+| :--: | :--------------------------: | :-----: | :--------: | :--------: |
+| 1    | Are the letters unique?      | Strings | 1️⃣         | ✅ 🔨 ⭐️  |
+| 2    | Is the string a palindrome?  | Strings | 1️⃣         | ⚠️ |
+| 3    | Do two strings contain the same characters? | Strings | 1️⃣ | 🛑 |
+| 4    | Does one string contain another? | Strings | 1️⃣ | 🛑 |
+| 5    | Count the characters | Strings | 1️⃣ | 🛑 |
+| 6    | Remove duplicate letters from a string | Strings | 1️⃣ | 🛑 |
+| 7    | Condense whitespace | Strings | 1️⃣ | 🛑 |
+
 
 ## Certificate of Completion 🎓
 
@@ -17,6 +24,8 @@ Expected completion date: **April 30th, 2019**
 1️⃣ = Easy
 2️⃣ = Tricky
 3️⃣ = Taxing
+⭐️ = Elegant Solution
+🔨 = Brute Force Solution
 ✅ = Complete
 ⚠️ = In Progress
 🛑 = Not Started
