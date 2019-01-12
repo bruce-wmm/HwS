@@ -51,7 +51,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     // MARK: Delegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if let speechTextVC = self.storyboard?.instantiateViewController(withIdentifier: "SpeechTextVC") as? SpeechTextViewController {
+            speechTextVC.speech = speeches[indexPath.row]
+            navigationController?.pushViewController(speechTextVC, animated: true)
+        }
     }
     
     // MARK: Data Source
@@ -64,7 +67,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let speech = speeches[indexPath.row]
         cell.textLabel?.text = speech.title
-        cell.detailTextLabel?.text = "\(speech.author) + \(speech.date)"
+        cell.detailTextLabel?.text = "\(speech.author) \(speech.date)"
         return cell
     }
     

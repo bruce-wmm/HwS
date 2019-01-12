@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SpeechItem: Codable {
+struct SpeechItem: Codable { // structs get memberwise initializer automatically
     var title: String
     var text: String
     var author: String
