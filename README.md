@@ -16,8 +16,8 @@
 | 8    | String is rotated | Strings | 2️⃣ | ✅ 🔨 |
 | 9    | Find pangrams | Strings | 2️⃣ | ✅ 🔨 |
 | 10   | Vowels and consonants | Strings | 2️⃣ | ✅ 🔨 |
-| 11   | Three different letters | Strings | 2️⃣ | ⚠️ |
-| 12   | Find longest prefix | Strings | 2️⃣ | 🛑 |
+| 11   | Three different letters | Strings | 2️⃣ | ✅ 🔨 ⭐️ |
+| 12   | Find longest prefix | Strings | 2️⃣ | ⚠️ |
 | 13   | Run-length encoding | Strings | 3️⃣ | 🛑 |
 | 14   | String permutations | Strings | 3️⃣ | 🛑 |
 | 15   | Reverse the words in a string | Strings | 3️⃣ | 🛑 |
