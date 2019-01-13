@@ -17,6 +17,18 @@ class SpeechTextViewController: UIViewController {
     var speech: SpeechItem!
     var blankCounter = 0
     
+    let visibleText: [NSAttributedString.Key: Any] = [
+        .font: UIFont(name: "Georgia", size: 28)!,
+        .foregroundColor: UIColor.black
+    ]
+    
+    let invisibleText: [NSAttributedString.Key: Any] = [
+        .font: UIFont(name: "Georgia", size: 28)!,
+        .foregroundColor: UIColor.clear,
+        .strikethroughStyle: 1,
+        .strikethroughColor: UIColor.black
+    ]
+    
     // MARK: IB Outlets
     
     @IBOutlet var textView: UITextView!
@@ -37,18 +49,30 @@ class SpeechTextViewController: UIViewController {
     
     fileprivate func showText() {
         let words = speech.text.components(separatedBy: " ")
-        var output = ""
+        let output = NSMutableAttributedString()
+        
+        let space = NSAttributedString(string: " ", attributes: visibleText)
         
         for (i, word) in words.enumerated() {
             if i < blankCounter {
-                output += "\(word) "
+                let attributedWord = NSAttributedString(string: word, attributes: visibleText)
+                output.append(attributedWord)
             } else {
-                let blank = String(repeating: "_", count: word.count)
-                output += "\(blank) "
+                var strippedWord = word
+                var punctuation: String?
+                
+                if ",.\n".contains(word.last!) {
+                    punctuation = String(strippedWord.removeLast())
+                }
+                
+                let attributedWord = NSAttributedString(string: word, attributes: invisibleText)
+                output.append(attributedWord)
             }
+            
+            output.append(space)
         }
         
-        textView.text = output
+        textView.attributedText = output
     }
     
     @objc fileprivate func wordsTapped() {
