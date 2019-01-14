@@ -14,7 +14,10 @@ class ViewController: UIViewController {
 
     // MARK: Properties
     
+    weak var delegate: ViewController?
+
     var friends = [Friend]()
+    var selectedFriend: Int? = nil
     
     // MARK: IB Outlets
     
@@ -29,6 +32,11 @@ class ViewController: UIViewController {
         
         title = "Time Zones"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addFriend))
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
     }
     
     // MARK: Helper Methods
@@ -60,8 +68,31 @@ class ViewController: UIViewController {
         defaults.set(savedData, forKey: "Friends")
     }
 
-    func addFriend() {
-        // TODO: Add method for bar button item
+    @objc func addFriend() {
+        let friend = Friend()
+        friends.append(friend)
+        tableView.insertRows(at: [IndexPath(row: friends.count - 1, section: 0)], with: .automatic)
+        saveData()
+        
+        configure(friend: friend, position: friends.count - 1)
+    }
+    
+    func configure(friend: Friend, position: Int) {
+        guard let friendVC = storyboard?.instantiateViewController(withIdentifier: "FriendViewController") as? FriendViewController else {
+            fatalError("Unable to create FriendViewController.")
+        }
+        
+        friendVC.delegate = self
+        friendVC.friend = friend
+        navigationController?.pushViewController(friendVC, animated: true)
+    }
+    
+    func updateFriend(friend: Friend) {
+        guard let selectedFriends = selectedFriend else { return }
+        
+        friends[selectedFriend] = friend
+        tableView.reloadData()
+        saveData()
     }
 }
 
@@ -72,7 +103,7 @@ extension UIViewController: UITableViewDelegate, UITableViewDataSource {
     // MARK: Delegate
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        configure(friend: friends[indexPath.row], position: indexPath.row)
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
