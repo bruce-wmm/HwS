@@ -13,61 +13,36 @@ import UIKit
 class ViewController: UIViewController {
 
     // MARK: Properties
-    
-    var speeches = [SpeechItem]()
+
+    let dataSource = SpeechDataSource()
     
     // MARK: IB Outlets
     
     @IBOutlet var tableView: UITableView!
+    
     // MARK: View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        guard let url = Bundle.main.url(forResource: "Speeches", withExtension: ".json") else {
-            fatalError("Can't find JSON.")
-        }
         
-        guard let data = try? Data(contentsOf: url) else {
-            fatalError("Unable to load JSON.")
-        }
-        
-        let decoder = JSONDecoder()
-        
-        guard let savedItems = try? decoder.decode([SpeechItem].self, from: data) else {
-            fatalError("Failed to decode JSON.")
-        }
-        
-        speeches = savedItems
+        tableView.dataSource = dataSource
     }
 
 }
 
-// MARK: - ViewController: UITableViewDelegate, UITableViewDataSource
+// MARK: - ViewController: UITableViewDelegate
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension ViewController: UITableViewDelegate {
     
     // MARK: Delegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let speechTextVC = self.storyboard?.instantiateViewController(withIdentifier: "SpeechTextVC") as? SpeechTextViewController {
-            speechTextVC.speech = speeches[indexPath.row]
+            speechTextVC.speech = dataSource.getSpeech(at: indexPath.row)
             navigationController?.pushViewController(speechTextVC, animated: true)
         }
     }
     
-    // MARK: Data Source
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return speeches.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        let speech = speeches[indexPath.row]
-        cell.textLabel?.text = speech.title
-        cell.detailTextLabel?.text = "\(speech.author) \(speech.date)"
-        return cell
-    }
     
 }
