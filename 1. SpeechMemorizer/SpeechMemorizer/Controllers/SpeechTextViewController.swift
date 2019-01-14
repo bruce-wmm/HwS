@@ -65,8 +65,13 @@ class SpeechTextViewController: UIViewController {
                     punctuation = String(strippedWord.removeLast())
                 }
                 
-                let attributedWord = NSAttributedString(string: word, attributes: invisibleText)
+                let attributedWord = NSAttributedString(string: strippedWord, attributes: invisibleText)
                 output.append(attributedWord)
+                
+                if let symbol = punctuation {
+                    let attributedPunctuation = NSAttributedString(string: symbol, attributes: visibleText)
+                    output.append(attributedPunctuation)
+                }
             }
             
             output.append(space)
