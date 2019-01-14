@@ -4,8 +4,8 @@
 
 | Date    | Time  | Project                      | Topics Learned   | Progress   |
 | :-----: | :---: | :--------------------------: | :--------------: | :--------: |
-| [January 6th, 2019](https://youtu.be/CpvC7bojHTE) | 12PM<br>EST | 📱<br>[Speech Memorizer](https://github.com/neilhiddink/HwSLive/tree/master/1.%20SpeechMemorizer) | Xcode, UIKit, UIViewController, `super`, viewDidLoad(), Bundle, `try`, fatalError(), Storyboards & Interface Builder, UITableView, UITableViewDelegate, UITableViewDataSource, UITextView, UINavigationController, UITapGestureRecognizer, Auto Layout, IB Outlets & Actions, NSAttributedString | ⚠️ |
-| [January 13th, 2019](https://youtu.be/p9fSsoHcLTg) | 1PM<br>EST | 📱<br>[TimeZones](https://github.com/neilhiddink/HwSLive/tree/master/2.%20TimeZones) | UITableViewController, Protocols, Keyboard Methods, Coordinator Pattern | ⚠️ |
+| [January 6th, 2019](https://youtu.be/CpvC7bojHTE) | 12PM<br>EST | 📱<br>[Speech Memorizer](https://github.com/neilhiddink/HwSLive/tree/master/1.%20SpeechMemorizer) | Xcode, UIKit, UIViewController, `super`, viewDidLoad(), Bundle, `try`, fatalError(), Storyboards & Interface Builder, UITableView, UITableViewDelegate, UITableViewDataSource, UITextView, UINavigationController, UITapGestureRecognizer, Auto Layout, IB Outlets & Actions, NSAttributedString | ✅ |
+| [January 13th, 2019](https://youtu.be/p9fSsoHcLTg) | 1PM<br>EST | 📱<br>[TimeZones](https://github.com/neilhiddink/HwSLive/tree/master/2.%20TimeZones) | Codable, `TimeZone.current`, Custom UITableViewCells, UserDefaults, JSONDecoder, JSONEncoder, UITableViewController, DateComponentsFormatter, Protocols, Keyboard Methods, Coordinator Pattern | ⚠️ |
 
 |  KEY  |
 | ----- |
