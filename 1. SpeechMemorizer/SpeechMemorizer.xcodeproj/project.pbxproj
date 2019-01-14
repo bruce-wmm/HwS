@@ -18,6 +18,7 @@
 		11D0F8A721EA7A57006080CB /* Speeches.json in Resources */ = {isa = PBXBuildFile; fileRef = 11D0F8A621EA7A57006080CB /* Speeches.json */; };
 		11D0F8A921EA8224006080CB /* SpeechTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D0F8A821EA8224006080CB /* SpeechTextViewController.swift */; };
 		11D0F8F221EC2CD8006080CB /* SpeechDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D0F8F121EC2CD8006080CB /* SpeechDataSource.swift */; };
+		11D0F8F421EC302D006080CB /* SpeechTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D0F8F321EC302D006080CB /* SpeechTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		11D0F8A621EA7A57006080CB /* Speeches.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Speeches.json; sourceTree = "<group>"; };
 		11D0F8A821EA8224006080CB /* SpeechTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechTextViewController.swift; sourceTree = "<group>"; };
 		11D0F8F121EC2CD8006080CB /* SpeechDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechDataSource.swift; sourceTree = "<group>"; };
+		11D0F8F321EC302D006080CB /* SpeechTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			children = (
 				11D0F8A421EA7A24006080CB /* SpeechItem.swift */,
 				11D0F8F121EC2CD8006080CB /* SpeechDataSource.swift */,
+				11D0F8F321EC302D006080CB /* SpeechTextView.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				11D0F87221EA766D006080CB /* AppDelegate.swift in Sources */,
 				11D0F8A521EA7A24006080CB /* SpeechItem.swift in Sources */,
 				11D0F8F221EC2CD8006080CB /* SpeechDataSource.swift in Sources */,
+				11D0F8F421EC302D006080CB /* SpeechTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
