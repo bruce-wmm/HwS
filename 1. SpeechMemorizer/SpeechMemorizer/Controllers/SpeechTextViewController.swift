@@ -39,7 +39,7 @@ class SpeechTextViewController: UIViewController {
         super.viewDidLoad()
         
         assert(speech != nil, "You must provide a speech item before trying to show this view controller.")
-        showText()
+        textView.attributedText = showText(for: speech)
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(wordsTapped))
         textView.addGestureRecognizer(tapRecognizer)
@@ -47,7 +47,7 @@ class SpeechTextViewController: UIViewController {
     
     // MARK: Helper Methods
     
-    fileprivate func showText() {
+    fileprivate func showText(for speech: SpeechItem) -> NSAttributedString {
         let words = speech.text.components(separatedBy: " ")
         let output = NSMutableAttributedString()
         
@@ -77,11 +77,11 @@ class SpeechTextViewController: UIViewController {
             output.append(space)
         }
         
-        textView.attributedText = output
+        return output
     }
     
     @objc fileprivate func wordsTapped() {
         blankCounter += 1
-        showText()
+        textView.attributedText = showText(for: speech)
     }
 }
