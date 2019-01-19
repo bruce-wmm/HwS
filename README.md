@@ -26,6 +26,17 @@
 
 | #    | Challenge                    | Topic   | Difficulty | Progress  |
 | :--: | :--------------------------: | :-----: | :--------: | :-------- |
+| 16   | Fizz Buzz                    | Numbers | 1️⃣         |           |
+| 17   | Generate a random number in a range | Numbers | 1️⃣ |  |
+| 18   | Recreate the pow() function | Numbers | 1️⃣ |  |
+| 19   | Swap two numbers | Numbers | 1️⃣ |  |
+| 20   | Number is prime | Numbers | 2️⃣ |  |
+| 21   | Counting binary ones | Numbers | 2️⃣ |  |
+| 22   | Binary reverse | Numbers | 2️⃣ |  |
+| 23   | Integer disguised as string | Numbers | 2️⃣ |  |
+| 24   | Add numbers inside a string | Numbers | 2️⃣ |  |
+| 25   | Calculate a square root by hand | Numbers | 3️⃣ |  |
+| 26   | Subtract without subtract | Numbers | 3️⃣ |  |
 
 ### Files 📘
 
