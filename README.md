@@ -19,8 +19,8 @@
 | 11   | Three different letters | Strings | 2️⃣ | ✅ 🔨 ⭐️ |
 | 12   | Find longest prefix | Strings | 2️⃣ | ✅ 🔨 |
 | 13   | Run-length encoding | Strings | 3️⃣ | ✅ 🔨 |
-| 14   | String permutations | Strings | 3️⃣ | ⚠️ |
-| 15   | Reverse the words in a string | Strings | 3️⃣ | 🛑 |
+| 14   | String permutations | Strings | 3️⃣ | ✅ 🔨 |
+| 15   | Reverse the words in a string | Strings | 3️⃣ | ✅ 🔨 ⭐️ |
 
 ### Numbers 📗
 
