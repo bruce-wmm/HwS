@@ -26,7 +26,7 @@
 
 | #    | Challenge                    | Topic   | Difficulty | Progress  |
 | :--: | :--------------------------: | :-----: | :--------: | :-------- |
-| 16   | Fizz Buzz                    | Numbers | 1️⃣         |           |
+| 16   | Fizz Buzz                    | Numbers | 1️⃣         | ✅ 🔨 ⭐️ |
 | 17   | Generate a random number in a range | Numbers | 1️⃣ |  |
 | 18   | Recreate the pow() function | Numbers | 1️⃣ |  |
 | 19   | Swap two numbers | Numbers | 1️⃣ |  |
