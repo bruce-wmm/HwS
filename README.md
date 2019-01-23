@@ -9,7 +9,7 @@
 | 1    | Are the letters unique?      | Strings | 1️⃣         | ✅ 🔨 ⭐️  |
 | 2    | Is the string a palindrome?  | Strings | 1️⃣         | ✅ 🔨 ⭐️|
 | 3    | Do two strings contain the same characters? | Strings | 1️⃣ | ✅ 🔨 ⭐️ |
-| 4    | Does one string contain another? (Custom `contains()` method) | Strings | 1️⃣ | ✅ 🔨 |
+| 4    | Does one string contain another? | Strings | 1️⃣ | ✅ 🔨 |
 | 5    | Count the characters | Strings | 1️⃣ | ✅ 🔨 |
 | 6    | Remove duplicate letters from a string | Strings | 1️⃣ | ✅ 🔨 |
 | 7    | Condense whitespace | Strings | 1️⃣ | ✅ 🔨 |
@@ -27,9 +27,9 @@
 | #    | Challenge                    | Topic   | Difficulty | Progress  |
 | :--: | :--------------------------: | :-----: | :--------: | :-------- |
 | 16   | Fizz Buzz                    | Numbers | 1️⃣         | ✅ 🔨 ⭐️ |
-| 17   | Generate a random number in a range | Numbers | 1️⃣ |  |
-| 18   | Recreate the pow() function | Numbers | 1️⃣ |  |
-| 19   | Swap two numbers | Numbers | 1️⃣ |  |
+| 17   | Generate a random number in a range | Numbers | 1️⃣ | ✅ 🔨 |
+| 18   | Recreate the pow() function | Numbers | 1️⃣ | ✅ 🔨 |
+| 19   | Swap two numbers | Numbers | 1️⃣ | ⚠️ |
 | 20   | Number is prime | Numbers | 2️⃣ |  |
 | 21   | Counting binary ones | Numbers | 2️⃣ |  |
 | 22   | Binary reverse | Numbers | 2️⃣ |  |
