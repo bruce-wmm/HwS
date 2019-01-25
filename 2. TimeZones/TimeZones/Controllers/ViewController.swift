@@ -34,11 +34,6 @@ class ViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addFriend))
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        
-    }
-    
     // MARK: Helper Methods
     
     func loadData() {
@@ -78,12 +73,13 @@ class ViewController: UIViewController {
             fatalError("Unable to create FriendViewController.")
         }
         
+        selectedFriend = position
         friendVC.delegate = self
         friendVC.friend = friend
         navigationController?.pushViewController(friendVC, animated: true)
     }
     
-    func updateFriend(friend: Friend) {
+    func update(friend: Friend) {
         guard let selectedFriends = selectedFriend else { return }
         
         friends[selectedFriends] = friend

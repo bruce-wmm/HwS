@@ -57,6 +57,11 @@ class FriendViewController: UIViewController {
         selectedTimeZone = timeZones.index(of: friend.timeZone) ?? 0
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        delegate?.update(friend: friend)
+    }
+    
     // MARK: Helper Methods
     
     func startEditingName() {
@@ -65,9 +70,7 @@ class FriendViewController: UIViewController {
     
     func selectRow(at indexPath: IndexPath) {
         nameEditingCell?.textField.resignFirstResponder()
-<<<<<<< HEAD
-=======
-        
+
         for cell in tableView.visibleCells {
             cell.accessoryType = .none
         }
@@ -79,15 +82,13 @@ class FriendViewController: UIViewController {
         selected?.accessoryType = .checkmark
         
         tableView.deselectRow(at: indexPath, animated: true)
->>>>>>> e45cf089f7a54b8a1aec53f757db5201f8f123e8
     }
     
     // MARK: IB Actions
     
     @IBAction func nameChanged(_ sender: UITextField) {
-        
+        friend.name = sender.text ?? ""
     }
-    
     
 }
 
@@ -137,9 +138,9 @@ extension FriendViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TimeZone", for: indexPath)
             let timeZone = timeZones[indexPath.row]
-            cell.textLabel?.text = timeZone.identifier
+            cell.textLabel?.text = timeZone.identifier.replacingOccurrences(of: "_", with: " ")
             let timeDifference = timeZone.secondsFromGMT(for: Date())
-            cell.detailTextLabel?.text = String(timeDifference)
+            cell.detailTextLabel?.text = timeDifference.timeString()
             
             if indexPath.row == selectedTimeZone {
                 cell.accessoryType = .checkmark

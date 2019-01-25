@@ -20,7 +20,7 @@ extension Int {
             return "GMT"
         } else {
             if formattedString.hasPrefix("-") {
-                return "GMT-\(formattedString)"
+                return "GMT\(formattedString)"
             } else {
                 return "GMT+\(formattedString)"
             }
