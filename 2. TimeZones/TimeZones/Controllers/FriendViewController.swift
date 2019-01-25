@@ -10,11 +10,10 @@ import UIKit
 
 // MARK: - FriendViewController: UIViewController
 
-class FriendViewController: UIViewController {
+class FriendViewController: UIViewController, Storyboarded {
     
     // MARK: Properties
     
-    weak var delegate: ViewController?
     var friend: Friend!
     
     var timeZones = [TimeZone]()
@@ -24,6 +23,8 @@ class FriendViewController: UIViewController {
         let indexPath = IndexPath(row: 0, section: 0)
         return tableView.cellForRow(at: indexPath) as? TextTableViewCell
     }
+    
+    weak var coordinator: MainCoordinator?
     
     // MARK: IB Outlets
     
@@ -59,7 +60,7 @@ class FriendViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        delegate?.update(friend: friend)
+        coordinator?.update(friend: friend)
     }
     
     // MARK: Helper Methods
