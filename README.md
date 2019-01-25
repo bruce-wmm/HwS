@@ -29,8 +29,8 @@
 | 16   | Fizz Buzz                    | Numbers | 1️⃣         | ✅ 🔨 ⭐️ |
 | 17   | Generate a random number in a range | Numbers | 1️⃣ | ✅ 🔨 |
 | 18   | Recreate the pow() function | Numbers | 1️⃣ | ✅ 🔨 |
-| 19   | Swap two numbers | Numbers | 1️⃣ | ⚠️ |
-| 20   | Number is prime | Numbers | 2️⃣ |  |
+| 19   | Swap two numbers | Numbers | 1️⃣ | ✅ 🔨 ⭐️ |
+| 20   | Number is prime | Numbers | 2️⃣ | ✅ 🔨 ⭐️ |
 | 21   | Counting binary ones | Numbers | 2️⃣ |  |
 | 22   | Binary reverse | Numbers | 2️⃣ |  |
 | 23   | Integer disguised as string | Numbers | 2️⃣ |  |
