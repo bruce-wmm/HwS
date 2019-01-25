@@ -20,6 +20,11 @@ class FriendViewController: UIViewController {
     var timeZones = [TimeZone]()
     var selectedTimeZone = 0
     
+    var nameEditingCell: TextTableViewCell? {
+        let indexPath = IndexPath(row: 0, section: 0)
+        return tableView.cellForRow(at: indexPath) as? TextTableViewCell
+    }
+    
     // MARK: IB Outlets
     
     @IBOutlet weak var tableView: UITableView!
@@ -52,6 +57,31 @@ class FriendViewController: UIViewController {
         selectedTimeZone = timeZones.index(of: friend.timeZone) ?? 0
     }
     
+    // MARK: Helper Methods
+    
+    func startEditingName() {
+        nameEditingCell?.textField.becomeFirstResponder()
+    }
+    
+    func selectRow(at indexPath: IndexPath) {
+        nameEditingCell?.textField.resignFirstResponder()
+<<<<<<< HEAD
+=======
+        
+        for cell in tableView.visibleCells {
+            cell.accessoryType = .none
+        }
+        
+        selectedTimeZone = indexPath.row
+        friend.timeZone = timeZones[indexPath.row]
+        
+        let selected = tableView.cellForRow(at: indexPath)
+        selected?.accessoryType = .checkmark
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+>>>>>>> e45cf089f7a54b8a1aec53f757db5201f8f123e8
+    }
+    
     // MARK: IB Actions
     
     @IBAction func nameChanged(_ sender: UITextField) {
@@ -68,7 +98,11 @@ extension FriendViewController: UITableViewDelegate, UITableViewDataSource {
     // MARK: Delegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if indexPath.section == 0 {
+            startEditingName()
+        } else {
+            selectRow(at: indexPath)
+        }
     }
     
     // MARK: Data Source
