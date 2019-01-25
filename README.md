@@ -31,8 +31,8 @@
 | 18   | Recreate the pow() function | Numbers | 1️⃣ | ✅ 🔨 |
 | 19   | Swap two numbers | Numbers | 1️⃣ | ✅ 🔨 ⭐️ |
 | 20   | Number is prime | Numbers | 2️⃣ | ✅ 🔨 ⭐️ |
-| 21   | Counting binary ones | Numbers | 2️⃣ |  |
-| 22   | Binary reverse | Numbers | 2️⃣ |  |
+| 21   | Counting binary ones | Numbers | 2️⃣ | ✅ 🔨 ⭐️ |
+| 22   | Binary reverse | Numbers | 2️⃣ | ✅ 🔨 |
 | 23   | Integer disguised as string | Numbers | 2️⃣ |  |
 | 24   | Add numbers inside a string | Numbers | 2️⃣ |  |
 | 25   | Calculate a square root by hand | Numbers | 3️⃣ |  |
