@@ -42,6 +42,16 @@
 
 | #    | Challenge                    | Topic   | Difficulty | Progress  |
 | :--: | :--------------------------: | :-----: | :--------: | :-------- |
+| 27   | Print last lines | Files | 1️⃣ |  |
+| 28   | Log a message | Files | 1️⃣ |  |
+| 29   | Documents directory | Files | 1️⃣ |  |
+| 30   | New JPEGs | Files | 1️⃣ |  |
+| 31   | Copy recursively | Files | 1️⃣ |  |
+| 32   | Word frequency | Files | 2️⃣ |  |
+| 33   | Find duplicate filenames | Files | 2️⃣ |  |
+| 34   | Find executables | Files | 2️⃣ |  |
+| 35   | Convert images | Files | 2️⃣ |  |
+| 36   | Print error lines | Files | 3️⃣ |  |
 
 ### Collections 📙
 
