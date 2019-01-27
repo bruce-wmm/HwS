@@ -16,6 +16,9 @@
 		11CC3F0E21FE298F0024436C /* FriendFaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC3F0D21FE298F0024436C /* FriendFaceUITests.swift */; };
 		11CC3F2221FE2C2E0024436C /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC3F2121FE2C2E0024436C /* Friend.swift */; };
 		11CC3F2421FE2D520024436C /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC3F2321FE2D520024436C /* Connection.swift */; };
+		11CC3F2621FE354A0024436C /* JSONDecoder-Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC3F2521FE354A0024436C /* JSONDecoder-Remote.swift */; };
+		11CC3F2821FE38130024436C /* FriendDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC3F2721FE38130024436C /* FriendDataSource.swift */; };
+		11CC3F2A21FE58830024436C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11CC3F2921FE58830024436C /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		11CC3F0F21FE298F0024436C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11CC3F2121FE2C2E0024436C /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		11CC3F2321FE2D520024436C /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		11CC3F2521FE354A0024436C /* JSONDecoder-Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder-Remote.swift"; sourceTree = "<group>"; };
+		11CC3F2721FE38130024436C /* FriendDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDataSource.swift; sourceTree = "<group>"; };
+		11CC3F2921FE58830024436C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		11CC3EE121FE298C0024436C = {
 			isa = PBXGroup;
 			children = (
+				11CC3F2921FE58830024436C /* Default-568h@2x.png */,
 				11CC3EEC21FE298C0024436C /* FriendFace */,
 				11CC3F0121FE298F0024436C /* FriendFaceTests */,
 				11CC3F0C21FE298F0024436C /* FriendFaceUIITests */,
@@ -150,6 +157,8 @@
 			children = (
 				11CC3F2121FE2C2E0024436C /* Friend.swift */,
 				11CC3F2321FE2D520024436C /* Connection.swift */,
+				11CC3F2521FE354A0024436C /* JSONDecoder-Remote.swift */,
+				11CC3F2721FE38130024436C /* FriendDataSource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -276,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11CC3EF821FE298F0024436C /* LaunchScreen.storyboard in Resources */,
+				11CC3F2A21FE58830024436C /* Default-568h@2x.png in Resources */,
 				11CC3EF521FE298F0024436C /* Assets.xcassets in Resources */,
 				11CC3EF321FE298C0024436C /* Main.storyboard in Resources */,
 			);
@@ -302,6 +312,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11CC3F2821FE38130024436C /* FriendDataSource.swift in Sources */,
+				11CC3F2621FE354A0024436C /* JSONDecoder-Remote.swift in Sources */,
 				11CC3F2221FE2C2E0024436C /* Friend.swift in Sources */,
 				11CC3EF021FE298C0024436C /* ViewController.swift in Sources */,
 				11CC3EEE21FE298C0024436C /* AppDelegate.swift in Sources */,

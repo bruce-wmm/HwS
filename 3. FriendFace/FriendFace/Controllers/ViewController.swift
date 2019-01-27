@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var filteredFriends = [Friend]()
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var searchController: UISearchController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +29,12 @@ class ViewController: UIViewController {
             do {
                 let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!
                 let data = try Data(contentsOf: url)
+                
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .iso8601
                 
                 let downloadedFriends = try decoder.decode([Friend].self, from: data)
+                
                 DispatchQueue.main.async {
                     self.friends = downloadedFriends
                     self.filteredFriends = downloadedFriends
