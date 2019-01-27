@@ -12,8 +12,10 @@
 		11CC3EF321FE298C0024436C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11CC3EF121FE298C0024436C /* Main.storyboard */; };
 		11CC3EF521FE298F0024436C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11CC3EF421FE298F0024436C /* Assets.xcassets */; };
 		11CC3EF821FE298F0024436C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11CC3EF621FE298F0024436C /* LaunchScreen.storyboard */; };
-		11CC3F0321FE298F0024436C /* NetworkingWithJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC3F0221FE298F0024436C /* NetworkingWithJSONTests.swift */; };
-		11CC3F0E21FE298F0024436C /* NetworkingWithJSONUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC3F0D21FE298F0024436C /* NetworkingWithJSONUITests.swift */; };
+		11CC3F0321FE298F0024436C /* FriendFaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC3F0221FE298F0024436C /* FriendFaceTests.swift */; };
+		11CC3F0E21FE298F0024436C /* FriendFaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC3F0D21FE298F0024436C /* FriendFaceUITests.swift */; };
+		11CC3F2221FE2C2E0024436C /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC3F2121FE2C2E0024436C /* Friend.swift */; };
+		11CC3F2421FE2D520024436C /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC3F2321FE2D520024436C /* Connection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +36,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11CC3EEA21FE298C0024436C /* NetworkingWithJSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkingWithJSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		11CC3EEA21FE298C0024436C /* FriendFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11CC3EED21FE298C0024436C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11CC3EEF21FE298C0024436C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		11CC3EF221FE298C0024436C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11CC3EF421FE298F0024436C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11CC3EF721FE298F0024436C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11CC3EF921FE298F0024436C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11CC3EFE21FE298F0024436C /* NetworkingWithJSONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingWithJSONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		11CC3F0221FE298F0024436C /* NetworkingWithJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingWithJSONTests.swift; sourceTree = "<group>"; };
+		11CC3EFE21FE298F0024436C /* FriendFaceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendFaceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11CC3F0221FE298F0024436C /* FriendFaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFaceTests.swift; sourceTree = "<group>"; };
 		11CC3F0421FE298F0024436C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		11CC3F0921FE298F0024436C /* NetworkingWithJSONUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingWithJSONUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		11CC3F0D21FE298F0024436C /* NetworkingWithJSONUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingWithJSONUITests.swift; sourceTree = "<group>"; };
+		11CC3F0921FE298F0024436C /* FriendFaceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendFaceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		11CC3F0D21FE298F0024436C /* FriendFaceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFaceUITests.swift; sourceTree = "<group>"; };
 		11CC3F0F21FE298F0024436C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11CC3F2121FE2C2E0024436C /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		11CC3F2321FE2D520024436C /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +81,9 @@
 		11CC3EE121FE298C0024436C = {
 			isa = PBXGroup;
 			children = (
-				11CC3EEC21FE298C0024436C /* NetworkingWithJSON */,
-				11CC3F0121FE298F0024436C /* NetworkingWithJSONTests */,
-				11CC3F0C21FE298F0024436C /* NetworkingWithJSONUITests */,
+				11CC3EEC21FE298C0024436C /* FriendFace */,
+				11CC3F0121FE298F0024436C /* FriendFaceTests */,
+				11CC3F0C21FE298F0024436C /* FriendFaceUIITests */,
 				11CC3EEB21FE298C0024436C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,14 +91,14 @@
 		11CC3EEB21FE298C0024436C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11CC3EEA21FE298C0024436C /* NetworkingWithJSON.app */,
-				11CC3EFE21FE298F0024436C /* NetworkingWithJSONTests.xctest */,
-				11CC3F0921FE298F0024436C /* NetworkingWithJSONUITests.xctest */,
+				11CC3EEA21FE298C0024436C /* FriendFace.app */,
+				11CC3EFE21FE298F0024436C /* FriendFaceTests.xctest */,
+				11CC3F0921FE298F0024436C /* FriendFaceUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		11CC3EEC21FE298C0024436C /* NetworkingWithJSON */ = {
+		11CC3EEC21FE298C0024436C /* FriendFace */ = {
 			isa = PBXGroup;
 			children = (
 				11CC3EED21FE298C0024436C /* AppDelegate.swift */,
@@ -104,25 +108,25 @@
 				11CC3F1B21FE29B00024436C /* Resources */,
 				11CC3F1C21FE29BB0024436C /* Supporting Files */,
 			);
-			path = NetworkingWithJSON;
+			path = FriendFace;
 			sourceTree = "<group>";
 		};
-		11CC3F0121FE298F0024436C /* NetworkingWithJSONTests */ = {
+		11CC3F0121FE298F0024436C /* FriendFaceTests */ = {
 			isa = PBXGroup;
 			children = (
-				11CC3F0221FE298F0024436C /* NetworkingWithJSONTests.swift */,
+				11CC3F0221FE298F0024436C /* FriendFaceTests.swift */,
 				11CC3F0421FE298F0024436C /* Info.plist */,
 			);
-			path = NetworkingWithJSONTests;
+			path = FriendFaceTests;
 			sourceTree = "<group>";
 		};
-		11CC3F0C21FE298F0024436C /* NetworkingWithJSONUITests */ = {
+		11CC3F0C21FE298F0024436C /* FriendFaceUIITests */ = {
 			isa = PBXGroup;
 			children = (
-				11CC3F0D21FE298F0024436C /* NetworkingWithJSONUITests.swift */,
+				11CC3F0D21FE298F0024436C /* FriendFaceUITests.swift */,
 				11CC3F0F21FE298F0024436C /* Info.plist */,
 			);
-			path = NetworkingWithJSONUITests;
+			path = FriendFaceUIITests;
 			sourceTree = "<group>";
 		};
 		11CC3F1B21FE29B00024436C /* Resources */ = {
@@ -144,6 +148,8 @@
 		11CC3F1E21FE29CD0024436C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				11CC3F2121FE2C2E0024436C /* Friend.swift */,
+				11CC3F2321FE2D520024436C /* Connection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,9 +174,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		11CC3EE921FE298C0024436C /* NetworkingWithJSON */ = {
+		11CC3EE921FE298C0024436C /* FriendFace */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11CC3F1221FE298F0024436C /* Build configuration list for PBXNativeTarget "NetworkingWithJSON" */;
+			buildConfigurationList = 11CC3F1221FE298F0024436C /* Build configuration list for PBXNativeTarget "FriendFace" */;
 			buildPhases = (
 				11CC3EE621FE298C0024436C /* Sources */,
 				11CC3EE721FE298C0024436C /* Frameworks */,
@@ -180,14 +186,14 @@
 			);
 			dependencies = (
 			);
-			name = NetworkingWithJSON;
+			name = FriendFace;
 			productName = NetworkingWithJSON;
-			productReference = 11CC3EEA21FE298C0024436C /* NetworkingWithJSON.app */;
+			productReference = 11CC3EEA21FE298C0024436C /* FriendFace.app */;
 			productType = "com.apple.product-type.application";
 		};
-		11CC3EFD21FE298F0024436C /* NetworkingWithJSONTests */ = {
+		11CC3EFD21FE298F0024436C /* FriendFaceTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11CC3F1521FE298F0024436C /* Build configuration list for PBXNativeTarget "NetworkingWithJSONTests" */;
+			buildConfigurationList = 11CC3F1521FE298F0024436C /* Build configuration list for PBXNativeTarget "FriendFaceTests" */;
 			buildPhases = (
 				11CC3EFA21FE298F0024436C /* Sources */,
 				11CC3EFB21FE298F0024436C /* Frameworks */,
@@ -198,14 +204,14 @@
 			dependencies = (
 				11CC3F0021FE298F0024436C /* PBXTargetDependency */,
 			);
-			name = NetworkingWithJSONTests;
+			name = FriendFaceTests;
 			productName = NetworkingWithJSONTests;
-			productReference = 11CC3EFE21FE298F0024436C /* NetworkingWithJSONTests.xctest */;
+			productReference = 11CC3EFE21FE298F0024436C /* FriendFaceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		11CC3F0821FE298F0024436C /* NetworkingWithJSONUITests */ = {
+		11CC3F0821FE298F0024436C /* FriendFaceUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11CC3F1821FE298F0024436C /* Build configuration list for PBXNativeTarget "NetworkingWithJSONUITests" */;
+			buildConfigurationList = 11CC3F1821FE298F0024436C /* Build configuration list for PBXNativeTarget "FriendFaceUITests" */;
 			buildPhases = (
 				11CC3F0521FE298F0024436C /* Sources */,
 				11CC3F0621FE298F0024436C /* Frameworks */,
@@ -216,9 +222,9 @@
 			dependencies = (
 				11CC3F0B21FE298F0024436C /* PBXTargetDependency */,
 			);
-			name = NetworkingWithJSONUITests;
+			name = FriendFaceUITests;
 			productName = NetworkingWithJSONUITests;
-			productReference = 11CC3F0921FE298F0024436C /* NetworkingWithJSONUITests.xctest */;
+			productReference = 11CC3F0921FE298F0024436C /* FriendFaceUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -244,7 +250,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 11CC3EE521FE298C0024436C /* Build configuration list for PBXProject "NetworkingWithJSON" */;
+			buildConfigurationList = 11CC3EE521FE298C0024436C /* Build configuration list for PBXProject "FriendFace" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -257,9 +263,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				11CC3EE921FE298C0024436C /* NetworkingWithJSON */,
-				11CC3EFD21FE298F0024436C /* NetworkingWithJSONTests */,
-				11CC3F0821FE298F0024436C /* NetworkingWithJSONUITests */,
+				11CC3EE921FE298C0024436C /* FriendFace */,
+				11CC3EFD21FE298F0024436C /* FriendFaceTests */,
+				11CC3F0821FE298F0024436C /* FriendFaceUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,8 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11CC3F2221FE2C2E0024436C /* Friend.swift in Sources */,
 				11CC3EF021FE298C0024436C /* ViewController.swift in Sources */,
 				11CC3EEE21FE298C0024436C /* AppDelegate.swift in Sources */,
+				11CC3F2421FE2D520024436C /* Connection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,7 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11CC3F0321FE298F0024436C /* NetworkingWithJSONTests.swift in Sources */,
+				11CC3F0321FE298F0024436C /* FriendFaceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,7 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11CC3F0E21FE298F0024436C /* NetworkingWithJSONUITests.swift in Sources */,
+				11CC3F0E21FE298F0024436C /* FriendFaceUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,12 +330,12 @@
 /* Begin PBXTargetDependency section */
 		11CC3F0021FE298F0024436C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 11CC3EE921FE298C0024436C /* NetworkingWithJSON */;
+			target = 11CC3EE921FE298C0024436C /* FriendFace */;
 			targetProxy = 11CC3EFF21FE298F0024436C /* PBXContainerItemProxy */;
 		};
 		11CC3F0B21FE298F0024436C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 11CC3EE921FE298C0024436C /* NetworkingWithJSON */;
+			target = 11CC3EE921FE298C0024436C /* FriendFace */;
 			targetProxy = 11CC3F0A21FE298F0024436C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -521,7 +529,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetworkingWithJSON.app/NetworkingWithJSON";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FriendFace.app/FriendFace";
 			};
 			name = Debug;
 		};
@@ -542,7 +550,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetworkingWithJSON.app/NetworkingWithJSON";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FriendFace.app/FriendFace";
 			};
 			name = Release;
 		};
@@ -589,7 +597,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		11CC3EE521FE298C0024436C /* Build configuration list for PBXProject "NetworkingWithJSON" */ = {
+		11CC3EE521FE298C0024436C /* Build configuration list for PBXProject "FriendFace" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				11CC3F1021FE298F0024436C /* Debug */,
@@ -598,7 +606,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		11CC3F1221FE298F0024436C /* Build configuration list for PBXNativeTarget "NetworkingWithJSON" */ = {
+		11CC3F1221FE298F0024436C /* Build configuration list for PBXNativeTarget "FriendFace" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				11CC3F1321FE298F0024436C /* Debug */,
@@ -607,7 +615,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		11CC3F1521FE298F0024436C /* Build configuration list for PBXNativeTarget "NetworkingWithJSONTests" */ = {
+		11CC3F1521FE298F0024436C /* Build configuration list for PBXNativeTarget "FriendFaceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				11CC3F1621FE298F0024436C /* Debug */,
@@ -616,7 +624,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		11CC3F1821FE298F0024436C /* Build configuration list for PBXNativeTarget "NetworkingWithJSONUITests" */ = {
+		11CC3F1821FE298F0024436C /* Build configuration list for PBXNativeTarget "FriendFaceUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				11CC3F1921FE298F0024436C /* Debug */,

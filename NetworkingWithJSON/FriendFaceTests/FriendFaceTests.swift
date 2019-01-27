@@ -1,15 +1,15 @@
 //
-//  NetworkingWithJSONTests.swift
-//  NetworkingWithJSONTests
+//  FriendFaceTests.swift
+//  FriendFaceTests
 //
 //  Created by Neil Hiddink on 1/27/19.
 //  Copyright © 2019 Neil Hiddink. All rights reserved.
 //
 
 import XCTest
-@testable import NetworkingWithJSON
+@testable import FriendFace
 
-class NetworkingWithJSONTests: XCTestCase {
+class FriendFaceTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

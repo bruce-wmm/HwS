@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:NetworkingWithJSON.xcodeproj">
+      location = "self:/Users/neilhiddink/GitHub/HwSLive/NetworkingWithJSON/FriendFace.xcodeproj">
    </FileRef>
 </Workspace>
