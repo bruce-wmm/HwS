@@ -482,7 +482,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7G4UHWJ29G;
-				INFOPLIST_FILE = NetworkingWithJSON/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FriendFaceUIITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,7 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7G4UHWJ29G;
-				INFOPLIST_FILE = NetworkingWithJSON/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FriendFaceUIITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
