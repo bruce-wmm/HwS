@@ -6,7 +6,7 @@
 | :-----: | :---: | :--------------------------: | :--------------: | :--------: |
 | [January 6th, 2019](https://youtu.be/CpvC7bojHTE) | 12PM<br>EST | 📱<br>[Speech Memorizer](https://github.com/neilhiddink/HwSLive/tree/master/1.%20SpeechMemorizer) | Xcode, UIKit, UIViewController, `super`, viewDidLoad(), Bundle, `try`, fatalError(), Storyboards & Interface Builder, UITableView, UITableViewDelegate, UITableViewDataSource, UITextView, UINavigationController, UITapGestureRecognizer, Auto Layout, IB Outlets & Actions, NSAttributedString | ✅ |
 | [January 13th, 2019](https://youtu.be/p9fSsoHcLTg) | 1PM<br>EST | 📱<br>[TimeZones](https://github.com/neilhiddink/HwSLive/tree/master/2.%20TimeZones) | Codable, `TimeZone.current`, Custom UITableViewCells, UserDefaults, JSONDecoder, JSONEncoder, UITableViewController, DateComponentsFormatter, Protocols, First Responder and Keyboard, Coordinator Pattern | ✅ |
-| January 27th, 2019 | 1PM<br>EST | TBD | TBD | 🛑 |
+| January 27th, 2019 | 1PM<br>EST | [FriendFace](https://github.com/neilhiddink/HwSLive/tree/master/3.%20FriendFace) | Codable, UITableViewController, JSONDecoder, ISO8601 Date Format, GCD and QoS, ARC and Retain Cycles, `weak` and `unowned`, UISearchController, UISearchBar, UISearchResultsUpdating, Generics  | 🛑 |
 | February 3rd, 2019 | 5AM<br>EST | TBD | TBD | 🛑 |
 
 |  KEY  |
