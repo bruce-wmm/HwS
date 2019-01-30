@@ -2,4 +2,4 @@
 
 #### Challenge 25: Square Root by Hand
 
-My initial solution may not have been intended for this problem. Need to resolve this without using `pow`.
+My intial solution was the equivalent of Paul's "sneaky" solution using `pow`. I need to revisit this problem to practice the transition between the brute force solution and the binary search/chop solution.
