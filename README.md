@@ -34,15 +34,15 @@
 | 21   | Counting binary ones | Numbers | 2️⃣ | ✅ 🔨 ⭐️ |
 | 22   | Binary reverse | Numbers | 2️⃣ | ✅ 🔨 |
 | 23   | Integer disguised as string | Numbers | 2️⃣ | ✅ 🔨 ⭐️ |
-| 24   | Add numbers inside a string | Numbers | 2️⃣ |  |
-| 25   | Calculate a square root by hand | Numbers | 3️⃣ |  |
-| 26   | Subtract without subtract | Numbers | 3️⃣ |  |
+| 24   | Add numbers inside a string | Numbers | 2️⃣ | ✅ 🔨 |
+| 25   | Calculate a square root by hand | Numbers | 3️⃣ | ✅ 🔨 |
+| 26   | Subtract without subtract | Numbers | 3️⃣ | ✅ 🔨 |
 
 ### Files 📘
 
 | #    | Challenge                    | Topic   | Difficulty | Progress  |
 | :--: | :--------------------------: | :-----: | :--------: | :-------- |
-| 27   | Print last lines | Files | 1️⃣ |  |
+| 27   | Print last lines | Files | 1️⃣ | 🛑 |
 | 28   | Log a message | Files | 1️⃣ |  |
 | 29   | Documents directory | Files | 1️⃣ |  |
 | 30   | New JPEGs | Files | 1️⃣ |  |
