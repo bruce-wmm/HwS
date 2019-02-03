@@ -19,7 +19,7 @@ let passingGrade = 70...100
 #6 - I went too quickly on this question and ignored the fact that a conditional statement can be written by itself on a line without printing/returning anything:
 
 ```swift
-let passingGrade = 70...100
+70 > 100
 ```
 
 ### 💡 New Concepts:
