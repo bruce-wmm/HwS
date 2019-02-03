@@ -1,4 +1,4 @@
-# 100 Days Of Swift
+<p align="center"><img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/00.%20Resources/banner.png" width="500"></p>
 
 ```
 "Can I jump over two or three guys like I used to? No.
