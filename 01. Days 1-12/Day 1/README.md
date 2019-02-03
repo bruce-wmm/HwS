@@ -1,5 +1,8 @@
+<p align="center"><img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/00.%20Resources/banner.png" width="500"></p>
 
-# Day 1 Notes
+## Day 1 Notes
+
+[Summary - Simple Types](https://youtu.be/3-6cyNw1Ync)
 
 <p align="center"><img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/Day%201/Tests/00.%20Day%201%20Progress%202-1-19.png" width="500"></p>
 

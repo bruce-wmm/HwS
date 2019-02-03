@@ -2,6 +2,8 @@
 
 ## Day 2 Notes
 
+[Summary - Complex Types](https://youtu.be/4dKDADbQtXY)
+
 <p align="center"><img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/Day%202/Tests/00.%20Day%202%20Progress%202-2-19.png" width="500"></p>
 
 ### Sets
