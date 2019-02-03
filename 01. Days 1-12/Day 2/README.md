@@ -8,7 +8,7 @@
 
 <img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/Day%202/Tests/02.%20Sets%202-2-19.png" width="300">
 
-I got 5/6 because I forgot about the shorthand rule for Sets. [Unlike arrays, sets do not have an equivalent shorthand form.](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html)
+I got 11/12 because I forgot about the shorthand rule for Sets. [Unlike arrays, sets do not have an equivalent shorthand form.](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html)
 
 ❌:
 ```swift
