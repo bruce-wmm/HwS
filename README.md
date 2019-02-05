@@ -25,6 +25,7 @@ I always worked on fundamentals because I know athleticism is fleeting."
 | 1    | [Variables, simple data types, and string interpolation](https://www.hackingwithswift.com/100/1) | ✅ |
 | 2    | [Arrays, dictionaries, sets, and enums](https://www.hackingwithswift.com/100/2) | ✅ |
 | 3    | [Operators and Conditions](https://www.hackingwithswift.com/100/3) | ✅ |
+| 4    | [Loops](https://www.hackingwithswift.com/100/4) | ✅ |
 
 |  KEY  |
 | ----- |
