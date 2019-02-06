@@ -26,6 +26,7 @@ I always worked on fundamentals because I know athleticism is fleeting."
 | 2    | [Arrays, dictionaries, sets, and enums](https://www.hackingwithswift.com/100/2) | ✅ |
 | 3    | [Operators and Conditions](https://www.hackingwithswift.com/100/3) | ✅ |
 | 4    | [Loops](https://www.hackingwithswift.com/100/4) | ✅ |
+| 5    | [Functions](https://www.hackingwithswift.com/100/5) | ⚠️ |
 
 |  KEY  |
 | ----- |
@@ -35,5 +36,3 @@ I always worked on fundamentals because I know athleticism is fleeting."
 ✅ = Complete
 ⚠️ = In Progress
 🛑 = Not Started
- 
-
