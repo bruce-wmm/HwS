@@ -17,7 +17,7 @@ This
 is
 a
 multiline
-comment"""
+string"""
 ```
 
 ✅:
@@ -27,7 +27,7 @@ This
 is
 a
 multiline
-comment
+string
 """
 ```
 
