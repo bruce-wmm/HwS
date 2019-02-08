@@ -20,4 +20,4 @@
 
 ### 💡 New Concepts:
 
-- 
+- If there is only one line of code in a closure, you can skip writing the `return` keyword.
