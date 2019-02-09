@@ -8,6 +8,8 @@
 - Benjamin Franklin
 ```
 
+[Summary - Closures](https://youtu.be/h-AFqtadVy0)
+
 [Brian Voong - How Do You Write Closures in Swift?](https://youtu.be/fVF_tNcIhfc)
 
 <p align="center"><img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/Day%207/Tests/00.%20Day%207%20Progress%202-7-19.png" width="500"></p>
