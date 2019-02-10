@@ -28,8 +28,10 @@ I always worked on fundamentals because I know athleticism is fleeting."
 | 4    | [Loops](https://www.hackingwithswift.com/100/4) | ✅ |
 | 5    | [Functions](https://www.hackingwithswift.com/100/5) | ✅ |
 | 6    | [Closures (Part 1)](https://www.hackingwithswift.com/100/6) | ✅ |
-| 7    | [Closures (Part 2)](https://www.hackingwithswift.com/100/7) | ⚠️  |
-| 8    | [Structs (Part 1)](https://www.hackingwithswift.com/100/8) | ⚠️  |
+| 7    | [Closures (Part 2)](https://www.hackingwithswift.com/100/7) | ✅  |
+| 8    | [Structs (Part 1)](https://www.hackingwithswift.com/100/8) | ✅  |
+| 9    | [Structs (Part 2)](https://www.hackingwithswift.com/100/9) | ⚠️  |
+| 10   | [Classes](https://www.hackingwithswift.com/100/10) | ⚠️  |
 
 |  KEY  |
 | ----- |
