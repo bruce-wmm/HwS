@@ -1,57 +1,102 @@
 import UIKit
 
-// Closures - Part 2
+// Structs - Part 1
 
-func createInterface(positioning: ([String]) -> Void) {
-    print("Creating some buttons")
-    let buttons = [
-        "Button 1"
-        "Button 2"
-        "Button 3"
-    ]
-    positioning(buttons)
+struct Person {
+    var name: String
+    
+//    mutating func makeAnonymous() {
+//        name = "Anonymous"
+//    }
 }
-createInterface { (buttons: [String]) in
-    for button in buttons {
-        print("I'll place \(button) here...")
+
+var person = Person(name: "Ed")
+person.name = "Neil"
+//person.makeAnonymous()
+person.name
+
+struct Sunglasses {
+    var protectionLevel: Int
+    var visionTest: String {
+        if protectionLevel < 3 {
+            return "These aren't very dark"
+        } else if protectionLevel < 6 {
+            return "These are just right"
+        } else if protectionLevel < 10 {
+            return "Who turned the lights out?"
+        } else { return "" }
     }
 }
 
-func bakeCookies(number: Int, secretIngredient: () -> String) {
-    for _ in 0..<number {
-        print("Adding butter...")
-        print("Adding flour...")
-        print("Adding sugar...")
-        print("Adding egg...")
-        let extra = secretIngredient()
-        print(extra)
+struct Race {
+    var distance: Int
+    var runners = 0
+    var description: String {
+        return "This is a \(distance)km race with \(runners) runners."
     }
 }
-bakeCookies(5) {
-    return "Adding vanilla extract"
-}
+let londonMarathon = Race(distance: 42, runners: 40_000)
 
-func goShopping(for item: String, decisionHandler: (String) -> Bool) {
-    print("I'm going to buy \(item)")
-    if decisionHandler() == true {
-        print("Great! I bought them.")
-    } else {
-        print("Maybe next time...")
-    }
-}
-goShopping(for: "shoes") { item in
-    if item == "shoes" {
-        return false
-    } else {
-        return true
+struct Candle {
+    var burnLength: Int
+    var alreadyBurned = 0
+    let burnRemaining: Int {
+        return burnLength - alreadyBurned
     }
 }
 
-func activateAI(ai: () -> String) {
-    print("Let's see what this thing can do...")
-    let result = ai()
-    print(result)
+struct Code {
+    var language: String
+    var containsErrors = false
+    var report {
+        if containsErrors {
+            return "This \(language) code has bugs!"
+        } else {
+            return "This looks good to me."
+        }
+    }
 }
-activateAI {
-    return "Come with me if you want to live."
+
+struct Keyboard {
+    var isMechanical = false
+    var noiseLevel: Int {
+        if isMechanical {
+            return 11
+        } else {
+            return 3
+        }
+    }
 }
+let majestouch = Keyboard(isMechanical: true, noiseLevel: 0)
+print(majestouch.noiseLevel)
+
+
+struct Dog {
+    var age {
+        didSet {
+            let dogAge = age * 7
+            print("I'm now \(dogAge) in dog years.")
+        }
+    }
+}
+
+struct Car {
+    let mileage: Int
+    mutating func drive(distance: Int) {
+        mileage += distance
+    }
+}
+
+struct Switch {
+    var isOn: Bool
+    mutating func toggle {
+        if isOn {
+            isOn == false
+        } else {
+            isOn == true
+        }
+    }
+}
+
+var examScores = [100, 95, 92]
+examScores.insert(98)

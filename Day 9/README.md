@@ -1,8 +1,8 @@
 <p align="center"><img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/00.%20Resources/banner.png" width="500"></p>
 
-## Day 8 Notes
+## Day 9 Notes
 
-[]()
+[Summary - Structs](https://www.hackingwithswift.com/sixty/7/13/structs-summary)
 
 <p align="center"><img src="" width="500"></p>
 
@@ -14,5 +14,4 @@
 
 ### 💡 New Concepts:
 
-- Computed properties cannot be declared as constants (with `let`)
-- `lazy` properties
+-
