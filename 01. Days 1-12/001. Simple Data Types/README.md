@@ -4,7 +4,7 @@
 
 [Summary - Simple Types](https://youtu.be/3-6cyNw1Ync)
 
-<p align="center"><img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/Day%201/Tests/00.%20Day%201%20Progress%202-1-19.png" width="500"></p>
+<p align="center"><img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/001.%20Simple%20Data%20Types/Tests/00.%20Day%201%20Progress%202-1-19.png" width="500"></p>
 
 ### Multi-line Strings
 
