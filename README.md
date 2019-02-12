@@ -30,8 +30,10 @@ I always worked on fundamentals because I know athleticism is fleeting."
 | 6    | [Closures (Part 1)](https://www.hackingwithswift.com/100/6) | ✅ |
 | 7    | [Closures (Part 2)](https://www.hackingwithswift.com/100/7) | ✅  |
 | 8    | [Structs (Part 1)](https://www.hackingwithswift.com/100/8) | ✅  |
-| 9    | [Structs (Part 2)](https://www.hackingwithswift.com/100/9) | ⚠️  |
-| 10   | [Classes](https://www.hackingwithswift.com/100/10) | ⚠️  |
+| 9    | [Structs (Part 2)](https://www.hackingwithswift.com/100/9) | ✅  |
+| 10   | [Classes](https://www.hackingwithswift.com/100/10) | ✅  |
+| 11   | [Protocols and Extensions](https://www.hackingwithswift.com/100/11) | ⚠️  |
+| 12   | [Optionals](https://www.hackingwithswift.com/100/12) | ⚠️  |
 
 |  KEY  |
 | ----- |
