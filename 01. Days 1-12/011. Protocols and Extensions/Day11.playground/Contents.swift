@@ -1,6 +1,6 @@
 import UIKit
 
-// Protocols
+// Protocols and Extensions
 
 protocol Swimmable {
     var depth { get }
