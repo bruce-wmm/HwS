@@ -15,3 +15,5 @@
 #X - 
 
 ### 💡 New Concepts:
+
+- [String `appending()` method](https://developer.apple.com/documentation/foundation/nsstring/1412307-appending)
