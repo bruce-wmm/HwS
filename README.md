@@ -34,9 +34,19 @@ I always worked on fundamentals because I know athleticism is fleeting."
 | 10   | [Classes](https://www.hackingwithswift.com/100/10) | ✅ |
 | 11   | [Protocols and Extensions](https://www.hackingwithswift.com/100/11) | ✅ |
 | 12   | [Optionals](https://www.hackingwithswift.com/100/12) | ✅ |
+
+
+### 📒 Days 13, 14, 15 - Review
+
+| Day  | Topics                    | Progress |
+| :--: | :----------------------- |:--------:|
 | 13   | [Swift Review, Day 1](https://www.hackingwithswift.com/100/13) | ⚠️ |
 | 14   | [Swift Review, Day 2](https://www.hackingwithswift.com/100/14) | ⚠️ |
 | 15   | [Swift Review, Day 3](https://www.hackingwithswift.com/100/15) | ⚠️ |
+
+### 📗 Days 16-...
+
+iOS Development
 
 |  KEY  |
 | ----- |
