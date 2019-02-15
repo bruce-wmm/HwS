@@ -35,7 +35,7 @@ I always worked on fundamentals because I know athleticism is fleeting."
 | 11   | [Protocols and Extensions](https://www.hackingwithswift.com/100/11) | ✅ |
 | 12   | [Optionals](https://www.hackingwithswift.com/100/12) | ⚠️ |
 | 13   | [Swift Review, Day 1](https://www.hackingwithswift.com/100/13) | ⚠️ |
-| 14   | [Swift Review, Day 1](https://www.hackingwithswift.com/100/14) | ⚠️ |
+| 14   | [Swift Review, Day 2](https://www.hackingwithswift.com/100/14) | ⚠️ |
 
 |  KEY  |
 | ----- |
