@@ -40,13 +40,13 @@ I always worked on fundamentals because I know athleticism is fleeting."
 
 | Day  | Topics                    | Progress |
 | :--: | :----------------------- |:--------:|
-| 13   | [Swift Review, Day 1](https://www.hackingwithswift.com/100/13) | ⚠️ |
-| 14   | [Swift Review, Day 2](https://www.hackingwithswift.com/100/14) | ⚠️ |
-| 15   | [Swift Review, Day 3](https://www.hackingwithswift.com/100/15) | ⚠️ |
+| 13   | [Swift Review, Day 1](https://www.hackingwithswift.com/100/13) | ✅ |
+| 14   | [Swift Review, Day 2](https://www.hackingwithswift.com/100/14) | ✅ |
+| 15   | [Swift Review, Day 3](https://www.hackingwithswift.com/100/15) | ✅ |
 
-### 📗 Days 16-...
+### 📗 Days 16-100
 
-iOS Development
+[Hacking With Swift Projects](https://github.com/neilhiddink/HwS)
 
 |  KEY  |
 | ----- |
