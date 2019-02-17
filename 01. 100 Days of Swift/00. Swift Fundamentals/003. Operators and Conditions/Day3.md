@@ -1,14 +1,14 @@
-<p align="center"><img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/00.%20Resources/banner.png" width="500"></p>
+<p align="center"><img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/00.%20Resources/banner-100.png" width="500"></p>
 
 ## Day 3 Notes
 
 [Summary - Operators and Conditions](https://youtu.be/Hhnx3i0o1_c)
 
-<p align="center"><img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/003.%20Operators%20and%20Conditions/Tests/00.%20Day%203%20Progress%202-3-19.png" width="500"></p>
+<p align="center"><img src="" width="500"></p>
 
 ### Summary - Operators and Conditions
 
-<img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/003.%20Operators%20and%20Conditions/Tests/10.%20Operators%20and%20Conditions%20-%20Summary%202-3-19.png" width="300">
+<img src="" width="300">
 
 #3 - I forgot how to declare a closed range. This is perfectly valid code:
 

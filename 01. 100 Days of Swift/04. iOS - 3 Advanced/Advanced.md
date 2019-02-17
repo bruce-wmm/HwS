@@ -1,0 +1,15 @@
+<p align="center"><img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/00.%20Resources/banner-100.png" width="500"></p>
+
+## Advanced 📘
+
+| #    | Project Name                | Topics Learned   | Progress   |
+| :--: | :-------------------------: | :--------------: | :--------: |
+| 31   | 📱<br>[Multibrowser](https://github.com/nhiddink/HackingWithSwift/tree/master/31.%20Multibrowser)            | UIStackView, iPad Multitasking, addArrangedSubview(), WKNavigationDelegate, UITextFieldDelegate, UIGestureRecognizerDelegate, App Transport Security | ✅ |
+| 32   | 📱<br>[Swift Searcher](https://github.com/nhiddink/HackingWithSwift/tree/master/32.%20Swift%20Searcher)            | Dynamic Type, NSAttributedString, SFSafariViewController, SFSafariViewControllerDelegate, Core Spotlight, UIContentSizeCategoryDidChange | ✅ |
+| 33   | 📱<br>[Name That Tune](https://github.com/nhiddink/HackingWithSwift/tree/master/33.%20Name%20that%20Tune)          | AVAudioRecorder, AVAudioSession, requestRecordPermission(), CloudKit, CKRecord, CKAsset, CloudKit Dashboard, CKQueryOperation, NSPredicate, CKRecord.Reference, fetch(withRecordID:), save(), CKQuerySubscription, NSSortDescriptor | ✅ |
+| 34   | 🕹<br>[Four in a Row](https://github.com/nhiddink/HackingWithSwift/tree/master/34.%20Connect%20Four)            | GameplayKit AI, GKGameModel, GKGameModelPlayer, GKGameModelUpdate, AI Heuristics, NSCopying, GKMinmaxStrategist | ✅ |
+| 35   | 🛠<br>[Random Numbers](https://github.com/nhiddink/HWS_Portfolio_Hiddink/tree/master/35.%20Random%20Numbers)           | Int.random(in:), Float.random(in:), Double.random(in:), CGFloat.random(in:), Bool.random(), arc4random(), GKRandomSource.sharedRandom(), GKLinearCongruentialRandomSource, GKMersenneTwisterRandomSource, GKARC4RandomSource, GKRandomDistribution, GKShuffledDistribution, GKGaussianDistribution, Fisher-Yates Algorithm, arrayByShufflingObjects(in:) | ✅ |
+| 36   | 🕹<br>[Crashy Plane](https://github.com/nhiddink/HWS_Portfolio_Hiddink/tree/master/36.%20Crashy%20Plane)             | Composed Methods,  Scale Modes, Parallax Scrolling, SpriteKit Physics, SKPhysicsContactDelegate, SKPhysicsBody, SKAudioNode, Managing Game State  | ✅ |
+| 37   | 🕹<br>[Psychic Tester](https://github.com/nhiddink/HWS_Portfolio_Hiddink/tree/master/37.%20Psychic%20Tester)           | WatchKit Extensions, 3D Touch, CAEmitterLayer, CAGradientLayer, @IBDesignable, @IBInspectable, transition(with:), WCSession, WKInterfaceLabel, WKInterfaceButton | ✅ |
+| 38   | 🛠<br>[Github Commits (Core Data)](https://github.com/neilhiddink/HWS_Portfolio_Hiddink/tree/master/38.%20GitHubCommits) | NSFetchRequest, NSManagedObject, NSPredicate, NSSortDescriptor, NSFetchedResultsController, ISO8601DateFormatter | ✅ |
+| 39   | 🛠<br>[Unit testing with XCTest](https://github.com/neilhiddink/HWS_Portfolio_Hiddink/tree/master/39.%20Swift%20Unit%20Tests) | XCTest, `filter()`, Test-Driven Development, Functional Programming, XCTestCase, Setting a Baseline, NSCountedSet, XCUIApplication(), XCUIElementQuery, UI Test Recording | ✅ |

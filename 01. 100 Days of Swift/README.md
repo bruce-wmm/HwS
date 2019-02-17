@@ -44,7 +44,7 @@ I always worked on fundamentals because I know athleticism is fleeting."
 | 14   | [Swift Review, Day 2](https://www.hackingwithswift.com/100/14) | ✅ |
 | 15   | [Swift Review, Day 3](https://www.hackingwithswift.com/100/15) | ✅ |
 
-### 📗 Days 16-100: iOS Development in Swift
+### 📗 Days 16-100: Beginner iOS Development
 
 | Day  | Topics                    | Progress |
 | :--: | :----------------------- |:--------:|
