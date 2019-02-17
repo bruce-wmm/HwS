@@ -22,8 +22,8 @@ I always worked on fundamentals because I know athleticism is fleeting."
 
 | Day  | Topics                    | Progress |
 | :--: | :----------------------- |:--------:|
-| 1    | [Variables, simple data types, and string interpolation](https://www.hackingwithswift.com/100/1) | ✅ |
-| 2    | [Arrays, dictionaries, sets, and enums](https://www.hackingwithswift.com/100/2) | ✅ |
+| 1    | [Simple Data Types](https://www.hackingwithswift.com/100/1) | ✅ |
+| 2    | [Complex Data Types](https://www.hackingwithswift.com/100/2) | ✅ |
 | 3    | [Operators and Conditions](https://www.hackingwithswift.com/100/3) | ✅ |
 | 4    | [Loops](https://www.hackingwithswift.com/100/4) | ✅ |
 | 5    | [Functions](https://www.hackingwithswift.com/100/5) | ✅ |
@@ -34,7 +34,6 @@ I always worked on fundamentals because I know athleticism is fleeting."
 | 10   | [Classes](https://www.hackingwithswift.com/100/10) | ✅ |
 | 11   | [Protocols and Extensions](https://www.hackingwithswift.com/100/11) | ✅ |
 | 12   | [Optionals](https://www.hackingwithswift.com/100/12) | ✅ |
-
 
 ### 📒 Days 13, 14, 15: Review
 
@@ -49,6 +48,7 @@ I always worked on fundamentals because I know athleticism is fleeting."
 | Day  | Topics                    | Progress |
 | :--: | :----------------------- |:--------:|
 | 16   | [Project 1, Part 1](https://www.hackingwithswift.com/100/16) | ⚠️ |
+| 17   | [Project 1, Part 2](https://www.hackingwithswift.com/100/17) | ⚠️ |
 
 |  KEY  |
 | ------ |
