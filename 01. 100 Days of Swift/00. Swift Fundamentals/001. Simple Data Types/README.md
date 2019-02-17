@@ -8,7 +8,7 @@
 
 ### Multi-line Strings
 
-<img src="https://github.com/neilhiddink/HwS/blob/master/01.%20100%20Days%20of%20Swift/00.%20Swift%20Fundamentals/001.%20Simple%20Data%20Types/Tests/01.%20Multi-line%20Strings%202-1-19.png" width="300"></p>
+<img src="" width="300"></p>
 
 #2 - I didn't know that the `"""` had to be on its own line for the opening and closing lines.
 

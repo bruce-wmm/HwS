@@ -4,11 +4,11 @@
 
 [Summary - Complex Types](https://youtu.be/4dKDADbQtXY)
 
-<p align="center"><img src="https://github.com/neilhiddink/HwS/blob/master/01.%20100%20Days%20of%20Swift/00.%20Swift%20Fundamentals/002.%20Complex%20Data%20Types/Tests/00.%20Day%202%20Progress%202-2-19.png" width="500"></p>
+<p align="center"><img src="" width="500"></p>
 
 ### Sets
 
-<img src="https://github.com/neilhiddink/HwS/blob/master/01.%20100%20Days%20of%20Swift/00.%20Swift%20Fundamentals/002.%20Complex%20Data%20Types/Tests/02.%20Sets%202-2-19.png" width="300">
+<img src="" width="300">
 
 #7 - I forgot about the shorthand rule for Sets. [Unlike arrays, sets do not have an equivalent shorthand form.](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html)
 
@@ -26,7 +26,7 @@ let mySet = Set([1, 1, 2, 3, 4])
 
 ### Dictionary Default Values
 
-<img src="https://github.com/neilhiddink/HwS/blob/master/01.%20100%20Days%20of%20Swift/00.%20Swift%20Fundamentals/002.%20Complex%20Data%20Types/Tests/04.%20Arrays%20vs%20Sets%20vs%20Tuples%202-2-19.png" width="300">
+<img src="" width="300">
 
 #2 - I missed a `:` in the code!
 
