@@ -22,8 +22,9 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
 
         let fileManager = FileManager.default
-        let path = Bundle.main.resourcePath!
-        let items = try! fileManager.contentsOfDirectory(atPath: path)
+        
+        guard let path = Bundle.main.resourcePath,
+              let items = try? fileManager.contentsOfDirectory(atPath: path) else { return }
         
         for item in items {
             if item.hasPrefix("nssl") {
