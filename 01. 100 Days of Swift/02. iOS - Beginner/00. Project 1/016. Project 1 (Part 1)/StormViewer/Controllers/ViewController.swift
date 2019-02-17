@@ -60,6 +60,8 @@ extension ViewController {
         cell.cellImageView?.image = UIImage(named: pictures[indexPath.row])
         cell.titleLabel.text = "Picture \(indexPath.row)"
         cell.descriptionLabel.text = pictures[indexPath.row]
+        cell.cellImageView.layer.masksToBounds = true
+        cell.cellImageView.layer.cornerRadius = cell.cellImageView.frame.width / 2.0
         return cell
     }
     
