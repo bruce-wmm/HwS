@@ -6,23 +6,23 @@
 
 [Swift Language Guide - Protocols](https://docs.swift.org/swift-book/LanguageGuide/Protocols.html)
 
-<p align="center"><img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/011.%20Protocols%20and%20Extensions/Tests/00.%20Day%2011%20Progress%202-11-19.png" width="500"></p>
+<p align="center"><img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/01.%20100%20Days%20of%20Swift/00.%20Swift%20Fundamentals/011.%20Protocols%20and%20Extensions/Tests/00.%20Day%2011%20Progress%202-11-19.png" width="500"></p>
 
 ### Extensions
 
-<img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/011.%20Protocols%20and%20Extensions/Tests/03.%20Extensions%202-11-19.png" width="300">
+<img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/01.%20100%20Days%20of%20Swift/00.%20Swift%20Fundamentals/011.%20Protocols%20and%20Extensions/Tests/03.%20Extensions%202-11-19.png" width="300">
 
 #7 - Missing `func` keyword
 
 ### Protocol Extensions
 
-<img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/011.%20Protocols%20and%20Extensions/Tests/04.%20Protocol%20Extensions%202-11-19.png" width="300">
+<img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/01.%20100%20Days%20of%20Swift/00.%20Swift%20Fundamentals/011.%20Protocols%20and%20Extensions/Tests/04.%20Protocol%20Extensions%202-11-19.png" width="300">
 
 #1 - `writeScript` is different from `makeScript` pay attention to the question.
 
 ### Summary - Protocols and Extensions
 
-<img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/011.%20Protocols%20and%20Extensions/Tests/06.%20Protocols%20and%20Extensions%20-%20Summary%202-11-19.png" width="300">
+<img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/01.%20100%20Days%20of%20Swift/00.%20Swift%20Fundamentals/011.%20Protocols%20and%20Extensions/Tests/06.%20Protocols%20and%20Extensions%20-%20Summary%202-11-19.png" width="300">
 
 #3 - Valid Swift - the `mutating` keyword is not mandatory in this case, but if you were to expand the implementation in the future you’d want it in case you’re dealing with value types such as Structs or Enumerations.
 

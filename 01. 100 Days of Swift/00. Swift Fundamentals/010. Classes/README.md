@@ -18,11 +18,11 @@ Structures and classes are general-purpose, flexible constructs that become the 
 4. Classes can have deinitializers.
 5. Classes are mutable.
 
-<p align="center"><img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/010.%20Classes/Tests/00.%20Day%2010%20Progress%202-10-19.png" width="500"></p>
+<p align="center"><img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/01.%20100%20Days%20of%20Swift/00.%20Swift%20Fundamentals/010.%20Classes/Tests/00.%20Day%2010%20Progress%202-10-19.png" width="500"></p>
 
 ### Creating Your Own Classes
 
-<img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/010.%20Classes/Tests/01.%20Creating%20Your%20Own%20Classes%202-10-19.png" width="300">
+<img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/01.%20100%20Days%20of%20Swift/00.%20Swift%20Fundamentals/010.%20Classes/Tests/01.%20Creating%20Your%20Own%20Classes%202-10-19.png" width="300">
 
 #7 - `func` keyword is not used for initializers
 
@@ -30,13 +30,13 @@ Structures and classes are general-purpose, flexible constructs that become the 
 
 ### Class Inheritance
 
-<img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/010.%20Classes/Tests/02.%20Class%20Inheritance%202-10-19.png" width="300">
+<img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/01.%20100%20Days%20of%20Swift/00.%20Swift%20Fundamentals/010.%20Classes/Tests/02.%20Class%20Inheritance%202-10-19.png" width="300">
 
 #9 - The `SmartPhone` class name can only be used once
 
 ### Copying Objects
 
-<img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/010.%20Classes/Tests/05.%20Copying%20Objects%202-10-19.png" width="300">
+<img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/01.%20100%20Days%20of%20Swift/00.%20Swift%20Fundamentals/010.%20Classes/Tests/05.%20Copying%20Objects%202-10-19.png" width="300">
 
 #8 - Same Output Twice - only one instance of the class
 

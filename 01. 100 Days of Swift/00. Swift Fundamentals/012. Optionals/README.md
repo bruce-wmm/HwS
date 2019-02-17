@@ -6,17 +6,17 @@
 
 [Swift Language Guide - Optionals](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html)
 
-<p align="center"><img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/012.%20Optionals/Tests/00.%20Day%2012%20Progress%202-12-19.png" width="500"></p>
+<p align="center"><img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/01.%20100%20Days%20of%20Swift/00.%20Swift%20Fundamentals/012.%20Optionals/Tests/00.%20Day%2012%20Progress%202-12-19.png" width="500"></p>
 
 ### Unwrapping Optionals
 
-<img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/012.%20Optionals/Tests/02.%20Unwrapping%20Optionals%202-12-19.png" width="300">
+<img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/01.%20100%20Days%20of%20Swift/00.%20Swift%20Fundamentals/012.%20Optionals/Tests/02.%20Unwrapping%20Optionals%202-12-19.png" width="300">
 
 #10 - `menuItems` should be `items` in print statement
 
 ### Typecasting
 
-<img src="https://github.com/neilhiddink/100DaysOfSwift/blob/master/01.%20Days%201-12/012.%20Optionals/Tests/10.%20Typecasting%202-12-19.png" width="300">
+<img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/01.%20100%20Days%20of%20Swift/00.%20Swift%20Fundamentals/012.%20Optionals/Tests/10.%20Typecasting%202-12-19.png" width="300">
 
 #3 - Types are different - Ints can’t cast into Strings, and if this was corrected, the initializer for conditional binding must have Optional type, not `[Int]`
 

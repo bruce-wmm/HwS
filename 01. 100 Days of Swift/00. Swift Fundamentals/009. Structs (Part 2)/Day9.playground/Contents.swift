@@ -9,7 +9,7 @@ struct Starship {
     var maxWarp: Double
     init(starshipName: String) {
         self.name = starshipName
-//        self.maxWarp = 0.0
+        //        self.maxWarp = 0.0
     }
 }
 let voyager = Starship(starshipName: "Voyager")
@@ -96,7 +96,7 @@ let drJones = Doctor(name: "Esther Jones", location: "Bristol")
 
 struct FacebookUser {
     private var privatePosts: [String]
-//    public var publicPosts: [String]
+    //    public var publicPosts: [String]
     var publicPosts: [String]
 }
 let user = FacebookUser()

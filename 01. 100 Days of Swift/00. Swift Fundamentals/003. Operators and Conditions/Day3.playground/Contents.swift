@@ -1,6 +1,6 @@
 import UIKit
 
-// OPERATORS AND CONDITIONS
+// Operators and Conditions
 
 // Arithmetic Operators
 
@@ -45,4 +45,5 @@ case 10:
 default:
     print("No matches found")
 }
+
 
