@@ -16,6 +16,8 @@ class DetailViewController: UIViewController {
     
     var selectedImage: String?
     
+    var pinchRecognizer: UIPinchGestureRecognizer!
+    
     // MARK: IB Outlets
     
     @IBOutlet weak var detailImageView: UIImageView!
@@ -27,6 +29,9 @@ class DetailViewController: UIViewController {
         
         title = selectedImage
         navigationItem.largeTitleDisplayMode = .never
+        
+        pinchRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(handlePinch(sender:)))
+        view.addGestureRecognizer(pinchRecognizer)
         
         guard let selectedImage = selectedImage else { return }
         detailImageView.image = UIImage(named: selectedImage)
@@ -54,6 +59,13 @@ class DetailViewController: UIViewController {
         let activityVC = UIActivityViewController(activityItems: [detailImageView.image!], applicationActivities: [])
         activityVC.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
         present(activityVC, animated: true)
+    }
+    
+    @objc func handlePinch(sender: UIPinchGestureRecognizer) {
+        if sender.state == .began || sender.state == .changed {
+            detailImageView.transform = detailImageView.transform.scaledBy(x: sender.scale, y: sender.scale)
+            sender.scale = 1.0
+        }
     }
     
 }
