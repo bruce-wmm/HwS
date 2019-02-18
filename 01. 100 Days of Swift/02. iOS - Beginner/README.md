@@ -1,11 +1,10 @@
 <p align="center"><img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/00.%20Resources/banner-100.png" width="500"></p>
 
-### Beginner 📕
+### iOS - Beginner 📕
 
-| #    | Project                      | Topics Learned   | Progress   |
+| #    | Project                      | Topics Learned   | Progress  | 
 | :--: | :--------------------------: | :--------------: | :--------: |
-| 0    | 🛠<br>[Introduction to Swift](https://github.com/nhiddink/HackingWithSwift/tree/master/00.%20Introduction%20to%20Swift)  | Playgrounds, Constants & Variables, Data Types, Operators, String Interpolation, Arrays & Dictionaries, Conditional Statements, Control Flow, Functions & Methods, Optionals, Enumerations, Classes & Structures, Property Observers, Access Control, Typecasting, Closures | ✅ |
-| 1    | 📱<br>[Storm Viewer](https://github.com/nhiddink/HackingWithSwift/tree/master/01.%20Storm%20Viewer)           | Xcode, UIKit, UIViewController, `super`, viewDidLoad(), FileManager, Bundle, `try-catch` Blocks, print(), Storyboards & Interface Builder, UITableView, UITableViewDelegate, UITableViewDataSource, UIImageView, UIImage, UIButton, Auto Layout, Outlets & Actions, UINavigationController | ✅ |
+| 1    | 📱<br>[Storm Viewer]()           | Xcode, UIKit, UIViewController, `super`, viewDidLoad(), FileManager, Bundle, `try-catch` Blocks, print(), Storyboards & Interface Builder, UITableView, UITableViewDelegate, UITableViewDataSource, UIImageView, UIImage, UIButton, Auto Layout, Outlets & Actions, UINavigationController | ✅ 💯 |
 | 2    | 🕹<br>[Guess the Flag](https://github.com/nhiddink/HackingWithSwift/tree/master/02.%20Guess%20the%20Flag)         | UIButton, Asset Catalogs, Retina displays & @2x and @3x images, UIControlState, CALayer, UIView, UIColor, CGColor, Random Numbers, UIAlertController, UIAlertAction, UILabel | ✅ |
 | 3    | 🛠 [Social Media](https://github.com/nhiddink/HackingWithSwift/tree/master/03.%20Social%20Media)              | UIActivityViewController, UINavigationBar, UIBarButtonItem, `#selector` & `@objc`, Info.plist, Privacy & Permissions | ✅ |
 | 4    | 📱<br>[Easy Browser](https://github.com/nhiddink/HackingWithSwift/tree/master/04.%20Easy%20Browser)           | WKWebView, URL, URLRequest, UIToolbar, UIProgressView, KVO Design Pattern, WKNavigationDelegate | ✅ |
