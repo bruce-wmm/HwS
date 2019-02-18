@@ -47,8 +47,8 @@ I always worked on fundamentals because I know athleticism is fleeting."
 
 | Day  | Topics                    | Progress |
 | :--: | :----------------------- |:--------:|
-| 16   | [Project 1, Part 1](https://www.hackingwithswift.com/100/16) | ⚠️ |
-| 17   | [Project 1, Part 2](https://www.hackingwithswift.com/100/17) | ⚠️ |
+| 16   | [Project 1, Part 1](https://www.hackingwithswift.com/100/16) | ✅ |
+| 17   | [Project 1, Part 2](https://www.hackingwithswift.com/100/17) | ✅ |
 
 |  KEY  |
 | ------ |
