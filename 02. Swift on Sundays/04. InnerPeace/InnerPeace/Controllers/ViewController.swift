@@ -9,7 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet var background: UIImageView!
+    @IBOutlet var quote: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
