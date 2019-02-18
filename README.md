@@ -1,15 +1,27 @@
 <p align="center"><img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/00.%20Resources/banner-hws.png" width="1000"></p>
 
+912c50d251c590a9ba719d2fde63ef8736e0fcb0
+
 | #    | Course                       | Completion Date |
 | :--: | :-------------------------- | :-------------: |
-| 1 | 100 Days of Swift | May 11th, 2019 |
-| 2 | Swift on Sundays | Ongoing |
+| 1 | [💯 Days of Swift] | May 11th, 2019 |
+| 2 | [Swift on Sundays](https://github.com/neilhiddink/HwS/tree/912c50d251c590a9ba719d2fde63ef8736e0fcb0/02.%20Swift%20on%20Sundays) | Ongoing |
 | 3 | Swift Coding Challenges | April 30th, 2019 |
 | 4 | What's New in Swift | Ongoing |
 | 5 | Swift Standard Library | Ongoing |
 | 6 | Lectures | Ongoing |
 | 7 | Xcode Tips | Ongoing |
 
-## Certificate of Completion 🎓
+## Certificates 🎓
 
-<img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/00.%20Resources/certificate-hws.jpg" width="500">
+- [x] [Hacking with Swift](https://www.hackingwithswift.com/read)
+
+
+
+- [ ] [Pro Swift](https://www.hackingwithswift.com/store/pro-swift)
+- [ ] [Swift Coding Challenges](https://www.hackingwithswift.com/store/swift-coding-challenges)
+- [ ] [Objective-C for Swift Developers](https://www.hackingwithswift.com/store/objective-c-for-swift-developers)
+- [ ] [Beyond Code](https://www.hackingwithswift.com/store/beyond-code)
+- [ ] [Advanced Swift Volume One](https://www.hackingwithswift.com/store/advanced-ios-1)
+
+<img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/00.%20Resources/certificate-hws.jpg" width="300">
