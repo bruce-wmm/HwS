@@ -4,7 +4,7 @@
 
 This is the final version of my project.
 
- <p align="center"><img src="https://media.giphy.com/media/1BGSyKTIWryNWISnnG/giphy.gif" width="200"></p>
+<p align="center"><img src="https://media.giphy.com/media/1BGSyKTIWryNWISnnG/giphy.gif" width="200">     <img src="https://media.giphy.com/media/7zxZSwAJ4bRDgJCVuR/giphy.gif" width="200"></p>
 
 ## Day 16 (Part 1)
 
@@ -30,10 +30,10 @@ After completing the videos for today, I decided to experiment by adding a `UIPi
 
 Challenges - add additional features to StormViewer based on what's been taught so far in the course.
 
-- [x ] Use Interface Builder to select the text label inside your table view cell and adjust its size to something larger.
+- [x] Use Interface Builder to select the text label inside your table view cell and adjust its size to something larger.
 - [x] In your main table view, show the image names in sorted order, i.e. so "nssl0033.jpg" comes before "nssl0034.jpg".
-
 - [x] Rather than show image names in the detail title bar, show "Picture X of Y", where Y is the total number of images and X is the picture's postion in the array.
+
 ## Future Plans
 
 - Explore performance with larger amounts of data
