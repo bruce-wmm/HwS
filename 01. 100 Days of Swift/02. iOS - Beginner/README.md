@@ -2,9 +2,16 @@
 
 ### iOS - Beginner 📕
 
+| Day(s) | Project                      | Topics Learned   | Progress  | 
+| :------: | :---------------------: | :------------------: | :---------: |
+| 16-18 | 📱<br>[Storm Viewer]()           | Xcode, UIKit, UIViewController, `super`, viewDidLoad(), FileManager, Bundle, `try-catch` Blocks, print(), Storyboards & Interface Builder, UITableView, UITableViewDelegate, UITableViewDataSource, UIImageView, UIImage, UIButton, Auto Layout, Outlets & Actions, UINavigationController | ✅ 💯 |
+
+### Upcoming Projects
+
+These are projects I've built while reading Hacking with Swift that may or may not show up during the 100 Days of Swift. If I get to the end of the 100 days and something's been missed, I'll move that project or those projects to a separate folder.
+
 | #    | Project                      | Topics Learned   | Progress  | 
 | :--: | :--------------------------: | :--------------: | :--------: |
-| 1    | 📱<br>[Storm Viewer]()           | Xcode, UIKit, UIViewController, `super`, viewDidLoad(), FileManager, Bundle, `try-catch` Blocks, print(), Storyboards & Interface Builder, UITableView, UITableViewDelegate, UITableViewDataSource, UIImageView, UIImage, UIButton, Auto Layout, Outlets & Actions, UINavigationController | ✅ 💯 |
 | 2    | 🕹<br>[Guess the Flag](https://github.com/nhiddink/HackingWithSwift/tree/master/02.%20Guess%20the%20Flag)         | UIButton, Asset Catalogs, Retina displays & @2x and @3x images, UIControlState, CALayer, UIView, UIColor, CGColor, Random Numbers, UIAlertController, UIAlertAction, UILabel | ✅ |
 | 3    | 🛠 [Social Media](https://github.com/nhiddink/HackingWithSwift/tree/master/03.%20Social%20Media)              | UIActivityViewController, UINavigationBar, UIBarButtonItem, `#selector` & `@objc`, Info.plist, Privacy & Permissions | ✅ |
 | 4    | 📱<br>[Easy Browser](https://github.com/nhiddink/HackingWithSwift/tree/master/04.%20Easy%20Browser)           | WKWebView, URL, URLRequest, UIToolbar, UIProgressView, KVO Design Pattern, WKNavigationDelegate | ✅ |
