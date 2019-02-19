@@ -26,6 +26,10 @@ After completing the videos for today, I decided to experiment by adding a `UIPi
 
 ## Day 18 (Part 3)
 
+### Test - Project 1 Review
+
+Challenges - add additional features to StormViewer based on what's been taught so far in the course.
+
 - [x ] Use Interface Builder to select the text label inside your table view cell and adjust its size to something larger.
 - [x] In your main table view, show the image names in sorted order, i.e. so "nssl0033.jpg" comes before "nssl0034.jpg".
 
