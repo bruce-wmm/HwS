@@ -1,18 +1,18 @@
 <p align="center"><img src="https://github.com/neilhiddink/HwS/blob/1aff6f6451bfbef908e80d071cde9f3f30158242/00.%20Resources/banner-100.png" width="500"></p>
 
-### iOS - Beginner 📕
+### iOS - Beginner 📗
 
 | Day(s) | Project                      | Topics Learned   | Progress  | 
 | :------: | :---------------------: | :------------------: | :---------: |
-| 16-18 | 📱<br>[Storm Viewer]()           | Xcode, UIKit, UIViewController, `super`, viewDidLoad(), FileManager, Bundle, `try-catch` Blocks, print(), Storyboards & Interface Builder, UITableView, UITableViewDelegate, UITableViewDataSource, UIImageView, UIImage, UIButton, Auto Layout, Outlets & Actions, UINavigationController | ✅ 💯 |
+| 16-18 | 📱<br>[Storm Viewer](https://github.com/neilhiddink/HwS/tree/master/01.%20100%20Days%20of%20Swift/02.%20iOS%20-%20Beginner/016-018.%20Project%201)           | Xcode, UIKit, UIViewController, `super`, viewDidLoad(), FileManager, Bundle, `try-catch` Blocks, print(), Storyboards & Interface Builder, UITableView, UITableViewDelegate, UITableViewDataSource, UIImageView, UIImage, UIButton, Auto Layout, Outlets & Actions, UINavigationController | ✅ 💯 |
+| 19    | 🕹<br>[Guess the Flag](https://github.com/neilhiddink/HwS/tree/master/01.%20100%20Days%20of%20Swift/02.%20iOS%20-%20Beginner/019.%20Project%202)         | UIButton, Asset Catalogs, Retina displays & @2x and @3x images, UIControlState, CALayer, UIView, UIColor, CGColor, Random Numbers, UIAlertController, UIAlertAction, UILabel | ✅ ⚠️ |
 
 ### Upcoming Projects
 
-These are projects I've built while reading Hacking with Swift that may or may not show up during the 100 Days of Swift. If I get to the end of the 100 days and something's been missed, I'll move that project or those projects to a separate folder.
+These are projects I've built while reading the Hacking with Swift book that may or may not show up during the 100 Days of Swift. If I get to the end of the 100 days and something's missing, I'll move that project (or those projects) to a separate folder.
 
 | #    | Project                      | Topics Learned   | Progress  | 
 | :--: | :--------------------------: | :--------------: | :--------: |
-| 2    | 🕹<br>[Guess the Flag](https://github.com/nhiddink/HackingWithSwift/tree/master/02.%20Guess%20the%20Flag)         | UIButton, Asset Catalogs, Retina displays & @2x and @3x images, UIControlState, CALayer, UIView, UIColor, CGColor, Random Numbers, UIAlertController, UIAlertAction, UILabel | ✅ |
 | 3    | 🛠 [Social Media](https://github.com/nhiddink/HackingWithSwift/tree/master/03.%20Social%20Media)              | UIActivityViewController, UINavigationBar, UIBarButtonItem, `#selector` & `@objc`, Info.plist, Privacy & Permissions | ✅ |
 | 4    | 📱<br>[Easy Browser](https://github.com/nhiddink/HackingWithSwift/tree/master/04.%20Easy%20Browser)           | WKWebView, URL, URLRequest, UIToolbar, UIProgressView, KVO Design Pattern, WKNavigationDelegate | ✅ |
 | 5    | 🕹<br>[Word Scramble](https://github.com/nhiddink/HackingWithSwift/tree/master/05.%20Word%20Scramble)          | String Methods, NSRange, UITextChecker, lowercased(), IndexPath | ✅ |
@@ -26,3 +26,13 @@ These are projects I've built while reading Hacking with Swift that may or may n
 | 13   | 📱<br>[Instafilter](https://github.com/nhiddink/HackingWithSwift/tree/master/13.%20Instafilter)            | UISlider, CIContext, CIFilter | ✅ |
 | 14   | 🕹<br>[Whack-a-Penguin](https://github.com/nhiddink/HackingWithSwift/tree/master/14.%20Whack-a-Penguin)        | SKCropNode, SKTexture, SKActions, asyncAfter() | ✅ |
 | 15   | 🛠<br>[Core Animation](https://github.com/nhiddink/HackingWithSwift/tree/master/15.%20Animation)         | `switch`, `case`, animate(withDuration:), CGAffineTransform, CGFloat.pi | ✅ |
+
+|  KEY  |
+| ------ |
+📱 = App
+🕹 = Game
+🛠 = Technique
+✅ = HwS Book Project
+💯 = 100DoS Project
+⚠️ = In Progress
+🛑 = Not Started
