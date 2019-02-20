@@ -68,16 +68,16 @@ class ViewController: UIViewController {
         var random1 = 0
         var random2 = 0
         var random3 = 0
-        while threeUniqueValues == false {
+        repeat {
         
-            random1 = Int(arc4random_uniform(UInt32(countries.count)))
-            random2 = Int(arc4random_uniform(UInt32(countries.count)))
-            random3 = Int(arc4random_uniform(UInt32(countries.count)))
+            random1 = Int.random(in: 0...(countries.count - 1))
+            random2 = Int.random(in: 0...(countries.count - 1))
+            random3 = Int.random(in: 0...(countries.count - 1))
             
             if random1 != random2, random1 != random3, random2 != random3 {
                 threeUniqueValues = true
                 
-                let randomQ = Int(arc4random_uniform(3))
+                let randomQ = Int.random(in: 1...3)
                 switch randomQ {
                     case 1:
                         countryString = countries[random1]
@@ -98,10 +98,8 @@ class ViewController: UIViewController {
                 
                 questionLabel.text = "Please select the flag for:\n\((countryString.uppercased()))"
                 
-                break
             }
-            
-        }
+        } while threeUniqueValues == false
         
     }
     
@@ -144,21 +142,21 @@ class ViewController: UIViewController {
             case middleButton:
                 if countryString.uppercased() == self.middleCountry?.uppercased() {
                     middleStatusLabel.text = "✓"
-                    topStatusLabel.textColor = UIColor.green
+                    middleStatusLabel.textColor = UIColor.green
                     updateScore(correct: true)
                 } else {
                     middleStatusLabel.text = "✗"
-                    topStatusLabel.textColor = UIColor.red
+                    middleStatusLabel.textColor = UIColor.red
                     updateScore(correct: false)
                 }
             case bottomButton:
                 if countryString.uppercased() == self.bottomCountry?.uppercased() {
                     bottomStatusLabel.text = "✓"
-                    topStatusLabel.textColor = UIColor.green
+                    bottomStatusLabel.textColor = UIColor.green
                     updateScore(correct: true)
                 } else {
                     bottomStatusLabel.text = "✗"
-                    topStatusLabel.textColor = UIColor.red
+                    bottomStatusLabel.textColor = UIColor.red
                     updateScore(correct: false)
                 }
             default:
